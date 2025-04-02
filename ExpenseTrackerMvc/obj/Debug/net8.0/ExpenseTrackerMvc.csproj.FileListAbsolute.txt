@@ -293,3 +293,6 @@ E:\manthan\ExpenseTracker\ExpenseTrackerMvc\bin\Debug\net8.0\runtimes\win\lib\ne
 E:\manthan\ExpenseTracker\ExpenseTrackerMvc\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 E:\manthan\ExpenseTracker\ExpenseTrackerMvc\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
 E:\manthan\ExpenseTracker\ExpenseTrackerMvc\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
+E:\manthan\ExpenseTracker\ExpenseTrackerMvc\bin\Debug\net8.0\ExpenseTrackerMvc.staticwebassets.endpoints.json
+E:\manthan\ExpenseTracker\ExpenseTrackerMvc\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+E:\manthan\ExpenseTracker\ExpenseTrackerMvc\obj\Debug\net8.0\staticwebassets\msbuild.ExpenseTrackerMvc.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
