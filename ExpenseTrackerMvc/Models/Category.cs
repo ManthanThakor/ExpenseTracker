@@ -1,6 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Identity;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ExpenseTrackerMvc.Models
 {
@@ -9,27 +8,23 @@ namespace ExpenseTrackerMvc.Models
         [Key]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Category name is required.")]
-        [StringLength(50, ErrorMessage = "Category name cannot exceed 50 characters.")]
+        [Required, StringLength(50)]
         public string Name { get; set; } = "";
 
-        [StringLength(200, ErrorMessage = "Description cannot exceed 200 characters.")]
+        [StringLength(200)]
         public string Description { get; set; } = "";
 
-        [Required(ErrorMessage = "Category type is required.")]
-        [RegularExpression("Expense|Income", ErrorMessage = "Category type must be 'Expense' or 'Income'.")]
+        [Required]
         public string Type { get; set; } = "Expense";
 
-        [RegularExpression(@"^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$", ErrorMessage = "Invalid color code format.")]
+        [StringLength(7)]
         public string Color { get; set; } = "#007bff";
 
         public string Icon { get; set; } = "";
 
-        [Required]
-        public string UserId { get; set; } = "";
-
+        public int UserId { get; set; }
         [ForeignKey("UserId")]
-        public virtual IdentityUser? User { get; set; }
+        public virtual User? User { get; set; }
 
         public virtual ICollection<Expense> Expenses { get; set; } = new List<Expense>();
     }

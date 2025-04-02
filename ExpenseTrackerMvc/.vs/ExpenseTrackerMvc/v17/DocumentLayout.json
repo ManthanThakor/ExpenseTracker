@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\views\\category\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:views\\category\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\expensetrackermvc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -94,11 +94,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Category\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Category\\Index.cshtml",
@@ -111,20 +111,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Create.cshtml",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Category\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Category\\Create.cshtml",
               "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Category\\Create.cshtml",
               "RelativeToolTip": "Views\\Category\\Create.cshtml",
-              "ViewState": "AQIAAAwBAAAAAAAAAAAIwBsBAAAAAAAA",
+              "ViewState": "AQIAAP4AAAAAAAAAAAAIwBMBAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-02T10:27:08.783Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Category\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\Category\\Delete.cshtml",
@@ -163,13 +163,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAswGEAAAAAAAAA",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAIwH4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-02T06:12:41.398Z",
               "EditorCaption": ""

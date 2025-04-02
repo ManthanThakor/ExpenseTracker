@@ -1,17 +1,16 @@
 ﻿using ExpenseTrackerMvc.Models;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ExpenseTrackerMvc.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<IdentityUser>
+    public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
 
+        public DbSet<User> Users { get; set; }
         public DbSet<Expense> Expenses { get; set; }
         public DbSet<Category> Categories { get; set; }
 
@@ -19,19 +18,15 @@ namespace ExpenseTrackerMvc.Data
         {
             base.OnModelCreating(builder);
 
-            // Expense Table Configuration
+            builder.Entity<User>()
+                .HasIndex(u => u.Email)
+                .IsUnique();
 
-            builder.Entity<Expense>()
-                .Property(e => e.Amount)
-                .HasColumnType("decimal(18,2)");
-
-            builder.Entity<Expense>()
-                .Property(e => e.Title)
-                .HasMaxLength(100);
-
-            builder.Entity<Expense>()
-                .Property(e => e.Description)
-                .HasMaxLength(500);
+            builder.Entity<Category>()
+                .HasOne(c => c.User)
+                .WithMany()
+                .HasForeignKey(c => c.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.Entity<Expense>()
                 .HasOne(e => e.Category)
@@ -43,32 +38,7 @@ namespace ExpenseTrackerMvc.Data
                 .HasOne(e => e.User)
                 .WithMany()
                 .HasForeignKey(e => e.UserId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            // Category Table Configuration
-
-            builder.Entity<Category>()
-                .Property(c => c.Name)
-                .HasMaxLength(50)
-                .IsRequired();
-
-            builder.Entity<Category>()
-                .Property(c => c.Description)
-                .HasMaxLength(200);
-
-            builder.Entity<Category>()
-                .Property(c => c.Color)
-                .HasMaxLength(7);
-
-            builder.Entity<Category>()
-                .Property(c => c.Icon)
-                .HasMaxLength(100);
-
-            builder.Entity<Category>()
-                .HasOne(c => c.User)
-                .WithMany()
-                .HasForeignKey(c => c.UserId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

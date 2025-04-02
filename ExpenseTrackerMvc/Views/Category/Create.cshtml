@@ -1,4 +1,4 @@
-﻿@model ExpenseTrackerMvc.Models.Category
+﻿@* @model ExpenseTrackerMvc.Models.Category
 @{
     ViewData["Title"] = Model?.Id > 0 ? "Edit Category" : "Create Category";
     var actionName = Model?.Id > 0 ? "Edit" : "Create";
@@ -25,7 +25,7 @@
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         @if (Model?.Id > 0)
                         {
-                                <input type="hidden" asp-for="Id" />
+                            <input type="hidden" asp-for="Id" />
                         }
 
                         <div class="row g-4">
@@ -106,7 +106,6 @@
         </div>
     </div>
 
-    <!-- Icon Picker Modal -->
     <div class="modal fade" id="iconPickerModal" tabindex="-1" aria-labelledby="iconPickerModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -119,7 +118,6 @@
                         <input type="text" class="form-control" id="iconSearch" placeholder="Search icons...">
                     </div>
                     <div class="icons-container d-flex gap-2 flex-wrap">
-                        <!-- Common category icons -->
                         <button type="button" class="btn btn-outline-primary icon-btn" data-icon="fas fa-shopping-cart"><i class="fas fa-shopping-cart"></i></button>
                         <button type="button" class="btn btn-outline-primary icon-btn" data-icon="fas fa-utensils"><i class="fas fa-utensils"></i></button>
                         <button type="button" class="btn btn-outline-primary icon-btn" data-icon="fas fa-home"><i class="fas fa-home"></i></button>
@@ -225,7 +223,6 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Initialize color picker
         $(".color-picker").spectrum({
             color: "@(string.IsNullOrEmpty(Model?.Color) ? "#007bff" : Model.Color)",
             showInput: true,
@@ -281,3 +278,4 @@
         });
     });
 </script>
+ *@

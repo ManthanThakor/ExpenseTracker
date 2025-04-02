@@ -1,6 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Identity;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ExpenseTrackerMvc.Models
 {
@@ -9,36 +8,26 @@ namespace ExpenseTrackerMvc.Models
         [Key]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Title is required.")]
-        [StringLength(100, ErrorMessage = "Title cannot exceed 100 characters.")]
+        [Required, StringLength(100)]
         public string Title { get; set; } = "";
 
-        [StringLength(500, ErrorMessage = "Description cannot exceed 500 characters.")]
+        [StringLength(500)]
         public string Description { get; set; } = "";
 
-        [Required(ErrorMessage = "Amount is required.")]
-        [Range(0.01, double.MaxValue, ErrorMessage = "Amount must be greater than zero.")]
-        [Column(TypeName = "decimal(18,2)")]
+        [Required, Column(TypeName = "decimal(18,2)")]
         public decimal Amount { get; set; }
 
-        [Required(ErrorMessage = "Date is required.")]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [Required]
         public DateTime Date { get; set; }
 
-        [Required(ErrorMessage = "Category is required.")]
         public int CategoryId { get; set; }
-
         [ForeignKey("CategoryId")]
         public virtual Category? Category { get; set; }
 
-        [Required]
-        public string UserId { get; set; } = "";
-
+        public int UserId { get; set; }
         [ForeignKey("UserId")]
-        public virtual IdentityUser? User { get; set; }
+        public virtual User? User { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 }
-
