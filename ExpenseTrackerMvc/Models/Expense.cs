@@ -8,22 +8,27 @@ namespace ExpenseTrackerMvc.Models
         [Key]
         public int Id { get; set; }
 
-        [Required, StringLength(100)]
+        [Required(ErrorMessage = "Title is required.")]
+        [StringLength(100, ErrorMessage = "Title cannot exceed 100 characters.")]
         public string Title { get; set; } = "";
 
-        [StringLength(500)]
+        [StringLength(500, ErrorMessage = "Description cannot exceed 500 characters.")]
         public string Description { get; set; } = "";
 
-        [Required, Column(TypeName = "decimal(18,2)")]
+        [Required(ErrorMessage = "Amount is required.")]
+        [Column(TypeName = "decimal(18,2)")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "Amount must be greater than zero.")]
         public decimal Amount { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Date is required.")]
         public DateTime Date { get; set; }
 
+        [Required(ErrorMessage = "Category is required.")]
         public int CategoryId { get; set; }
         [ForeignKey("CategoryId")]
         public virtual Category? Category { get; set; }
 
+        [Required(ErrorMessage = "User is required.")]
         public int UserId { get; set; }
         [ForeignKey("UserId")]
         public virtual User? User { get; set; }

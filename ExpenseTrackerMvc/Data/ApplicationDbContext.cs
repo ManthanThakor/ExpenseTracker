@@ -14,31 +14,28 @@ namespace ExpenseTrackerMvc.Data
         public DbSet<Expense> Expenses { get; set; }
         public DbSet<Category> Categories { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(builder);
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.Expenses)
+                .WithOne(e => e.User)
+                .HasForeignKey(e => e.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
 
-            builder.Entity<User>()
-                .HasIndex(u => u.Email)
-                .IsUnique();
-
-            builder.Entity<Category>()
-                .HasOne(c => c.User)
-                .WithMany()
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.Categories)
+                .WithOne(c => c.User)
                 .HasForeignKey(c => c.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            builder.Entity<Expense>()
-                .HasOne(e => e.Category)
-                .WithMany(c => c.Expenses)
+            modelBuilder.Entity<Category>()
+                .HasMany(c => c.Expenses)
+                .WithOne(e => e.Category)
                 .HasForeignKey(e => e.CategoryId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            builder.Entity<Expense>()
-                .HasOne(e => e.User)
-                .WithMany()
-                .HasForeignKey(e => e.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+            base.OnModelCreating(modelBuilder);
         }
+
     }
 }
