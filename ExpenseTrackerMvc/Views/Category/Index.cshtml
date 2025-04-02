@@ -1,0 +1,195 @@
+﻿@model IEnumerable<ExpenseTrackerMvc.Models.Category>
+@{
+    ViewData["Title"] = "Categories";
+    var stats = ViewBag.Stats as ExpenseTrackerMvc.Services.CategoryStatsViewModel;
+    string currentFilter = ViewBag.CurrentFilter as string ?? "";
+}
+
+<div class="container-fluid py-4">
+    <!-- Animation Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Success Alert -->
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show animate__animated animate__fadeIn" role="alert">
+            <i class="fas fa-check-circle me-2"></i> @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-lg-8 col-md-7">
+            <div class="card mb-4 animate__animated animate__fadeInUp border-0 shadow-sm">
+                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                    <h3 class="mb-0">Categories</h3>
+                    <a asp-action="Create" class="btn btn-primary btn-sm">
+                        <i class="fas fa-plus me-1"></i> New Category
+                    </a>
+                </div>
+                <div class="card-body p-0">
+                    <div class="d-flex justify-content-between p-3 bg-light">
+                        <div class="btn-group" role="group">
+                            <a asp-action="Index" class="btn @(string.IsNullOrEmpty(currentFilter) ? "btn-primary" : "btn-outline-primary")">
+                                All
+                            </a>
+                            <a asp-action="Index" asp-route-type="Income" class="btn @(currentFilter == "Income" ? "btn-primary" : "btn-outline-primary")">
+                                Income
+                            </a>
+                            <a asp-action="Index" asp-route-type="Expense" class="btn @(currentFilter == "Expense" ? "btn-primary" : "btn-outline-primary")">
+                                Expense
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="text-muted small">Total: @Model.Count() categories</span>
+                        </div>
+                    </div>
+
+                    @if (!Model.Any())
+                    {
+                        <div class="py-5 text-center">
+                            <img src="~/images/empty-state.svg" alt="No Categories" style="max-width: 200px;" class="mb-3">
+                            <h5>No categories found</h5>
+                            <p class="text-muted">Start by creating your first category</p>
+                            <a asp-action="Create" class="btn btn-primary">
+                                <i class="fas fa-plus me-1"></i> New Category
+                            </a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="table-responsive">
+                            <table class="table-hover mb-0 table">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Type</th>
+                                        <th>Description</th>
+                                        <th class="text-end">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr data-aos="fade-right" data-aos-delay="@(Model.ToList().IndexOf(item) * 50)">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="category-icon me-2" style="background-color: @item.Color">
+                                                        @if (!string.IsNullOrEmpty(item.Icon))
+                                                        {
+                                                            <i class="@item.Icon"></i>
+                                                        }
+                                                        else
+                                                        {
+                                                            <i class="fas fa-tag"></i>
+                                                        }
+                                                    </div>
+                                                    <span>@item.Name</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="badge @(item.Type == "Income" ? "bg-success" : "bg-danger")">
+                                                    @item.Type
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="text-muted">@(string.IsNullOrEmpty(item.Description) ? "-" : item.Description)</span>
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="btn-group btn-group-sm">
+                                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-primary">
+                                                        <i class="fas fa-edit"></i>
+                                                    </a>
+                                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">
+                                                        <i class="fas fa-trash"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5">
+            <div class="card mb-4 animate__animated animate__fadeInRight border-0 shadow-sm">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Category Statistics</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <div class="p-3 bg-light rounded border text-center" data-aos="zoom-in">
+                                <h2 class="mb-1">@stats.TotalCategories</h2>
+                                <span class="text-muted">Total Categories</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3 bg-success rounded border bg-opacity-10 text-center" data-aos="zoom-in" data-aos-delay="100">
+                                <h3 class="mb-1 text-success">@stats.IncomeCategories</h3>
+                                <span class="text-muted">Income</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3 bg-danger rounded border bg-opacity-10 text-center" data-aos="zoom-in" data-aos-delay="200">
+                                <h3 class="mb-1 text-danger">@stats.ExpenseCategories</h3>
+                                <span class="text-muted">Expense</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div data-aos="fade-up">
+                        <h6 class="mb-3">Quick Tips:</h6>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <i class="fas fa-lightbulb text-warning me-2"></i>
+                                Create specific categories for better expense tracking
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <i class="fas fa-lightbulb text-warning me-2"></i>
+                                Use distinct colors to easily identify categories
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <i class="fas fa-lightbulb text-warning me-2"></i>
+                                Add icons to make your categories more visual
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .category-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    .table > :not(caption) > * > * {
+        padding: 1rem;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    });
+</script>
