@@ -15,54 +15,56 @@ namespace ExpenseTrackerMvc.Repository
             _dbSet = context.Set<T>();
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public async Task<IEnumerable<T>> GetAll()
         {
             return await _dbSet.ToListAsync();
         }
 
-        public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
+        public async Task<IEnumerable<T>> Find(Expression<Func<T, bool>> predicate)
         {
             return await _dbSet.Where(predicate).ToListAsync();
         }
 
-        public async Task<T?> GetByIdAsync(int id)
+        public async Task<T?> GetById(int id)
         {
             return await _dbSet.FindAsync(id);
         }
 
-        public async Task<T> AddAsync(T entity)
+        public async Task<T> Add(T entity)
         {
             await _dbSet.AddAsync(entity);
-            await SaveChangesAsync();
+            await SaveChanges();
             return entity;
         }
 
-        public async Task UpdateAsync(T entity)
+        public async Task Update(T entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
-            await SaveChangesAsync();
+            await SaveChanges();
         }
 
-        public async Task DeleteAsync(T entity)
+        public async Task Delete(T entity)
         {
             _dbSet.Remove(entity);
-            await SaveChangesAsync();
+            await SaveChanges();
         }
 
-        public async Task<bool> ExistsAsync(int id)
+        public async Task<bool> Exists(int id)
         {
-            var entity = await GetByIdAsync(id);
+            var entity = await GetById(id);
             return entity != null;
         }
 
-        public async Task<int> CountAsync(Expression<Func<T, bool>>? predicate = null)
+        public async Task<int> Count(Expression<Func<T, bool>>? predicate = null)
         {
             if (predicate == null)
+            {
                 return await _dbSet.CountAsync();
+            }
             return await _dbSet.CountAsync(predicate);
         }
 
-        public async Task SaveChangesAsync()
+        public async Task SaveChanges()
         {
             await _context.SaveChangesAsync();
         }

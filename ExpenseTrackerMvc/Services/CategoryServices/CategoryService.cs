@@ -14,7 +14,7 @@ namespace ExpenseTrackerMvc.Services.CategoryServices
 
         public async Task<IEnumerable<Category>> GetAllCategoriesAsync(int userId)
         {
-            return await _repository.FindAsync(c => c.UserId == userId);
+            return await _repository.Find(c => c.UserId == userId);
         }
 
         public async Task<IEnumerable<Category>> SearchCategoriesAsync(int userId, string searchTerm)
@@ -23,7 +23,7 @@ namespace ExpenseTrackerMvc.Services.CategoryServices
                 return await GetAllCategoriesAsync(userId);
 
             searchTerm = searchTerm.ToLower();
-            return await _repository.FindAsync(c =>
+            return await _repository.Find(c =>
                 c.UserId == userId &&
                 (c.Name.ToLower().Contains(searchTerm) ||
                  c.Description.ToLower().Contains(searchTerm) ||
@@ -32,7 +32,7 @@ namespace ExpenseTrackerMvc.Services.CategoryServices
 
         public async Task<Category?> GetCategoryByIdAsync(int id, int userId)
         {
-            var category = await _repository.GetByIdAsync(id);
+            var category = await _repository.GetById(id);
             if (category != null && category.UserId != userId)
                 return null;
             return category;
@@ -40,32 +40,32 @@ namespace ExpenseTrackerMvc.Services.CategoryServices
 
         public async Task<Category> CreateCategoryAsync(Category category)
         {
-            return await _repository.AddAsync(category);
+            return await _repository.Add(category);
         }
 
         public async Task UpdateCategoryAsync(Category category)
         {
-            await _repository.UpdateAsync(category);
+            await _repository.Update(category);
         }
 
         public async Task DeleteCategoryAsync(int id, int userId)
         {
-            var category = await _repository.GetByIdAsync(id);
+            var category = await _repository.GetById(id);
             if (category != null && category.UserId == userId)
             {
-                await _repository.DeleteAsync(category);
+                await _repository.Delete(category);
             }
         }
 
         public async Task<bool> CategoryExistsAsync(int id, int userId)
         {
-            var category = await _repository.GetByIdAsync(id);
+            var category = await _repository.GetById(id);
             return category != null && category.UserId == userId;
         }
 
         public async Task<IEnumerable<Category>> GetCategoriesByTypeAsync(int userId, string type)
         {
-            return await _repository.FindAsync(c => c.UserId == userId && c.Type == type);
+            return await _repository.Find(c => c.UserId == userId && c.Type == type);
         }
     }
 }

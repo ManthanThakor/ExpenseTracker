@@ -3,7 +3,7 @@
     ViewData["Title"] = "Categories";
 }
 
-<div class="py-5 container">
+<div class="py-5 container" style="margin-top:100px;">
     <div class="row mb-4">
         <div class="col-md-8">
             <h1 class="h3 fw-bold text-dark">
@@ -31,7 +31,7 @@
             <div class="row mb-4">
                 <div class="col-md-6">
                     <form asp-action="Index" method="get" class="input-group">
-                        <input type="text" class="form-control" placeholder="Search categories..." 
+                        <input type="text" class="form-control" placeholder="Search categories..."
                                name="searchTerm" value="@Model.SearchTerm">
                         <input type="hidden" name="categoryType" value="@Model.CategoryType" />
                         <button class="btn btn-outline-secondary" type="submit">
@@ -47,15 +47,15 @@
                 </div>
                 <div class="col-md-6">
                     <div class="btn-group float-md-end" role="group">
-                        <a asp-action="Index" asp-route-categoryType="All" asp-route-searchTerm="@Model.SearchTerm" 
+                        <a asp-action="Index" asp-route-categoryType="All" asp-route-searchTerm="@Model.SearchTerm"
                            class="btn @(Model.CategoryType == "All" ? "btn-primary" : "btn-outline-secondary")">
                             All
                         </a>
-                        <a asp-action="Index" asp-route-categoryType="Expense" asp-route-searchTerm="@Model.SearchTerm" 
+                        <a asp-action="Index" asp-route-categoryType="Expense" asp-route-searchTerm="@Model.SearchTerm"
                            class="btn @(Model.CategoryType == "Expense" ? "btn-primary" : "btn-outline-secondary")">
                             Expenses
                         </a>
-                        <a asp-action="Index" asp-route-categoryType="Income" asp-route-searchTerm="@Model.SearchTerm" 
+                        <a asp-action="Index" asp-route-categoryType="Income" asp-route-searchTerm="@Model.SearchTerm"
                            class="btn @(Model.CategoryType == "Income" ? "btn-primary" : "btn-outline-secondary")">
                             Income
                         </a>
@@ -75,7 +75,7 @@
                     else
                     {
                         <p>
-                            Get started by 
+                            Get started by
                             <a asp-action="Create" class="fw-bold text-decoration-none">creating a new category</a>
                         </p>
                     }
@@ -99,7 +99,7 @@
                             {
                                 <tr>
                                     <td>
-                                        <div class="category-icon rounded-circle" 
+                                        <div class="category-icon rounded-circle"
                                              style="background-color: @category.Color; width: 32px; height: 32px;">
                                             @if (!string.IsNullOrEmpty(category.Icon))
                                             {
@@ -121,20 +121,20 @@
                                     </td>
                                     <td>
                                         <span class="text-muted small">
-                                            @(string.IsNullOrEmpty(category.Description) 
-                                              ? "-" 
-                                              : (category.Description.Length > 50 
-                                                 ? $"{category.Description.Substring(0, 47)}..." 
-                                                 : category.Description))
+                                            @(string.IsNullOrEmpty(category.Description)
+                                                ? "-"
+                                                : (category.Description.Length > 50
+                                                ? $"{category.Description.Substring(0, 47)}..."
+                                                : category.Description))
                                         </span>
                                     </td>
                                     <td class="text-end">
                                         <div class="btn-group" role="group">
-                                            <a asp-action="Edit" asp-route-id="@category.Id" 
+                                            <a asp-action="Edit" asp-route-id="@category.Id"
                                                class="btn btn-sm btn-outline-primary">
                                                 <i class="fas fa-edit"></i>
                                             </a>
-                                            <a asp-action="Delete" asp-route-id="@category.Id" 
+                                            <a asp-action="Delete" asp-route-id="@category.Id"
                                                class="btn btn-sm btn-outline-danger">
                                                 <i class="fas fa-trash"></i>
                                             </a>
@@ -152,9 +152,8 @@
 
 @section Scripts {
     <script>
-        // Auto-hide alert messages after 5 seconds
-        $(document).ready(function() {
-            setTimeout(function() {
+        $(document).ready(function () {
+            setTimeout(function () {
                 $(".alert-success").fadeOut("slow");
             }, 5000);
         });
