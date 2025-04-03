@@ -28,7 +28,7 @@ namespace ExpenseTrackerMvc.Controllers
             throw new UnauthorizedAccessException("User is not authenticated properly.");
         }
 
-        // GET: Category
+
         public async Task<IActionResult> Index(string searchTerm, string categoryType)
         {
             int userId = GetCurrentUserId();
@@ -47,7 +47,7 @@ namespace ExpenseTrackerMvc.Controllers
                 categories = await _categoryService.GetAllCategoriesAsync(userId);
             }
 
-            var viewModel = new CategoryListViewModel
+            CategoryListViewModel viewModel = new CategoryListViewModel
             {
                 Categories = categories,
                 SearchTerm = searchTerm ?? "",
@@ -57,14 +57,12 @@ namespace ExpenseTrackerMvc.Controllers
             return View(viewModel);
         }
 
-        // GET: Category/Create
         public IActionResult Create()
         {
-            var viewModel = new CategoryViewModel();
+            CategoryViewModel viewModel = new CategoryViewModel();
             return View("CreateEdit", viewModel);
         }
 
-        // GET: Category/Edit/5
         public async Task<IActionResult> Edit(int id)
         {
             int userId = GetCurrentUserId();
@@ -74,7 +72,7 @@ namespace ExpenseTrackerMvc.Controllers
                 return NotFound();
             }
 
-            var viewModel = new CategoryViewModel
+            CategoryViewModel viewModel = new CategoryViewModel
             {
                 Id = category.Id,
                 Name = category.Name,
@@ -87,7 +85,7 @@ namespace ExpenseTrackerMvc.Controllers
             return View("CreateEdit", viewModel);
         }
 
-        // POST: Category/CreateEdit
+    
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateEdit(CategoryViewModel viewModel)
@@ -98,8 +96,8 @@ namespace ExpenseTrackerMvc.Controllers
 
                 if (viewModel.Id == 0)
                 {
-                    // Create
-                    var newCategory = new Category
+
+                    Category newCategory = new Category
                     {
                         Name = viewModel.Name,
                         Description = viewModel.Description,
@@ -114,8 +112,7 @@ namespace ExpenseTrackerMvc.Controllers
                 }
                 else
                 {
-                    // Edit
-                    var existingCategory = await _categoryService.GetCategoryByIdAsync(viewModel.Id, userId);
+                    Category? existingCategory = await _categoryService.GetCategoryByIdAsync(viewModel.Id, userId);
                     if (existingCategory == null)
                     {
                         return NotFound();
@@ -137,7 +134,6 @@ namespace ExpenseTrackerMvc.Controllers
             return View(viewModel);
         }
 
-        // GET: Category/Delete/5
         public async Task<IActionResult> Delete(int id)
         {
             int userId = GetCurrentUserId();
@@ -147,7 +143,7 @@ namespace ExpenseTrackerMvc.Controllers
                 return NotFound();
             }
 
-            var viewModel = new CategoryDeleteViewModel
+            CategoryDeleteViewModel viewModel = new CategoryDeleteViewModel
             {
                 Id = category.Id,
                 Name = category.Name,
@@ -158,7 +154,6 @@ namespace ExpenseTrackerMvc.Controllers
             return View(viewModel);
         }
 
-        // POST: Category/DeleteConfirmed/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ActionName("Delete")]
