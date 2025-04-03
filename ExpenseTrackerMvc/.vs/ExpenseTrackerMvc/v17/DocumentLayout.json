@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -95,10 +99,6 @@
       "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:services\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -154,11 +154,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "icon-l1g9rKqp.svg",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\assets\\Logo\\icon-l1g9rKqp.svg",
               "RelativeDocumentMoniker": "wwwroot\\assets\\Logo\\icon-l1g9rKqp.svg",
@@ -188,19 +188,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Category.cs",
-              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "Models\\Category.cs",
-              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Models\\Category.cs",
-              "RelativeToolTip": "Models\\Category.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T04:36:05.515Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Create.cshtml",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Category\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Category\\Create.cshtml",
@@ -213,20 +200,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Shared\\_Layout.cshtml*",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml*",
-              "ViewState": "AQIAABEAAAAAAAAAAAAgwC4AAAAAAAAA",
+              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABoAAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-02T06:12:41.398Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Login.cshtml",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
@@ -239,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "site.css",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -252,20 +239,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "site.js",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
               "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\js\\site.js",
               "RelativeToolTip": "wwwroot\\js\\site.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBIAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-04-02T06:26:43.575Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-03T04:49:24.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "Category.cs",
+              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:36:05.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "AuthService.cs",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Services\\AuthServices\\AuthService.cs",
               "RelativeDocumentMoniker": "Services\\AuthServices\\AuthService.cs",
@@ -278,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "PasswordService.cs",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Services\\PassService\\PasswordService.cs",
               "RelativeDocumentMoniker": "Services\\PassService\\PasswordService.cs",
@@ -291,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Services\\CategoryService.cs",
               "RelativeDocumentMoniker": "Services\\CategoryService.cs",
@@ -304,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Services\\AuthServices\\IAuthService.cs",
               "RelativeDocumentMoniker": "Services\\AuthServices\\IAuthService.cs",
@@ -317,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "AccountController.cs",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
@@ -330,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -343,7 +356,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Register.cshtml",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
@@ -356,7 +369,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Profile.cshtml",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Account\\Profile.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Profile.cshtml",
@@ -369,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -382,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Dashboard\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Dashboard\\Index.cshtml",
@@ -395,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "DashboardController.cs",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Controllers\\DashboardController.cs",
               "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
@@ -408,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "CategoryRepository.cs",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Repository\\CategoryRepository.cs",
               "RelativeDocumentMoniker": "Repository\\CategoryRepository.cs",
@@ -421,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "AccessDenied.cshtml",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Account\\AccessDenied.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\AccessDenied.cshtml",
@@ -434,7 +447,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
@@ -447,7 +460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "RegisterViewModel.cs",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\ViewModels\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\RegisterViewModel.cs",
@@ -460,7 +473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "ICategoryService.cs",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Services\\ICategoryService.cs",
               "RelativeDocumentMoniker": "Services\\ICategoryService.cs",
@@ -469,19 +482,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T11:21:09.816Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-03T04:49:24.024Z",
               "EditorCaption": ""
             },
             {
