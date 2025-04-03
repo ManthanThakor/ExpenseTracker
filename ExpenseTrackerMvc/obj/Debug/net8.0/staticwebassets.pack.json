@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ExpenseTrackerMvc.bundle.scp.css"
     },
     {
+      "Id": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\assets\\Logo\\icon-l1g9rKqp.svg",
+      "PackagePath": "staticwebassets\\assets\\Logo\\icon-l1g9rKqp.svg"
+    },
+    {
       "Id": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

@@ -16,7 +16,7 @@ namespace ExpenseTrackerMvc.Models
         public string Description { get; set; } = "";
 
         [Required(ErrorMessage = "Type is required.")]
-        public string Type { get; set; } = "Expense"; // Can be "Income" or "Expense"
+        public string Type { get; set; } = "Expense";
 
         [StringLength(7, ErrorMessage = "Invalid color code.")]
         public string Color { get; set; } = "#007bff";

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lnBD8Vl6bSx+dEMpzu064bteh8qSrCzfbOxE1QiJVlk=",
+  "Hash": "S4zC3aCep+spfxbGXULTfuB3PtXm+245SuzobDnvHlE=",
   "Source": "ExpenseTrackerMvc",
   "BasePath": "_content/ExpenseTrackerMvc",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ExpenseTrackerMvc.bundle.scp.css"
+    },
+    {
+      "Identity": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\assets\\Logo\\icon-l1g9rKqp.svg",
+      "SourceId": "ExpenseTrackerMvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\",
+      "BasePath": "_content/ExpenseTrackerMvc",
+      "RelativePath": "assets/Logo/icon-l1g9rKqp.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\Logo\\icon-l1g9rKqp.svg"
     },
     {
       "Identity": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\site.css",
