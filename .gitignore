@@ -1,1 +1,4 @@
-.vs/
+/ExpenseTrackerMvc/obj/
+/ExpenseTrackerMvc/bin/
+/ExpenseTrackerMvc/.vs/
+/.vs/
