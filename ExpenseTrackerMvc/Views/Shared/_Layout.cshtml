@@ -20,23 +20,43 @@
     <link rel="stylesheet" href="~/ExpenseTrackerMvc.styles.css" asp-append-version="true" />
 </head>
 <body>
+
     <header>
         <nav class="navbar">
             <div class="logo">
-
-                <a href="#"> <img src="~/assets/Logo/icon-l1g9rKqp.svg" alt="Logo"></a>
+                <a asp-controller="Home" asp-action="Index">
+                    <img src="~/assets/Logo/icon-l1g9rKqp.svg" alt="Logo">
+                </a>
             </div>
+
             <ul class="nav-links">
-                <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="/privacy"><i class="fas fa-user-shield"></i> Privacy</a></li>
-                <li class="dropdown">
-                    <a href="#"><i class="fas fa-bars"></i> More ▼</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/account/profile"><i class="fas fa-user"></i> Profile</a></li>
-                        <li><a href="/account/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
-                    </ul>
-                </li>
+                <li><a asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i> Home</a></li>
+                <li><a asp-controller="Home" asp-action="Privacy"><i class="fas fa-user-shield"></i> Privacy</a></li>
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="dropdown">
+                        <a href="#"><i class="fas fa-bars"></i> More ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-controller="Account" asp-action="Profile"><i class="fas fa-user"></i> Profile</a></li>
+                            <li>
+                                <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
+                                    <button type="submit" class="btn btn-link text-decoration-none">
+                                        <i class="fas fa-sign-out-alt"></i> Logout
+                                    </button>
+                                </form>
+                            </li>
+
+                        </ul>
+                    </li>
+                }
+                else
+                {
+                    <li><a asp-controller="Account" asp-action="Login"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                    <li><a asp-controller="Account" asp-action="Register"><i class="fas fa-user-plus"></i> Register</a></li>
+                }
             </ul>
+
             <div class="burger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -46,20 +66,20 @@
     </header>
 
 
-    <div class="mt-5" id="Margin-sec">
-    </div>
 
-    <div class="container">
-        <main role="main" class="pb-3">
+
+
+    <div class="container-fluid">
+        <main role="main" class="main-section-body">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - ExpenseTrackerMvc - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    @*    <footer class="border-top footer text-muted">
+    <div class="container">
+    &copy; 2025 - ExpenseTrackerMvc - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
+    </footer> *@
 
     <!-- ✅ Load jQuery First -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

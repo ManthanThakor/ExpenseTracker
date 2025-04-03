@@ -3,7 +3,6 @@
     document.querySelector('.burger').classList.toggle('active');
 }
 
-// Dropdown in Mobile View
 document.querySelector(".dropdown > a").addEventListener("click", function (e) {
     if (window.innerWidth <= 768) {
         e.preventDefault();
@@ -11,8 +10,7 @@ document.querySelector(".dropdown > a").addEventListener("click", function (e) {
     }
 });
 
-// Navbar Background on Scroll
 window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
-    navbar.style.background = window.scrollY > 50 ? "rgba(25, 25, 25, 0.95)" : "rgba(25, 25, 25, 0.8)";
+    navbar.style.background = window.scrollY > 50 ? "rgba(13, 17, 23, 0.95)" : "rgba(13, 17, 23, 0.8)";
 });

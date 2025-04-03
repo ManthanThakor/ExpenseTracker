@@ -1,0 +1,158 @@
+﻿/* General Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+}
+
+/* Register Container */
+.register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 100px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../imgs/Background/image.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Register Box */
+.register-box {
+    display: flex;
+    width: 900px;
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+    .register-box:hover {
+        transform: scale(1.02);
+    }
+
+/* Register Form */
+.register-form {
+    padding: 40px;
+    width: 50%;
+}
+
+    .register-form img {
+        display: block;
+        margin: 0 auto;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+    }
+
+    .register-form h1 {
+        font-size: 24px;
+        color: #333;
+    }
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group-text {
+    background: #6a82fb;
+    color: white;
+    border: none;
+    font-size: 1.6rem;
+}
+
+.form-control {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.btn-primary {
+    width: 100%;
+    background: linear-gradient(to right, #6a82fb, #fc5c7d);
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    transition: all 0.4s;
+}
+
+    .btn-primary:hover {
+        background: linear-gradient(to right, #fc5c7d, #6a82fb);
+        transform: translateY(-3px);
+    }
+
+.btn-secondary {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #4c4c4c;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+}
+
+    .btn-secondary:hover {
+        background-color: #333;
+    }
+
+/* Links */
+.login-link, .register-link {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    color: #555;
+    text-decoration: none;
+}
+
+    .login-link:hover, .register-link:hover {
+        color: #6a82fb;
+    }
+
+/* Robot Image */
+.register-image {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .register-image img {
+        border-radius: 0 20px 20px 0;
+        filter: grayscale(40%);
+        transition: filter 0.4s ease-in-out;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+    }
+
+        .register-image img:hover {
+            filter: grayscale(0%);
+        }
+
+
+/* Error Message Styling */
+.error-message {
+    display: block;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #dc3545;
+    font-weight: bold;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Error Input Field Styling */
+.input-group.error .form-control {
+    border: 2px solid #dc3545;
+    background: rgba(220, 53, 69, 0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

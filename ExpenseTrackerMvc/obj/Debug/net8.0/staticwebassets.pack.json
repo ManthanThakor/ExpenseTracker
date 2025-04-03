@@ -9,12 +9,32 @@
       "PackagePath": "staticwebassets\\assets\\Logo\\icon-l1g9rKqp.svg"
     },
     {
+      "Id": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\register.css",
+      "PackagePath": "staticwebassets\\css\\register.css"
+    },
+    {
       "Id": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\imgs\\Background\\Bgimg.jpg",
+      "PackagePath": "staticwebassets\\imgs\\Background\\Bgimg.jpg"
+    },
+    {
+      "Id": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\imgs\\Background\\image.png",
+      "PackagePath": "staticwebassets\\imgs\\Background\\image.png"
+    },
+    {
+      "Id": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\imgs\\login\\cute-blue-robot-waving-hand-600nw-2056356791-removebg-preview.png",
+      "PackagePath": "staticwebassets\\imgs\\login\\cute-blue-robot-waving-hand-600nw-2056356791-removebg-preview.png"
     },
     {
       "Id": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\js\\site.js",
