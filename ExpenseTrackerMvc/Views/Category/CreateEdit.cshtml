@@ -1,0 +1,203 @@
+﻿@model ExpenseTrackerMvc.ViewModels.CategoryViewModel
+@{
+    ViewData["Title"] = Model.Id == 0 ? "Create Category" : "Edit Category";
+    var isCreate = Model.Id == 0;
+    var iconOptions = new List<string> {
+        "fas fa-home", "fas fa-car", "fas fa-utensils", "fas fa-shopping-cart",
+        "fas fa-tshirt", "fas fa-graduation-cap", "fas fa-medkit", "fas fa-plane",
+        "fas fa-coffee", "fas fa-gamepad", "fas fa-gift", "fas fa-book",
+        "fas fa-bus", "fas fa-laptop", "fas fa-mobile-alt", "fas fa-money-bill",
+        "fas fa-credit-card", "fas fa-piggy-bank", "fas fa-hand-holding-usd", "fas fa-wallet"
+    };
+}
+
+<div class="py-5 container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card shadow-sm">
+                <div class="card-header bg-light py-3">
+                    <h1 class="h4 card-title mb-0">
+                        @(isCreate ? "Create New Category" : "Edit Category")
+                    </h1>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="CreateEdit" method="post">
+                        <input type="hidden" asp-for="Id" />
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="Name" class="form-label fw-medium">Category Name <span class="text-danger">*</span></label>
+                                    <input asp-for="Name" class="form-control" placeholder="Enter category name" />
+                                    <span asp-validation-for="Name" class="text-danger small"></span>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label asp-for="Type" class="form-label fw-medium">Category Type <span class="text-danger">*</span></label>
+                                    <div class="btn-group w-100" role="group">
+                                        <input type="radio" class="btn-check" asp-for="Type" value="Expense" id="typeExpense" autocomplete="off" checked>
+                                        <label class="btn btn-outline-danger" for="typeExpense">Expense</label>
+
+                                        <input type="radio" class="btn-check" asp-for="Type" value="Income" id="typeIncome" autocomplete="off">
+                                        <label class="btn btn-outline-success" for="typeIncome">Income</label>
+                                    </div>
+                                    <span asp-validation-for="Type" class="text-danger small"></span>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label asp-for="Description" class="form-label fw-medium">Description</label>
+                                    <textarea asp-for="Description" class="form-control" rows="3" placeholder="Enter description"></textarea>
+                                    <span asp-validation-for="Description" class="text-danger small"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="Color" class="form-label fw-medium">Color</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <div id="colorPreview" style="width: 24px; height: 24px; background-color: @Model.Color; border-radius: 4px;"></div>
+                                        </span>
+                                        <input asp-for="Color" type="text" class="form-control" id="colorInput" />
+                                    </div>
+                                    <span asp-validation-for="Color" class="text-danger small"></span>
+                                    <div class="mt-2">
+                                        <div class="d-flex gap-2 flex-wrap">
+                                            @foreach (var color in new[] { "#4CAF50", "#2196F3", "#F44336", "#FFC107", "#9C27B0", "#FF5722", "#607D8B", "#795548", "#00BCD4", "#3F51B5" })
+                                            {
+                                                <div class="color-option" style="background-color: @color;" data-color="@color"></div>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label asp-for="Icon" class="form-label fw-medium">Icon</label>
+                                    <div class="icon-picker p-3 rounded border">
+                                        <div class="selected-icon-preview mb-2 text-center" id="selectedIconPreview">
+                                            @if (string.IsNullOrEmpty(Model.Icon))
+                                            {
+                                                <i class="fas fa-tag" style="font-size: 1.5rem;"></i>
+                                            }
+                                            else
+                                            {
+                                                <i class="@Model.Icon" style="font-size: 1.5rem;"></i>
+                                            }
+                                        </div>
+                                        <input type="hidden" asp-for="Icon" id="iconInput" />
+                                        <div class="icon-grid">
+                                            @foreach (var icon in iconOptions)
+                                            {
+                                                <div class="icon-option @(Model.Icon == icon ? "selected" : "")" data-icon="@icon">
+                                                    <i class="@icon"></i>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-top pt-3 d-flex justify-content-between">
+                            <a asp-action="Index" class="btn btn-outline-secondary">
+                                <i class="fas fa-arrow-left me-1"></i> Back to List
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save me-1"></i> @(isCreate ? "Create Category" : "Update Category")
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Inline styles instead of using a Styles section -->
+<style>
+    .color-option {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid #fff;
+        box-shadow: 0 0 0 1px #ddd;
+        transition: all 0.2s ease;
+    }
+
+        .color-option:hover, .color-option.selected {
+            transform: scale(1.1);
+            box-shadow: 0 0 0 1px #aaa;
+        }
+
+    .icon-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    .icon-option {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 4px;
+        cursor: pointer;
+        border: 1px solid #ddd;
+        transition: all 0.2s ease;
+    }
+
+        .icon-option:hover {
+            background-color: #f8f9fa;
+        }
+
+        .icon-option.selected {
+            background-color: #e9ecef;
+            border-color: #6c757d;
+        }
+</style>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            // Color picker functionality
+            $('.color-option').click(function () {
+                const color = $(this).data('color');
+                $('#colorInput').val(color);
+                $('#colorPreview').css('background-color', color);
+                $('.color-option').removeClass('selected');
+                $(this).addClass('selected');
+            });
+
+            $('#colorInput').on('input', function () {
+                const color = $(this).val();
+                $('#colorPreview').css('background-color', color);
+            });
+
+            // Icon picker functionality
+            $('.icon-option').click(function () {
+                const icon = $(this).data('icon');
+                $('#iconInput').val(icon);
+                $('#selectedIconPreview').html(`<i class="${icon}" style="font-size: 1.5rem;"></i>`);
+                $('.icon-option').removeClass('selected');
+                $(this).addClass('selected');
+            });
+
+            // Initialize selected state
+            const currentColor = $('#colorInput').val();
+            $(`.color-option[data-color="${currentColor}"]`).addClass('selected');
+
+            const currentIcon = $('#iconInput').val();
+            if (currentIcon) {
+                $(`.icon-option[data-icon="${currentIcon}"]`).addClass('selected');
+            }
+        });
+    </script>
+}

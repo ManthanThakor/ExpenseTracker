@@ -1,138 +1,173 @@
-﻿//using System.Threading.Tasks;
-//using Microsoft.AspNetCore.Mvc;
-//using ExpenseTrackerMvc.Models;
-//using ExpenseTrackerMvc.Services;
-//using Microsoft.AspNetCore.Authorization;
-//using Microsoft.AspNetCore.Identity;
-//using System.Linq;
-//using System.Collections.Generic;
+﻿using ExpenseTrackerMvc.Models;
+using ExpenseTrackerMvc.Services;
+using ExpenseTrackerMvc.Services.CategoryServices;
+using ExpenseTrackerMvc.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
-//namespace ExpenseTrackerMvc.Controllers
-//{
-//    [Authorize]
-//    public class CategoryController : Controller
-//    {
-//        private readonly ICategoryService _categoryService;
-//        private readonly UserManager<IdentityUser> _userManager;
+namespace ExpenseTrackerMvc.Controllers
+{
+    [Authorize]
+    public class CategoryController : Controller
+    {
+        private readonly ICategoryService _categoryService;
 
-//        public CategoryController(ICategoryService categoryService, UserManager<IdentityUser> userManager)
-//        {
-//            _categoryService = categoryService;
-//            _userManager = userManager;
-//        }
+        public CategoryController(ICategoryService categoryService)
+        {
+            _categoryService = categoryService;
+        }
 
-//        private async Task<string> GetCurrentUserId()
-//        {
-//            var user = await _userManager.GetUserAsync(User);
-//            return user?.Id ?? string.Empty;
-//        }
+        private int GetCurrentUserId()
+        {
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (userIdClaim != null && int.TryParse(userIdClaim.Value, out int userId))
+            {
+                return userId;
+            }
+            throw new UnauthorizedAccessException("User is not authenticated properly.");
+        }
 
-//        // GET: Category
-//        public async Task<IActionResult> Index(string type = "")
-//        {
-//            var userId = await GetCurrentUserId();
-//            IEnumerable<Category> categories;
+        // GET: Category
+        public async Task<IActionResult> Index(string searchTerm, string categoryType)
+        {
+            int userId = GetCurrentUserId();
+            IEnumerable<Category> categories;
 
-//            ViewBag.CurrentFilter = type;
-//            ViewBag.Stats = await _categoryService.GetCategoryStatsAsync(userId);
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                categories = await _categoryService.SearchCategoriesAsync(userId, searchTerm);
+            }
+            else if (!string.IsNullOrEmpty(categoryType) && categoryType != "All")
+            {
+                categories = await _categoryService.GetCategoriesByTypeAsync(userId, categoryType);
+            }
+            else
+            {
+                categories = await _categoryService.GetAllCategoriesAsync(userId);
+            }
 
-//            if (string.IsNullOrEmpty(type))
-//            {
-//                categories = await _categoryService.GetAllCategoriesAsync(userId);
-//            }
-//            else
-//            {
-//                categories = await _categoryService.GetCategoriesByTypeAsync(userId, type);
-//            }
+            var viewModel = new CategoryListViewModel
+            {
+                Categories = categories,
+                SearchTerm = searchTerm ?? "",
+                CategoryType = categoryType ?? "All"
+            };
 
-//            return View(categories);
-//        }
+            return View(viewModel);
+        }
 
-//        // GET: Category/Create
-//        public IActionResult Create()
-//        {
-//            return View();
-//        }
+        // GET: Category/Create
+        public IActionResult Create()
+        {
+            var viewModel = new CategoryViewModel();
+            return View("CreateEdit", viewModel);
+        }
 
-//        // POST: Category/Create
-//        [HttpPost]
-//        [ValidateAntiForgeryToken]
-//        public async Task<IActionResult> Create(Category category)
-//        {
-//            if (ModelState.IsValid)
-//            {
-//                category.UserId = await GetCurrentUserId();
-//                await _categoryService.CreateCategoryAsync(category);
-//                TempData["Success"] = "Category created successfully!";
-//                return RedirectToAction(nameof(Index));
-//            }
-//            return View(category);
-//        }
+        // GET: Category/Edit/5
+        public async Task<IActionResult> Edit(int id)
+        {
+            int userId = GetCurrentUserId();
+            var category = await _categoryService.GetCategoryByIdAsync(id, userId);
+            if (category == null)
+            {
+                return NotFound();
+            }
 
-//        // GET: Category/Edit/5
-//        public async Task<IActionResult> Edit(int id)
-//        {
-//            var userId = await GetCurrentUserId();
-//            var category = await _categoryService.GetCategoryByIdAsync(id, userId);
+            var viewModel = new CategoryViewModel
+            {
+                Id = category.Id,
+                Name = category.Name,
+                Description = category.Description,
+                Type = category.Type,
+                Color = category.Color,
+                Icon = category.Icon
+            };
 
-//            if (category == null)
-//            {
-//                return NotFound();
-//            }
+            return View("CreateEdit", viewModel);
+        }
 
-//            return View(category);
-//        }
+        // POST: Category/CreateEdit
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateEdit(CategoryViewModel viewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                int userId = GetCurrentUserId();
 
-//        // POST: Category/Edit/5
-//        [HttpPost]
-//        [ValidateAntiForgeryToken]
-//        public async Task<IActionResult> Edit(int id, Category category)
-//        {
-//            if (id != category.Id)
-//            {
-//                return NotFound();
-//            }
+                if (viewModel.Id == 0)
+                {
+                    // Create
+                    var newCategory = new Category
+                    {
+                        Name = viewModel.Name,
+                        Description = viewModel.Description,
+                        Type = viewModel.Type,
+                        Color = viewModel.Color,
+                        Icon = viewModel.Icon,
+                        UserId = userId
+                    };
 
-//            if (ModelState.IsValid)
-//            {
-//                var userId = await GetCurrentUserId();
-//                category.UserId = userId;
+                    await _categoryService.CreateCategoryAsync(newCategory);
+                    TempData["SuccessMessage"] = "Category created successfully.";
+                }
+                else
+                {
+                    // Edit
+                    var existingCategory = await _categoryService.GetCategoryByIdAsync(viewModel.Id, userId);
+                    if (existingCategory == null)
+                    {
+                        return NotFound();
+                    }
 
-//                if (!await _categoryService.CategoryExistsAsync(id, userId))
-//                {
-//                    return NotFound();
-//                }
+                    existingCategory.Name = viewModel.Name;
+                    existingCategory.Description = viewModel.Description;
+                    existingCategory.Type = viewModel.Type;
+                    existingCategory.Color = viewModel.Color;
+                    existingCategory.Icon = viewModel.Icon;
 
-//                await _categoryService.UpdateCategoryAsync(category);
-//                TempData["Success"] = "Category updated successfully!";
-//                return RedirectToAction(nameof(Index));
-//            }
-//            return View(category);
-//        }
+                    await _categoryService.UpdateCategoryAsync(existingCategory);
+                    TempData["SuccessMessage"] = "Category updated successfully.";
+                }
 
-//        // GET: Category/Delete/5
-//        public async Task<IActionResult> Delete(int id)
-//        {
-//            var userId = await GetCurrentUserId();
-//            var category = await _categoryService.GetCategoryByIdAsync(id, userId);
+                return RedirectToAction(nameof(Index));
+            }
 
-//            if (category == null)
-//            {
-//                return NotFound();
-//            }
+            return View(viewModel);
+        }
 
-//            return View(category);
-//        }
+        // GET: Category/Delete/5
+        public async Task<IActionResult> Delete(int id)
+        {
+            int userId = GetCurrentUserId();
+            var category = await _categoryService.GetCategoryByIdAsync(id, userId);
+            if (category == null)
+            {
+                return NotFound();
+            }
 
-//        // POST: Category/Delete/5
-//        [HttpPost, ActionName("Delete")]
-//        [ValidateAntiForgeryToken]
-//        public async Task<IActionResult> DeleteConfirmed(int id)
-//        {
-//            var userId = await GetCurrentUserId();
-//            await _categoryService.DeleteCategoryAsync(id, userId);
-//            TempData["Success"] = "Category deleted successfully!";
-//            return RedirectToAction(nameof(Index));
-//        }
-//    }
-//}
+            var viewModel = new CategoryDeleteViewModel
+            {
+                Id = category.Id,
+                Name = category.Name,
+                Type = category.Type,
+                ExpensesCount = category.Expenses?.Count ?? 0
+            };
+
+            return View(viewModel);
+        }
+
+        // POST: Category/DeleteConfirmed/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            int userId = GetCurrentUserId();
+            await _categoryService.DeleteCategoryAsync(id, userId);
+            TempData["SuccessMessage"] = "Category deleted successfully.";
+            return RedirectToAction(nameof(Index));
+        }
+    }
+}

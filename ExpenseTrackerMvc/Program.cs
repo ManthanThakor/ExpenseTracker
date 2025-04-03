@@ -1,6 +1,5 @@
 ﻿using ExpenseTrackerMvc.Data;
 using Microsoft.EntityFrameworkCore;
-using ExpenseTrackerMvc.Repositories;
 using ExpenseTrackerMvc.Services;
 using ExpenseTrackerMvc.Services.AuthServices;
 using ExpenseTrackerMvc.Services.PassService;
@@ -8,6 +7,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using ExpenseTrackerMvc.Repository;
+using ExpenseTrackerMvc.Services.CategoryServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,8 +21,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddScoped<IPasswordService, PasswordService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 
-// builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-// builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>

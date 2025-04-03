@@ -1,195 +1,162 @@
-﻿@* @model IEnumerable<ExpenseTrackerMvc.Models.Category>
+﻿@model ExpenseTrackerMvc.ViewModels.CategoryListViewModel
 @{
     ViewData["Title"] = "Categories";
-    var stats = ViewBag.Stats as ExpenseTrackerMvc.Services.CategoryStatsViewModel;
-    string currentFilter = ViewBag.CurrentFilter as string ?? "";
 }
 
-<div class="container-fluid py-4">
-    <!-- Animation Libraries -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<div class="py-5 container">
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h1 class="h3 fw-bold text-dark">
+                <i class="fas fa-tags me-2"></i> Categories
+            </h1>
+            <p class="text-muted">Manage your expense and income categories</p>
+        </div>
+        <div class="col-md-4 text-md-end">
+            <a asp-action="Create" class="btn btn-primary">
+                <i class="fas fa-plus-circle me-1"></i> New Category
+            </a>
+        </div>
+    </div>
 
-    <!-- Success Alert -->
-    @if (TempData["Success"] != null)
+    @if (TempData["SuccessMessage"] != null)
     {
-        <div class="alert alert-success alert-dismissible fade show animate__animated animate__fadeIn" role="alert">
-            <i class="fas fa-check-circle me-2"></i> @TempData["Success"]
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="fas fa-check-circle me-2"></i> @TempData["SuccessMessage"]
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     }
 
-    <div class="row">
-        <div class="col-lg-8 col-md-7">
-            <div class="card mb-4 animate__animated animate__fadeInUp border-0 shadow-sm">
-                <div class="card-header bg-white d-flex justify-content-between align-items-center">
-                    <h3 class="mb-0">Categories</h3>
-                    <a asp-action="Create" class="btn btn-primary btn-sm">
-                        <i class="fas fa-plus me-1"></i> New Category
-                    </a>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <form asp-action="Index" method="get" class="input-group">
+                        <input type="text" class="form-control" placeholder="Search categories..." 
+                               name="searchTerm" value="@Model.SearchTerm">
+                        <input type="hidden" name="categoryType" value="@Model.CategoryType" />
+                        <button class="btn btn-outline-secondary" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        @if (!string.IsNullOrEmpty(Model.SearchTerm))
+                        {
+                            <a asp-action="Index" asp-route-categoryType="@Model.CategoryType" class="btn btn-outline-secondary">
+                                <i class="fas fa-times"></i>
+                            </a>
+                        }
+                    </form>
                 </div>
-                <div class="card-body p-0">
-                    <div class="d-flex justify-content-between p-3 bg-light">
-                        <div class="btn-group" role="group">
-                            <a asp-action="Index" class="btn @(string.IsNullOrEmpty(currentFilter) ? "btn-primary" : "btn-outline-primary")">
-                                All
-                            </a>
-                            <a asp-action="Index" asp-route-type="Income" class="btn @(currentFilter == "Income" ? "btn-primary" : "btn-outline-primary")">
-                                Income
-                            </a>
-                            <a asp-action="Index" asp-route-type="Expense" class="btn @(currentFilter == "Expense" ? "btn-primary" : "btn-outline-primary")">
-                                Expense
-                            </a>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <span class="text-muted small">Total: @Model.Count() categories</span>
-                        </div>
+                <div class="col-md-6">
+                    <div class="btn-group float-md-end" role="group">
+                        <a asp-action="Index" asp-route-categoryType="All" asp-route-searchTerm="@Model.SearchTerm" 
+                           class="btn @(Model.CategoryType == "All" ? "btn-primary" : "btn-outline-secondary")">
+                            All
+                        </a>
+                        <a asp-action="Index" asp-route-categoryType="Expense" asp-route-searchTerm="@Model.SearchTerm" 
+                           class="btn @(Model.CategoryType == "Expense" ? "btn-primary" : "btn-outline-secondary")">
+                            Expenses
+                        </a>
+                        <a asp-action="Index" asp-route-categoryType="Income" asp-route-searchTerm="@Model.SearchTerm" 
+                           class="btn @(Model.CategoryType == "Income" ? "btn-primary" : "btn-outline-secondary")">
+                            Income
+                        </a>
                     </div>
+                </div>
+            </div>
 
-                    @if (!Model.Any())
+            @if (!Model.Categories.Any())
+            {
+                <div class="py-5 text-center">
+                    <i class="fas fa-folder-open text-muted mb-3" style="font-size: 3rem;"></i>
+                    <h5 class="text-muted">No categories found</h5>
+                    @if (!string.IsNullOrEmpty(Model.SearchTerm))
                     {
-                        <div class="py-5 text-center">
-                            <img src="~/images/empty-state.svg" alt="No Categories" style="max-width: 200px;" class="mb-3">
-                            <h5>No categories found</h5>
-                            <p class="text-muted">Start by creating your first category</p>
-                            <a asp-action="Create" class="btn btn-primary">
-                                <i class="fas fa-plus me-1"></i> New Category
-                            </a>
-                        </div>
+                        <p>Try a different search term or <a asp-action="Index">view all categories</a>.</p>
                     }
                     else
                     {
-                        <div class="table-responsive">
-                            <table class="table-hover mb-0 table">
-                                <thead class="table-light">
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Type</th>
-                                        <th>Description</th>
-                                        <th class="text-end">Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach (var item in Model)
-                                    {
-                                        <tr data-aos="fade-right" data-aos-delay="@(Model.ToList().IndexOf(item) * 50)">
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="category-icon me-2" style="background-color: @item.Color">
-                                                        @if (!string.IsNullOrEmpty(item.Icon))
-                                                        {
-                                                            <i class="@item.Icon"></i>
-                                                        }
-                                                        else
-                                                        {
-                                                            <i class="fas fa-tag"></i>
-                                                        }
-                                                    </div>
-                                                    <span>@item.Name</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <span class="badge @(item.Type == "Income" ? "bg-success" : "bg-danger")">
-                                                    @item.Type
-                                                </span>
-                                            </td>
-                                            <td>
-                                                <span class="text-muted">@(string.IsNullOrEmpty(item.Description) ? "-" : item.Description)</span>
-                                            </td>
-                                            <td class="text-end">
-                                                <div class="btn-group btn-group-sm">
-                                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-primary">
-                                                        <i class="fas fa-edit"></i>
-                                                    </a>
-                                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">
-                                                        <i class="fas fa-trash"></i>
-                                                    </a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    }
-                                </tbody>
-                            </table>
-                        </div>
+                        <p>
+                            Get started by 
+                            <a asp-action="Create" class="fw-bold text-decoration-none">creating a new category</a>
+                        </p>
                     }
                 </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-5">
-            <div class="card mb-4 animate__animated animate__fadeInRight border-0 shadow-sm">
-                <div class="card-header bg-white">
-                    <h5 class="mb-0">Category Statistics</h5>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table-hover table align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th style="width: 50px"></th>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                                <th class="text-end">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var category in Model.Categories)
+                            {
+                                <tr>
+                                    <td>
+                                        <div class="category-icon rounded-circle" 
+                                             style="background-color: @category.Color; width: 32px; height: 32px;">
+                                            @if (!string.IsNullOrEmpty(category.Icon))
+                                            {
+                                                <i class="@category.Icon text-white" style="font-size: 14px;"></i>
+                                            }
+                                            else
+                                            {
+                                                <i class="fas fa-tag text-white" style="font-size: 14px;"></i>
+                                            }
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="fw-medium">@category.Name</span>
+                                    </td>
+                                    <td>
+                                        <span class="badge @(category.Type == "Expense" ? "bg-danger" : "bg-success")">
+                                            @category.Type
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text-muted small">
+                                            @(string.IsNullOrEmpty(category.Description) 
+                                              ? "-" 
+                                              : (category.Description.Length > 50 
+                                                 ? $"{category.Description.Substring(0, 47)}..." 
+                                                 : category.Description))
+                                        </span>
+                                    </td>
+                                    <td class="text-end">
+                                        <div class="btn-group" role="group">
+                                            <a asp-action="Edit" asp-route-id="@category.Id" 
+                                               class="btn btn-sm btn-outline-primary">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a asp-action="Delete" asp-route-id="@category.Id" 
+                                               class="btn btn-sm btn-outline-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
                 </div>
-                <div class="card-body">
-                    <div class="row g-3">
-                        <div class="col-12">
-                            <div class="p-3 bg-light rounded border text-center" data-aos="zoom-in">
-                                <h2 class="mb-1">@stats.TotalCategories</h2>
-                                <span class="text-muted">Total Categories</span>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="p-3 bg-success rounded border bg-opacity-10 text-center" data-aos="zoom-in" data-aos-delay="100">
-                                <h3 class="mb-1 text-success">@stats.IncomeCategories</h3>
-                                <span class="text-muted">Income</span>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="p-3 bg-danger rounded border bg-opacity-10 text-center" data-aos="zoom-in" data-aos-delay="200">
-                                <h3 class="mb-1 text-danger">@stats.ExpenseCategories</h3>
-                                <span class="text-muted">Expense</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="my-4">
-
-                    <div data-aos="fade-up">
-                        <h6 class="mb-3">Quick Tips:</h6>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item bg-transparent ps-0">
-                                <i class="fas fa-lightbulb text-warning me-2"></i>
-                                Create specific categories for better expense tracking
-                            </li>
-                            <li class="list-group-item bg-transparent ps-0">
-                                <i class="fas fa-lightbulb text-warning me-2"></i>
-                                Use distinct colors to easily identify categories
-                            </li>
-                            <li class="list-group-item bg-transparent ps-0">
-                                <i class="fas fa-lightbulb text-warning me-2"></i>
-                                Add icons to make your categories more visual
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </div>
 
-<style>
-    .category-icon {
-        width: 32px;
-        height: 32px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-    }
-
-    .table > :not(caption) > * > * {
-        padding: 1rem;
-    }
-</style>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        AOS.init({
-            duration: 800,
-            once: true
+@section Scripts {
+    <script>
+        // Auto-hide alert messages after 5 seconds
+        $(document).ready(function() {
+            setTimeout(function() {
+                $(".alert-success").fadeOut("slow");
+            }, 5000);
         });
-    });
-</script> *@
+    </script>
+}

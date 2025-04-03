@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 
     <link rel="stylesheet" href="~/ExpenseTrackerMvc.styles.css" asp-append-version="true" />
+    @await RenderSectionAsync("Styles", required: false)
+
 </head>
 <body>
 
@@ -32,6 +34,7 @@
             <ul class="nav-links">
                 <li><a asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i> Home</a></li>
                 <li><a asp-controller="Home" asp-action="Privacy"><i class="fas fa-user-shield"></i> Privacy</a></li>
+                <li><a asp-controller="Category" asp-action="Index"><i class="fas fa-user-shield"></i> Privacy</a></li>
 
                 @if (User.Identity.IsAuthenticated)
                 {
@@ -64,9 +67,6 @@
             </div>
         </nav>
     </header>
-
-
-
 
 
     <div class="container-fluid">
