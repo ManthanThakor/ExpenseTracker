@@ -71,8 +71,9 @@ namespace ExpenseTrackerMvc.Controllers
                 return LocalRedirect(returnUrl);
             }
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Dashboard");
         }
+
 
         [HttpGet]
         public IActionResult Register(string returnUrl = null)
@@ -126,7 +127,7 @@ namespace ExpenseTrackerMvc.Controllers
                 return LocalRedirect(returnUrl);
             }
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Dashboard");
         }
 
         [HttpPost]
