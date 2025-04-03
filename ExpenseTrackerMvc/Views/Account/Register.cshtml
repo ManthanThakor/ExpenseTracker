@@ -1,55 +1,189 @@
-﻿@model ExpenseTrackerMvc.ViewModels.RegisterViewModel
-
-@{
-    ViewData["Title"] = "Register";
+﻿@{
+    ViewData["Title"] = "Create Account";
 }
 
 <div class="row justify-content-center">
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-header">
-                <h4>Register</h4>
+    <div class="col-md-8 col-lg-6">
+        <div class="card shadow-lg">
+            <div class="card-header bg-white border-0 pb-0">
+                <h3 class="card-title text-center text-primary mb-4">
+                    <i class="fas fa-user-plus me-2"></i>Create Your Account
+                </h3>
+                <p class="text-center text-muted mb-0">Join thousands managing their expenses effectively</p>
             </div>
-            <div class="card-body">
-                <form asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-                    <div class="form-group mb-3">
-                        <label asp-for="Username" class="control-label"></label>
-                        <input asp-for="Username" class="form-control" />
-                        <span asp-validation-for="Username" class="text-danger"></span>
+            <div class="card-body px-5 py-4">
+                <form id="registerForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <label for="firstName" class="form-label fw-semibold">First Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <input type="text" class="form-control" id="firstName" placeholder="John" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label for="lastName" class="form-label fw-semibold">Last Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <input type="text" class="form-control" id="lastName" placeholder="Doe" required>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="form-group mb-3">
-                        <label asp-for="Email" class="control-label"></label>
-                        <input asp-for="Email" class="form-control" />
-                        <span asp-validation-for="Email" class="text-danger"></span>
+                    
+                    <div class="mb-4">
+                        <label for="username" class="form-label fw-semibold">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-text"></span>
+                            <input type="text" class="form-control" id="username" placeholder="johndoe" required>
+                        </div>
+                        <small class="text-muted">This will be your unique identifier</small>
                     </div>
-
-                    <div class="form-group mb-3">
-                        <label asp-for="Password" class="control-label"></label>
-                        <input asp-for="Password" class="form-control" type="password" />
-                        <span asp-validation-for="Password" class="text-danger"></span>
+                    
+                    <div class="mb-4">
+                        <label for="email" class="form-label fw-semibold">Email Address</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            <input type="email" class="form-control" id="email" placeholder="john@example.com" required>
+                        </div>
                     </div>
-
-                    <div class="form-group mb-3">
-                        <label asp-for="ConfirmPassword" class="control-label"></label>
-                        <input asp-for="ConfirmPassword" class="form-control" type="password" />
-                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    
+                    <div class="mb-4">
+                        <label for="password" class="form-label fw-semibold">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                            <input type="password" class="form-control" id="password" placeholder="Create a password" required>
+                            <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="password-strength mt-2">
+                            <div class="progress" style="height: 4px;">
+                                <div class="progress-bar" id="passwordStrength" role="progressbar" style="width: 0%"></div>
+                            </div>
+                            <small class="text-muted" id="passwordHint">Use 8+ characters with mix of letters, numbers & symbols</small>
+                        </div>
                     </div>
-
-                    <div class="form-group d-flex justify-content-between align-items-center">
-                        <button type="submit" class="btn btn-primary">Register</button>
-                        <a asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]">Already have an account? Login</a>
+                    
+                    <div class="mb-4">
+                        <label for="confirmPassword" class="form-label fw-semibold">Confirm Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4 form-check">
+                        <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                        <label class="form-check-label" for="termsCheck">
+                            I agree to the <a href="#" class="text-decoration-none">Terms of Service</a> and <a href="#" class="text-decoration-none">Privacy Policy</a>
+                        </label>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-user-plus me-2"></i>Create Account
+                        </button>
                     </div>
                 </form>
+            </div>
+            <div class="card-footer bg-white border-0 text-center pt-0">
+                <p class="mb-0">Already have an account? 
+                    <a asp-controller="Auth" asp-action="Login" class="text-decoration-none fw-semibold">Sign in</a>
+                </p>
             </div>
         </div>
     </div>
 </div>
 
 @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+    <script>
+        $(document).ready(function () {
+            // Toggle password visibility
+            $("#togglePassword").click(function() {
+                const password = $("#password");
+                const type = password.attr("type") === "password" ? "text" : "password";
+                password.attr("type", type);
+                $(this).find("i").toggleClass("fa-eye fa-eye-slash");
+            });
+
+            // Password strength indicator
+            $("#password").on("input", function() {
+                const password = $(this).val();
+                let strength = 0;
+                
+                // Length check
+                if (password.length >= 8) strength += 25;
+                if (password.length >= 12) strength += 25;
+                
+                // Complexity checks
+                if (/[A-Z]/.test(password)) strength += 15;
+                if (/[0-9]/.test(password)) strength += 15;
+                if (/[^A-Za-z0-9]/.test(password)) strength += 20;
+                
+                // Update UI
+                $("#passwordStrength").css("width", strength + "%");
+                
+                // Color feedback
+                if (strength < 50) {
+                    $("#passwordStrength").removeClass("bg-warning bg-success").addClass("bg-danger");
+                    $("#passwordHint").text("Weak password").removeClass("text-success text-warning").addClass("text-danger");
+                } else if (strength < 75) {
+                    $("#passwordStrength").removeClass("bg-danger bg-success").addClass("bg-warning");
+                    $("#passwordHint").text("Moderate password").removeClass("text-danger text-success").addClass("text-warning");
+                } else {
+                    $("#passwordStrength").removeClass("bg-danger bg-warning").addClass("bg-success");
+                    $("#passwordHint").text("Strong password").removeClass("text-danger text-warning").addClass("text-success");
+                }
+            });
+
+            $("#registerForm").submit(function (e) {
+                e.preventDefault();
+                
+                // Validate password match
+                if ($("#password").val() !== $("#confirmPassword").val()) {
+                    alert("Passwords don't match!");
+                    return;
+                }
+                
+                // Validate terms checkbox
+                if (!$("#termsCheck").is(":checked")) {
+                    alert("You must agree to the terms and conditions");
+                    return;
+                }
+
+                $.ajax({
+                    url: "/api/auth/register",
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify({
+                        firstName: $("#firstName").val(),
+                        lastName: $("#lastName").val(),
+                        username: $("#username").val(),
+                        email: $("#email").val(),
+                        password: $("#password").val()
+                    }),
+                    success: function (response) {
+                        // Show success message with SweetAlert or similar
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Account Created!',
+                            text: 'Your account has been successfully created. Redirecting to login...',
+                            timer: 2000,
+                            showConfirmButton: false
+                        }).then(() => {
+                            window.location.href = "/Auth/Login";
+                        });
+                    },
+                    error: function (xhr) {
+                        // Show error message with SweetAlert or similar
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Registration Failed',
+                            text: xhr.responseText || 'An error occurred during registration'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 }
