@@ -1,54 +1,50 @@
 ﻿using ExpenseTrackerMvc.Data;
 using ExpenseTrackerMvc.Models;
 using ExpenseTrackerMvc.Services.PassService;
-using ExpenseTrackerMvc.Services.TokServices;
 using ExpenseTrackerMvc.ViewModels;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace ExpenseTrackerMvc.Services.AuthServices
 {
     public class AuthService : IAuthService
     {
-        private readonly ApplicationDbContext _context;
-        private readonly IPasswordService _passwordService;
-        private readonly ITokenService _tokenService;
-
-        public AuthService(ApplicationDbContext context, IPasswordService passwordService, ITokenService tokenService)
+        public async Task SignInAsync(User user, HttpContext httpContext, bool rememberMe = false)
         {
-            _context = context;
-            _passwordService = passwordService;
-            _tokenService = tokenService;
-        }
-
-        public async Task<string?> Register(RegisterViewModel model)
-        {
-            if (await _context.Users.AnyAsync(u => u.Email == model.Email))
+            var claims = new List<Claim>
             {
-                return "Email is already in use.";
-            }
-
-            var user = new User
-            {
-                Username = model.Username,
-                Email = model.Email,
-                PasswordHash = _passwordService.HashPassword(model.Password)
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.Email, user.Email)
             };
 
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
+            var claimsIdentity = new ClaimsIdentity(
+                claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
-            return null;
+            var authProperties = new AuthenticationProperties
+            {
+                IsPersistent = rememberMe,
+                ExpiresUtc = rememberMe
+                    ? DateTimeOffset.UtcNow.AddDays(14)
+                    : DateTimeOffset.UtcNow.AddHours(1)
+            };
+
+            await httpContext.SignInAsync(
+                CookieAuthenticationDefaults.AuthenticationScheme,
+                new ClaimsPrincipal(claimsIdentity),
+                authProperties);
         }
 
-        public async Task<string?> Login(LoginViewModel model)
+        public async Task SignOutAsync(HttpContext httpContext)
         {
-            var user = await _context.Users.SingleOrDefaultAsync(u => u.Email == model.Email);
-            if (user == null || !_passwordService.VerifyPassword(model.Password, user.PasswordHash))
-            {
-                return "Invalid email or password.";
-            }
+            await httpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        }
 
-            return _tokenService.GenerateToken(user);
+        public ClaimsPrincipal GetCurrentUser(HttpContext httpContext)
+        {
+            return httpContext.User;
         }
     }
 }

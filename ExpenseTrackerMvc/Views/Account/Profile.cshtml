@@ -1,0 +1,36 @@
+﻿@model ExpenseTrackerMvc.Models.User
+
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4>User Profile</h4>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="fw-bold">Username:</label>
+                    <p>@Model.Username</p>
+                </div>
+                <div class="mb-3">
+                    <label class="fw-bold">Email:</label>
+                    <p>@Model.Email</p>
+                </div>
+                <div class="mb-3">
+                    <label class="fw-bold">Registered Categories:</label>
+                    <p>@Model.Categories.Count</p>
+                </div>
+                <div class="mb-3">
+                    <label class="fw-bold">Recorded Expenses:</label>
+                    <p>@Model.Expenses.Count</p>
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Back to Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
