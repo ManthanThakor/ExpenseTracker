@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:views\\category\\createedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\wwwroot\\js\\categorycreateedit.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:wwwroot\\js\\categorycreateedit.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\wwwroot\\css\\categorycreateedit.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:wwwroot\\css\\categorycreateedit.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\wwwroot\\js\\categorycreateedit.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:wwwroot\\js\\categorycreateedit.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,26 +42,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "CategoryCreateEdit.css",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\CategoryCreateEdit.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\CategoryCreateEdit.css",
               "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\CategoryCreateEdit.css",
               "RelativeToolTip": "wwwroot\\css\\CategoryCreateEdit.css",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAAwCsAAAAAAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAwCsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-04-04T05:11:19.087Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "categoryCreateEdit.js",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\js\\categoryCreateEdit.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\categoryCreateEdit.js",
               "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\js\\categoryCreateEdit.js",
               "RelativeToolTip": "wwwroot\\js\\categoryCreateEdit.js",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAswCAAAAADAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-04-04T05:09:46.867Z",
               "EditorCaption": ""
@@ -74,7 +74,7 @@
               "RelativeDocumentMoniker": "Views\\Category\\CreateEdit.cshtml",
               "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Category\\CreateEdit.cshtml",
               "RelativeToolTip": "Views\\Category\\CreateEdit.cshtml",
-              "ViewState": "AQIAAGYAAAAAAAAAAAAAAHQAAAA9AAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAF0AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-04T05:09:43.457Z",
               "EditorCaption": ""
