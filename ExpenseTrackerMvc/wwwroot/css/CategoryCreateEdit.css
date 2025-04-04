@@ -1,0 +1,43 @@
+﻿.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px #ddd;
+    transition: all 0.2s ease;
+}
+
+    .color-option:hover, .color-option.selected {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 1px #aaa;
+    }
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.icon-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: all 0.2s ease;
+}
+
+    .icon-option:hover {
+        background-color: #f8f9fa;
+    }
+
+    .icon-option.selected {
+        background-color: #e9ecef;
+        border-color: #6c757d;
+    }
