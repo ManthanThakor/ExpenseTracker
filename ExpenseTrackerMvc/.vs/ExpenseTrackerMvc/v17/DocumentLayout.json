@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\services\\categoryservices\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:services\\categoryservices\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\services\\categoryservices\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:services\\categoryservices\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\repository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:repository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\views\\category\\createedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:views\\category\\createedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,16 +31,8 @@
       "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:views\\category\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\views\\category\\createedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:views\\category\\createedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -47,20 +59,8 @@
       "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:viewmodels\\categoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\services\\categoryservices\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:services\\categoryservices\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\expensetrackermvc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:expensetrackermvc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\services\\categoryservices\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:services\\categoryservices\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\repository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:repository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|e:\\manthan\\expensetracker\\expensetrackermvc\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -162,7 +162,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -182,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CreateEdit.cshtml",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Category\\CreateEdit.cshtml",
               "RelativeDocumentMoniker": "Views\\Category\\CreateEdit.cshtml",
@@ -190,155 +190,60 @@
               "RelativeToolTip": "Views\\Category\\CreateEdit.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T10:27:08.783Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T10:27:08.783Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T04:42:55.842Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T06:12:41.398Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Repository\\GenericRepository.cs",
               "RelativeDocumentMoniker": "Repository\\GenericRepository.cs",
               "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Repository\\GenericRepository.cs",
               "RelativeToolTip": "Repository\\GenericRepository.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAA4wD0AAAA2AAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwBsAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T11:21:06.785Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Category.cs",
-              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "Models\\Category.cs",
-              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Models\\Category.cs",
-              "RelativeToolTip": "Models\\Category.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAkwCEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T04:36:05.515Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Category\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Category\\Index.cshtml",
-              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Category\\Index.cshtml*",
-              "RelativeToolTip": "Views\\Category\\Index.cshtml*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA1AAAA",
+              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Category\\Index.cshtml",
+              "RelativeToolTip": "Views\\Category\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T10:22:13.224Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T10:22:13.224Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Category\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Views\\Category\\Delete.cshtml",
-              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Category\\Delete.cshtml*",
-              "RelativeToolTip": "Views\\Category\\Delete.cshtml*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T10:27:25.681Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "site.js",
-              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
-              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "wwwroot\\js\\site.js",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwCIAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-04-02T06:26:43.575Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "site.css",
-              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AQIAAPUAAAAAAAAAAAAmwAUBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-04-02T06:26:46.764Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
-              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "Controllers\\CategoryController.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAkwKwAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T05:10:58.385Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CategoryViewModel.cs",
-              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\ViewModels\\CategoryViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\CategoryViewModel.cs",
-              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\ViewModels\\CategoryViewModel.cs",
-              "RelativeToolTip": "ViewModels\\CategoryViewModel.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAcAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T11:43:23.219Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Services\\CategoryServices\\CategoryService.cs",
               "RelativeDocumentMoniker": "Services\\CategoryServices\\CategoryService.cs",
               "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Services\\CategoryServices\\CategoryService.cs",
               "RelativeToolTip": "Services\\CategoryServices\\CategoryService.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T11:21:32.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T11:21:32.952Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 3,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Repository\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\IGenericRepository.cs",
+              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Repository\\IGenericRepository.cs",
+              "RelativeToolTip": "Repository\\IGenericRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T11:20:45.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ICategoryService.cs",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Services\\CategoryServices\\ICategoryService.cs",
               "RelativeDocumentMoniker": "Services\\CategoryServices\\ICategoryService.cs",
@@ -346,25 +251,107 @@
               "RelativeToolTip": "Services\\CategoryServices\\ICategoryService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T11:21:09.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T11:21:09.816Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IGenericRepository.cs",
-              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Repository\\IGenericRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\IGenericRepository.cs",
-              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Repository\\IGenericRepository.cs",
-              "RelativeToolTip": "Repository\\IGenericRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAgAAAA",
+              "DocumentIndex": 6,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Category\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Category\\Delete.cshtml",
+              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Category\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Category\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T10:27:25.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Category.cs",
+              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAkwCEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T11:20:45.871Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T04:36:05.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T06:12:41.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:42:55.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "site.js",
+              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
+              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "wwwroot\\js\\site.js",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwCIAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-02T06:26:43.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "site.css",
+              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AQIAAPUAAAAAAAAAAAAmwAUBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-02T06:26:46.764Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
+              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "Controllers\\CategoryController.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAkwKwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T05:10:58.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CategoryViewModel.cs",
+              "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\ViewModels\\CategoryViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\CategoryViewModel.cs",
+              "ToolTip": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\ViewModels\\CategoryViewModel.cs",
+              "RelativeToolTip": "ViewModels\\CategoryViewModel.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T11:43:23.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "ExpenseTrackerMvc.csproj",
               "DocumentMoniker": "E:\\manthan\\ExpenseTracker\\ExpenseTrackerMvc\\ExpenseTrackerMvc.csproj",
               "RelativeDocumentMoniker": "ExpenseTrackerMvc.csproj",
@@ -372,8 +359,7 @@
               "RelativeToolTip": "ExpenseTrackerMvc.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-02T04:46:04.081Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T04:46:04.081Z"
             },
             {
               "$type": "Document",
@@ -385,8 +371,7 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAswBgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T11:57:47.133Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T11:57:47.133Z"
             },
             {
               "$type": "Document",
@@ -398,8 +383,7 @@
               "RelativeToolTip": "Models\\Expense.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAkwCYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T04:38:07.92Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T04:38:07.92Z"
             },
             {
               "$type": "Document",
@@ -411,8 +395,7 @@
               "RelativeToolTip": "Views\\Account\\Login.cshtml",
               "ViewState": "AQIAAEIAAAAAAAAAAAAAAFsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T12:41:11.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:41:11.988Z"
             },
             {
               "$type": "Document",
@@ -424,8 +407,7 @@
               "RelativeToolTip": "Views\\Account\\Register.cshtml",
               "ViewState": "AQIAAEwAAAAAAAAAAAAgwFYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T12:44:59.193Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:44:59.193Z"
             },
             {
               "$type": "Document",
@@ -437,8 +419,7 @@
               "RelativeToolTip": "wwwroot\\css\\login.css",
               "ViewState": "AQIAAH8AAAAAAAAAAAAYwJ0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-04-03T10:12:15.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T10:12:15.979Z"
             },
             {
               "$type": "Document",
@@ -450,8 +431,7 @@
               "RelativeToolTip": "wwwroot\\css\\register.css",
               "ViewState": "AQIAAHwAAAAAAAAAAAAYwIEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-04-03T10:44:10.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T10:44:10.276Z"
             },
             {
               "$type": "Document",
@@ -463,8 +443,7 @@
               "RelativeToolTip": "Views\\Account\\Profile.cshtml",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAACEAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-03T05:11:42.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T05:11:42.996Z"
             },
             {
               "$type": "Document",
@@ -476,8 +455,7 @@
               "RelativeToolTip": "Controllers\\AccountController.cs",
               "ViewState": "AQIAAIsAAAAAAAAAAAAAAJoAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:38:40.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:38:40.296Z"
             },
             {
               "$type": "Document",
@@ -489,8 +467,7 @@
               "RelativeToolTip": "Views\\Account\\AccessDenied.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-03T05:15:07.211Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T05:15:07.211Z"
             },
             {
               "$type": "Document",
@@ -502,8 +479,7 @@
               "RelativeToolTip": "wwwroot\\assets\\Logo\\icon-l1g9rKqp.svg",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKTSURBVDhPjVNLSFRRGP7unTsz9w75uOaMZlMNpo1aFFJRodRGN7UwatMiKgga3JgVRBSNSA8RooUFLRycCCpc9ITIFi0EW\u002BhCW/gONYUcxplsQL13nKv3dM6ZGV\u002BE9N37c\u002B455/\u002B\u002B/7s/5whYA7/fP5L63BSCIDxvbGxsAiEktZQEE6Brm6K1tXWS5TU0NNQyjsiZKQgCBgBChQ2Q\u002BfswpytgDLmg9zihD9XBNJfhcrlstPoeqlVPRS6uCBDy1broLnN29PkxPeaFFmpC79gOdEu9sB8KQRt\u002Bz/NUVbUGAoGpJIfc5j2gZIuv3fam/sCNGrdjGLGwE23hR\u002BiMeBCKAbXlOTgfr0VW9QfqD4iEZ5BIJNAWDI5yB75X0tXqwrc1JZk90MKVUEq/4UplFc4W5UKwiHjaO4tx90NWiYfT5cQuj4dRITLrZfn9104XtOD3\u002BE4z7/BrqIoKZ4YM37E8XNifA4vdiuCIApPzWY9Wmy9h6UfOpd13t89FstEceyF2PJlAfNHkm6y6xSbxcTASpyuMyFT4NoeI6PV6mzEvvIy0oO\u002BXPVGULaMs186jVLVil0zzF\u002BI4ki\u002BnqjP\u002BGgemrp0Z\u002BHn8T0d0nyrOTky\u002B8x0tNoxE0iZrcSqXz5lAcroCcXkeBcGpyzcnowRTDk9xoDuEmbkE5vRlfB6cRcWzIXibv\u002BNTf5ST0y7SEBa6MGIaOFje2VUnZSgPTFECMZM9YCeLde6cdwvuVLlXrVMFWXGAHqRRaUlDezyEic6tlbFBbW/oS8nHbf0RDZIooDDLipPeTJwozIJJH4EIoG/y1/6Fe/5bj6lFousa0WjoWjoWiLYhGNidWHcXDNhOsVGWFSg0ZCUdDigbIo11Zv73Oq8C\u002BAsr5V2IWWNA0gAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-04-03T06:50:24.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T06:50:24.536Z"
             },
             {
               "$type": "Document",
@@ -515,8 +491,7 @@
               "RelativeToolTip": "Services\\AuthServices\\AuthService.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAA1wDEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:30:17.368Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:30:17.368Z"
             },
             {
               "$type": "Document",
@@ -528,8 +503,7 @@
               "RelativeToolTip": "Services\\PassService\\PasswordService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:26:02.17Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:26:02.17Z"
             },
             {
               "$type": "Document",
@@ -541,8 +515,7 @@
               "RelativeToolTip": "Services\\AuthServices\\IAuthService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:28:03.004Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:28:03.004Z"
             },
             {
               "$type": "Document",
@@ -554,8 +527,7 @@
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAkwCAAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T04:41:19.311Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T04:41:19.311Z"
             },
             {
               "$type": "Document",
@@ -567,8 +539,7 @@
               "RelativeToolTip": "Views\\Dashboard\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-03T06:03:06.313Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T06:03:06.313Z"
             },
             {
               "$type": "Document",
@@ -580,8 +551,7 @@
               "RelativeToolTip": "Controllers\\DashboardController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T06:02:45.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T06:02:45.137Z"
             },
             {
               "$type": "Document",
@@ -593,8 +563,7 @@
               "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:25:33.448Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:25:33.448Z"
             },
             {
               "$type": "Document",
@@ -606,8 +575,7 @@
               "RelativeToolTip": "ViewModels\\RegisterViewModel.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAAABAAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:25:18.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:25:18.521Z"
             },
             {
               "$type": "Document",
@@ -619,8 +587,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-02T04:45:32.856Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T04:45:32.856Z"
             },
             {
               "$type": "Document",
@@ -632,8 +599,7 @@
               "RelativeToolTip": "ScaffoldingReadMe.txt",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-04-02T07:02:10.32Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T07:02:10.32Z"
             },
             {
               "$type": "Document",
@@ -645,8 +611,7 @@
               "RelativeToolTip": "Services\\PassService\\IPasswordService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:26:52.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:26:52.921Z"
             },
             {
               "$type": "Document",
