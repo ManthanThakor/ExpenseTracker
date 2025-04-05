@@ -34,6 +34,10 @@ namespace ExpenseTrackerMvc.Data
                 .HasForeignKey(t => t.CategoryId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            modelBuilder.Entity<Transaction>()
+                .Property(t => t.Amount)
+                .HasPrecision(18, 2); 
+
             base.OnModelCreating(modelBuilder);
         }
     }

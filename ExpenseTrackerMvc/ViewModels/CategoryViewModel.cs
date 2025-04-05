@@ -15,7 +15,7 @@ namespace ExpenseTrackerMvc.ViewModels
         public string Description { get; set; } = "";
 
         [Required(ErrorMessage = "Type is required.")]
-        public string Type { get; set; } = "Expense";
+        public string Type { get; set; } = "Expense";       
 
         [StringLength(7, ErrorMessage = "Invalid color code.")]
         [RegularExpression(@"^#([A-Fa-f0-9]{6})$", ErrorMessage = "Color must be a valid hex color code.")]
@@ -37,6 +37,6 @@ namespace ExpenseTrackerMvc.ViewModels
         public int Id { get; set; }
         public string Name { get; set; } = "";
         public string Type { get; set; } = "";
-        public int ExpensesCount { get; set; }
+        public int TransactionCount { get; set; }
     }
 }

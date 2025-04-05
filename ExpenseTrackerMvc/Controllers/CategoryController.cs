@@ -148,8 +148,9 @@ namespace ExpenseTrackerMvc.Controllers
                 Id = category.Id,
                 Name = category.Name,
                 Type = category.Type,
-                ExpensesCount = category.Expenses?.Count ?? 0
+                TransactionCount = category.Transactions?.Count ?? 0
             };
+
 
             return View(viewModel);
         }

@@ -1,0 +1,328 @@
+﻿@model ExpenseTrackerMvc.ViewModels.DashboardViewModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container-fluid">
+    <h1 class="mt-4">Financial Dashboard</h1>
+
+    <!-- Date Filter -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-calendar me-1"></i> Date Range
+        </div>
+        <div class="card-body">
+            <form asp-action="Dashboard" method="get" class="row g-3">
+                <div class="col-md-4">
+                    <label asp-for="StartDate" class="form-label">Start Date</label>
+                    <input asp-for="StartDate" class="form-control" type="date" />
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="EndDate" class="form-label">End Date</label>
+                    <input asp-for="EndDate" class="form-control" type="date" />
+                </div>
+                <div class="col-md-4 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="fas fa-filter me-1"></i> Apply Filter
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="row mb-4">
+        <div class="col-xl-4 col-md-6">
+            <div class="card bg-success text-white mb-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="small text-white-50">Total Income</div>
+                            <div class="fs-4">@Model.TotalIncome.ToString("C")</div>
+                        </div>
+                        <div class="fs-1">
+                            <i class="fas fa-arrow-circle-up"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-6">
+            <div class="card bg-danger text-white mb-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="small text-white-50">Total Expense</div>
+                            <div class="fs-4">@Model.TotalExpense.ToString("C")</div>
+                        </div>
+                        <div class="fs-1">
+                            <i class="fas fa-arrow-circle-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-6">
+            <div class="card @(Model.Balance >= 0 ? "bg-primary" : "bg-warning") text-white mb-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="small text-white-50">Balance</div>
+                            <div class="fs-4">@Model.Balance.ToString("C")</div>
+                        </div>
+                        <div class="fs-1">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts Row -->
+    <div class="row mb-4">
+        <!-- Income/Expense Chart -->
+        <div class="col-xl-8">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-chart-area me-1"></i>
+                    Income vs Expense Over Time
+                </div>
+                <div class="card-body">
+                    <canvas id="incomeExpenseChart" width="100%" height="40"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie Chart for Category Distribution -->
+        <div class="col-xl-4">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-chart-pie me-1"></i>
+                    Expense Distribution
+                </div>
+                <div class="card-body">
+                    <canvas id="expensePieChart" width="100%" height="50"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Summaries -->
+    <div class="row">
+        <!-- Income Categories -->
+        <div class="col-lg-6">
+            <div class="card mb-4">
+                <div class="card-header bg-success text-white">
+                    <i class="fas fa-list me-1"></i>
+                    Income Categories
+                </div>
+                <div class="card-body">
+                    @if (!Model.CategorySummaries.Any(c => c.Type == "Income"))
+                    {
+                        <div class="alert alert-info">No income transactions in the selected period.</div>
+                    }
+                    else
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Amount</th>
+                                        <th>%</th>
+                                        <th>Distribution</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var category in Model.CategorySummaries.Where(c => c.Type == "Income").OrderByDescending(c => c.Amount))
+                                    {
+                                        <tr>
+                                            <td>
+                                                <span class="badge" style="background-color: @category.Color">
+                                                    @category.Name
+                                                </span>
+                                            </td>
+                                            <td>@category.Amount.ToString("C")</td>
+                                            <td>@category.Percentage.ToString("F1")%</td>
+                                            <td style="width: 40%">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar"
+                                                         style="width: @category.Percentage%; background-color: @category.Color"
+                                                         aria-valuenow="@category.Percentage" aria-valuemin="0" aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Expense Categories -->
+        <div class="col-lg-6">
+            <div class="card mb-4">
+                <div class="card-header bg-danger text-white">
+                    <i class="fas fa-list me-1"></i>
+                    Expense Categories
+                </div>
+                <div class="card-body">
+                    @if (!Model.CategorySummaries.Any(c => c.Type == "Expense"))
+                    {
+                        <div class="alert alert-info">No expense transactions in the selected period.</div>
+                    }
+                    else
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Amount</th>
+                                        <th>%</th>
+                                        <th>Distribution</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var category in Model.CategorySummaries.Where(c => c.Type == "Expense").OrderByDescending(c => c.Amount))
+                                    {
+                                        <tr>
+                                            <td>
+                                                <span class="badge" style="background-color: @category.Color">
+                                                    @category.Name
+                                                </span>
+                                            </td>
+                                            <td>@category.Amount.ToString("C")</td>
+                                            <td>@category.Percentage.ToString("F1")%</td>
+                                            <td style="width: 40%">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar"
+                                                         style="width: @category.Percentage%; background-color: @category.Color"
+                                                         aria-valuenow="@category.Percentage" aria-valuemin="0" aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Parse the model data for charts
+        const dailyTransactions = @Html.Raw(Json.Serialize(Model.DailyTransactions));
+        const expenseCategories = @Html.Raw(Json.Serialize(Model.CategorySummaries
+        .Where(c => c.Type == "Expense")
+        .OrderByDescending(c => c.Amount)
+        .Take(5)
+        .ToList()));
+
+        // Prepare data for line chart
+        const dates = dailyTransactions.map(item => new Date(item.date).toLocaleDateString());
+        const incomeData = dailyTransactions.map(item => item.income);
+        const expenseData = dailyTransactions.map(item => item.expense);
+
+        // Prepare data for pie chart
+        const categoryNames = expenseCategories.map(item => item.name);
+        const categoryAmounts = expenseCategories.map(item => item.amount);
+        const categoryColors = expenseCategories.map(item => item.color);
+
+        // Create line chart
+        const lineCtx = document.getElementById('incomeExpenseChart');
+        new Chart(lineCtx, {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [
+                    {
+                        label: 'Income',
+                        data: incomeData,
+                        borderColor: '#28a745',
+                        backgroundColor: 'rgba(40, 167, 69, 0.1)',
+                        fill: true,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Expense',
+                        data: expenseData,
+                        borderColor: '#dc3545',
+                        backgroundColor: 'rgba(220, 53, 69, 0.1)',
+                        fill: true,
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value;
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                label += '$' + context.parsed.y;
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Create pie chart
+        const pieCtx = document.getElementById('expensePieChart');
+        new Chart(pieCtx, {
+            type: 'doughnut',
+            data: {
+                labels: categoryNames,
+                datasets: [{
+                    data: categoryAmounts,
+                    backgroundColor: categoryColors,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const value = context.parsed;
+                                const total = context.dataset.data.reduce((acc, data) => acc + data, 0);
+                                const percentage = ((value * 100) / total).toFixed(1);
+                                return `$${value} (${percentage}%)`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+}

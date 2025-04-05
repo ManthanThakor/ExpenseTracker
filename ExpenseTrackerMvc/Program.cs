@@ -9,7 +9,7 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using ExpenseTrackerMvc.Repository;
 using ExpenseTrackerMvc.Services.CategoryServices;
-using ExpenseTrackerMvc.Services.ExpenseServices;
+using ExpenseTrackerMvc.Services.TransactionServices;
 
 var builder = WebApplication.CreateBuilder(args);
 

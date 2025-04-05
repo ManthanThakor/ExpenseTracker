@@ -35,6 +35,14 @@
                 <li><a asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i> Home</a></li>
                 <li><a asp-controller="Home" asp-action="Privacy"><i class="fas fa-user-shield"></i> Privacy</a></li>
                 <li><a asp-controller="Category" asp-action="Index"><i class="fas fa-user-shield"></i> Category</a></li>
+                <li class="nav-item">
+                    <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "Transaction" && ViewContext.RouteData.Values["action"].ToString() == "Dashboard" ? "active" : "")" href="@Url.Action("Dashboard", "Transaction")">
+                        <i class="fas fa-chart-line me-1"></i> Dashboard
+                    </a>
+                </li>
+                <li><a asp-controller="Transaction" asp-action="Index"><i class="fas fa-user-shield"></i> Transactions</a></li>
+
+              
 
                 @if (User.Identity.IsAuthenticated)
                 {

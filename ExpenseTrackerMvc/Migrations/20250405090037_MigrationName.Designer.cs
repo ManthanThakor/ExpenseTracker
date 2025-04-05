@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExpenseTrackerMvc.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250405031230_MigrationName")]
+    [Migration("20250405090037_MigrationName")]
     partial class MigrationName
     {
         /// <inheritdoc />
@@ -66,7 +66,7 @@ namespace ExpenseTrackerMvc.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("ExpenseTrackerMvc.Models.Expense", b =>
+            modelBuilder.Entity("ExpenseTrackerMvc.Models.Transaction", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -75,6 +75,7 @@ namespace ExpenseTrackerMvc.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<decimal>("Amount")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("CategoryId")
@@ -85,11 +86,6 @@ namespace ExpenseTrackerMvc.Migrations
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -105,7 +101,7 @@ namespace ExpenseTrackerMvc.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Expenses");
+                    b.ToTable("Transactions");
                 });
 
             modelBuilder.Entity("ExpenseTrackerMvc.Models.User", b =>
@@ -145,16 +141,16 @@ namespace ExpenseTrackerMvc.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("ExpenseTrackerMvc.Models.Expense", b =>
+            modelBuilder.Entity("ExpenseTrackerMvc.Models.Transaction", b =>
                 {
                     b.HasOne("ExpenseTrackerMvc.Models.Category", "Category")
-                        .WithMany("Expenses")
+                        .WithMany("Transactions")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ExpenseTrackerMvc.Models.User", "User")
-                        .WithMany("Expenses")
+                        .WithMany("Transactions")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -166,14 +162,14 @@ namespace ExpenseTrackerMvc.Migrations
 
             modelBuilder.Entity("ExpenseTrackerMvc.Models.Category", b =>
                 {
-                    b.Navigation("Expenses");
+                    b.Navigation("Transactions");
                 });
 
             modelBuilder.Entity("ExpenseTrackerMvc.Models.User", b =>
                 {
                     b.Navigation("Categories");
 
-                    b.Navigation("Expenses");
+                    b.Navigation("Transactions");
                 });
 #pragma warning restore 612, 618
         }
