@@ -19,7 +19,7 @@ namespace ExpenseTrackerMvc.Models
         [MinLength(6, ErrorMessage = "Password must be at least 6 characters long.")]
         public string PasswordHash { get; set; } = "";
 
-        public virtual ICollection<Expense> Expenses { get; set; } = new List<Expense>();
+        public virtual ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
         public virtual ICollection<Category> Categories { get; set; } = new List<Category>();
     }
 }

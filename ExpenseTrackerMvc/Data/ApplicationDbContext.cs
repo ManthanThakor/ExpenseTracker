@@ -11,15 +11,15 @@ namespace ExpenseTrackerMvc.Data
         }
 
         public DbSet<User> Users { get; set; }
-        public DbSet<Expense> Expenses { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
         public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
-                .HasMany(u => u.Expenses)
-                .WithOne(e => e.User)
-                .HasForeignKey(e => e.UserId)
+                .HasMany(u => u.Transactions)
+                .WithOne(t => t.User)
+                .HasForeignKey(t => t.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<User>()
@@ -29,13 +29,12 @@ namespace ExpenseTrackerMvc.Data
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Category>()
-                .HasMany(c => c.Expenses)
-                .WithOne(e => e.Category)
-                .HasForeignKey(e => e.CategoryId)
+                .HasMany(c => c.Transactions)
+                .WithOne(t => t.Category)
+                .HasForeignKey(t => t.CategoryId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             base.OnModelCreating(modelBuilder);
         }
-
     }
 }

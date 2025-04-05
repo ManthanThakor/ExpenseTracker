@@ -16,6 +16,7 @@ namespace ExpenseTrackerMvc.Models
         public string Description { get; set; } = "";
 
         [Required(ErrorMessage = "Type is required.")]
+        [RegularExpression("^(Income|Expense)$", ErrorMessage = "Type must be either 'Income' or 'Expense'.")]
         public string Type { get; set; } = "Expense";
 
         [StringLength(7, ErrorMessage = "Invalid color code.")]
@@ -25,9 +26,10 @@ namespace ExpenseTrackerMvc.Models
 
         [Required(ErrorMessage = "User is required.")]
         public int UserId { get; set; }
+
         [ForeignKey("UserId")]
         public virtual User? User { get; set; }
 
-        public virtual ICollection<Expense> Expenses { get; set; } = new List<Expense>();
+        public virtual ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
     }
 }

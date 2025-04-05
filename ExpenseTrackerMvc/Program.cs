@@ -9,6 +9,7 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using ExpenseTrackerMvc.Repository;
 using ExpenseTrackerMvc.Services.CategoryServices;
+using ExpenseTrackerMvc.Services.ExpenseServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,8 +22,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddScoped<IPasswordService, PasswordService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 
+
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ITransactionService, TransactionService>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
