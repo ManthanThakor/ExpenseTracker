@@ -1,4 +1,5 @@
 wwwroot\assets\Logo\icon-l1g9rKqp.svg
+wwwroot\css\CategoryCreateEdit.css
 wwwroot\css\login.css
 wwwroot\css\register.css
 wwwroot\css\site.css
@@ -6,6 +7,7 @@ wwwroot\favicon.ico
 wwwroot\imgs\Background\Bgimg.jpg
 wwwroot\imgs\Background\image.png
 wwwroot\imgs\login\cute-blue-robot-waving-hand-600nw-2056356791-removebg-preview.png
+wwwroot\js\categoryCreateEdit.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
