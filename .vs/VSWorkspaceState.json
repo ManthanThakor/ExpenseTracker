@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ExpenseTrackerMvc",
+    "\\ExpenseTrackerMvc\\Views",
+    "\\ExpenseTrackerMvc\\Views\\Category"
   ],
+  "SelectedNode": "\\ExpenseTrackerMvc\\Views\\Category\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
