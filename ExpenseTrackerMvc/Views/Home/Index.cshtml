@@ -2,202 +2,267 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="container-fluid p-0">
-    <!-- Hero Section with Slider -->
-    <div id="expenseTrackerCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#expenseTrackerCarousel" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#expenseTrackerCarousel" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#expenseTrackerCarousel" data-bs-slide-to="2"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="d-block w-100 bg-primary text-white p-5" style="height: 400px;">
-                    <div class="container d-flex flex-column justify-content-center h-100">
-                        <h1 class="display-4 fw-bold">Track Your Finances</h1>
-                        <p class="lead">Take control of your spending habits and achieve your financial goals.</p>
-                        <a href="/Transactions/Create" class="btn btn-light btn-lg mt-3">Add Transaction</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="d-block w-100 bg-success text-white p-5" style="height: 400px;">
-                    <div class="container d-flex flex-column justify-content-center h-100">
-                        <h1 class="display-4 fw-bold">Categorize Your Expenses</h1>
-                        <p class="lead">Organize transactions by custom categories to see where your money goes.</p>
-                        <a href="/Categories" class="btn btn-light btn-lg mt-3">Manage Categories</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="d-block w-100 bg-info text-white p-5" style="height: 400px;">
-                    <div class="container d-flex flex-column justify-content-center h-100">
-                        <h1 class="display-4 fw-bold">Visualize Your Spending</h1>
-                        <p class="lead">Get insights with beautiful charts and detailed financial reports.</p>
-                        <a href="/Dashboard" class="btn btn-light btn-lg mt-3">View Dashboard</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#expenseTrackerCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#expenseTrackerCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
-    <!-- Features Section -->
-    <div class="container py-5">
-        <h2 class="text-center mb-5">Features that help you manage money better</h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="mb-3">
-                            <i class="bi bi-currency-dollar fs-1 text-primary"></i>
-                        </div>
-                        <h3 class="card-title">Track Expenses</h3>
-                        <p class="card-text">Easily record and categorize your daily expenses and income to keep track of where your money is going.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="mb-3">
-                            <i class="bi bi-pie-chart-fill fs-1 text-success"></i>
-                        </div>
-                        <h3 class="card-title">Visual Reports</h3>
-                        <p class="card-text">Get insights into your spending habits with beautiful charts and detailed financial reports.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <div class="mb-3">
-                            <i class="bi bi-bookmark-check fs-1 text-info"></i>
-                        </div>
-                        <h3 class="card-title">Budget Goals</h3>
-                        <p class="card-text">Set financial goals and track your progress to stay motivated and achieve financial freedom.</p>
-                    </div>
-                </div>
-            </div>
+<!-- Animated Slider Section -->
+<div id="slider">
+    <div class="slider-inner">
+        <div id="slider-content">
+            <div class="meta">Finance</div>
+            <h2 id="slide-title">Track Your<br>Expenses</h2>
+            <span data-slide-title="0">Track Your<br>Expenses</span>
+            <span data-slide-title="1">Manage Your<br>Budget</span>
+            <span data-slide-title="2">Visualize<br>Spending</span>
+            <span data-slide-title="3">Achieve<br>Goals</span>
+            <div class="meta">Action</div>
+            <div id="slide-status">Take Control Today</div>
+            <span data-slide-status="0">Take Control Today</span>
+            <span data-slide-status="1">Plan For Tomorrow</span>
+            <span data-slide-status="2">Understand Your Habits</span>
+            <span data-slide-status="3">Financial Freedom</span>
         </div>
     </div>
 
-    <!-- Quick Stats Section -->
-    <div class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Your Financial Overview</h2>
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <div class="card border-0 bg-primary text-white">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">Total Income</h3>
-                            <p class="display-6">$@ViewBag.TotalIncome</p>
-                        </div>
+    <img src="/api/placeholder/1200/800" alt="Track expenses" />
+    <img src="/api/placeholder/1200/800" alt="Manage budget" />
+    <img src="/api/placeholder/1200/800" alt="Visualize spending" />
+    <img src="/api/placeholder/1200/800" alt="Achieve goals" />
+
+    <div id="pagination">
+        <button class="active" data-slide="0"></button>
+        <button data-slide="1"></button>
+        <button data-slide="2"></button>
+        <button data-slide="3"></button>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="container py-5">
+    <h2 class="text-center mb-5">Features that help you manage money better</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="bi bi-currency-dollar fs-1 text-primary"></i>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card border-0 bg-danger text-white">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">Total Expenses</h3>
-                            <p class="display-6">$@ViewBag.TotalExpenses</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card border-0 bg-success text-white">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">Net Balance</h3>
-                            <p class="display-6">$@ViewBag.NetBalance</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card border-0 bg-info text-white">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">Transactions</h3>
-                            <p class="display-6">@ViewBag.TransactionCount</p>
-                        </div>
-                    </div>
+                    <h3 class="card-title">Track Expenses</h3>
+                    <p class="card-text">Easily record and categorize your daily expenses and income to keep track of where your money is going.</p>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Recent Transactions Section -->
-    <div class="container py-5">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2>Recent Transactions</h2>
-            <a href="/Transactions" class="btn btn-outline-primary">View All</a>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="bi bi-pie-chart-fill fs-1 text-success"></i>
+                    </div>
+                    <h3 class="card-title">Visual Reports</h3>
+                    <p class="card-text">Get insights into your spending habits with beautiful charts and detailed financial reports.</p>
+                </div>
+            </div>
         </div>
-
-        @if (ViewBag.RecentTransactions != null && ViewBag.RecentTransactions.Count > 0)
-        {
-            <div class="table-responsive">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Title</th>
-                            <th>Category</th>
-                            <th>Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var transaction in ViewBag.RecentTransactions)
-                        {
-                            <tr>
-                                <td>@transaction.Date.ToString("MMM dd, yyyy")</td>
-                                <td>@transaction.Title</td>
-                                <td>
-                                    <span class="badge" style="background-color: @transaction.Category.Color">
-                                        @transaction.Category.Name
-                                    </span>
-                                </td>
-                                <td class="@(transaction.Category.Type == "Income" ? "text-success" : "text-danger")">
-                                    @(transaction.Category.Type == "Income" ? "+" : "-")$@transaction.Amount.ToString("0.00")
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-        }
-        else
-        {
-            <div class="alert alert-info">
-                <p>No recent transactions found. Start by <a href="/Transactions/Create">adding a new transaction</a>.</p>
-            </div>
-        }
-    </div>
-
-    <!-- Call to Action Section -->
-    <div class="bg-primary text-white py-5">
-        <div class="container text-center">
-            <h2 class="display-5 mb-4">Ready to take control of your finances?</h2>
-            <p class="lead mb-4">Start tracking your expenses today and make smarter financial decisions.</p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="/Account/Register" class="btn btn-light btn-lg">Sign Up Now</a>
-                <a href="/Home/About" class="btn btn-outline-light btn-lg">Learn More</a>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="bi bi-bookmark-check fs-1 text-info"></i>
+                    </div>
+                    <h3 class="card-title">Budget Goals</h3>
+                    <p class="card-text">Set financial goals and track your progress to stay motivated and achieve financial freedom.</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<!-- Quick Stats Section -->
+<div class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Your Financial Overview</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="card border-0 bg-primary text-white">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Total Income</h3>
+                        <p class="display-6">$@(ViewBag.TotalIncome ?? 0)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 bg-danger text-white">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Total Expenses</h3>
+                        <p class="display-6">$@(ViewBag.TotalExpenses ?? 0)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 bg-success text-white">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Net Balance</h3>
+                        <p class="display-6">$@(ViewBag.NetBalance ?? 0)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 bg-info text-white">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Transactions</h3>
+                        <p class="display-6">@(ViewBag.TransactionCount ?? 0)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Transactions Section -->
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Recent Transactions</h2>
+        <a href="/Transactions" class="btn btn-outline-primary">View All</a>
+    </div>
+
+    @if (ViewBag.RecentTransactions != null && ((IEnumerable<dynamic>)ViewBag.RecentTransactions).Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var transaction in ViewBag.RecentTransactions)
+                    {
+                        <tr>
+                            <td>@transaction.Date.ToString("MMM dd, yyyy")</td>
+                            <td>@transaction.Title</td>
+                            <td>
+                                <span class="badge" style="background-color: @transaction.Category.Color">
+                                    @transaction.Category.Name
+                                </span>
+                            </td>
+                            <td class="@(transaction.Category.Type == "Income" ? "text-success" : "text-danger")">
+                                @(transaction.Category.Type == "Income" ? "+" : "-")$@transaction.Amount.ToString("0.00")
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            <p>No recent transactions found. Start by <a href="/Transactions/Create">adding a new transaction</a>.</p>
+        </div>
+    }
+</div>
+
+<!-- Call to Action Section -->
+<div class="bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="display-5 mb-4">Ready to take control of your finances?</h2>
+        <p class="lead mb-4">Start tracking your expenses today and make smarter financial decisions.</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="/Account/Register" class="btn btn-light btn-lg">Sign Up Now</a>
+            <a href="/Home/About" class="btn btn-outline-light btn-lg">Learn More</a>
+        </div>
+    </div>
+</div>
+
+
+<link href="~/css/home.css" rel="stylesheet" />
 @section Scripts {
     <script>
-        // Initialize the carousel with a 5-second interval
         document.addEventListener('DOMContentLoaded', function() {
-            var myCarousel = document.getElementById('expenseTrackerCarousel');
-            var carousel = new bootstrap.Carousel(myCarousel, {
-                interval: 5000
+            // Slider functionality
+            const pagination = document.getElementById('pagination');
+            const buttons = pagination.querySelectorAll('button');
+            const sliderImages = document.querySelectorAll('#slider > img');
+            const slideTitle = document.getElementById('slide-title');
+            const slideStatus = document.getElementById('slide-status');
+            let currentSlide = 0;
+            let isAnimating = false;
+
+            // Function to change slide
+            function changeSlide(slideId) {
+                if (isAnimating || currentSlide === slideId) return;
+
+                isAnimating = true;
+
+                // Update pagination
+                buttons[currentSlide].classList.remove('active');
+                buttons[slideId].classList.add('active');
+
+                // Fade out current slide
+                sliderImages[currentSlide].style.opacity = 0;
+
+                // Fade in next slide
+                setTimeout(() => {
+                    sliderImages[slideId].style.opacity = 1;
+
+                    // Update slide content with animation
+                    updateSlideContent(slideId);
+
+                    currentSlide = slideId;
+                    isAnimating = false;
+                }, 500);
+            }
+
+            // Function to update slide content
+            function updateSlideContent(slideId) {
+                // Fade out current content
+                slideTitle.style.opacity = 0;
+                slideStatus.style.opacity = 0;
+
+                setTimeout(() => {
+                    // Update content
+                    const nextSlideTitle = document.querySelector(`[data-slide-title="${slideId}"]`).innerHTML;
+                    const nextSlideStatus = document.querySelector(`[data-slide-status="${slideId}"]`).innerHTML;
+
+                    slideTitle.innerHTML = nextSlideTitle;
+                    slideStatus.innerHTML = nextSlideStatus;
+
+                    // Fade in new content
+                    slideTitle.style.opacity = 1;
+                    slideStatus.style.opacity = 1;
+                }, 300);
+            }
+
+            // Set up event listeners for pagination buttons
+            buttons.forEach((button) => {
+                button.addEventListener('click', function() {
+                    const slideId = parseInt(this.dataset.slide, 10);
+                    changeSlide(slideId);
+                });
             });
+
+            // Auto-rotate slides every 5 seconds
+            let slideInterval = setInterval(() => {
+                let nextSlide = (currentSlide + 1) % sliderImages.length;
+                changeSlide(nextSlide);
+            }, 5000);
+
+            // Pause auto-rotation when hovering over slider
+            const slider = document.getElementById('slider');
+            slider.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+
+            slider.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(() => {
+                    let nextSlide = (currentSlide + 1) % sliderImages.length;
+                    changeSlide(nextSlide);
+                }, 5000);
+            });
+
+            // Add transition styling to slider content
+            slideTitle.style.transition = 'opacity 0.3s ease';
+            slideStatus.style.transition = 'opacity 0.3s ease';
         });
     </script>
 }

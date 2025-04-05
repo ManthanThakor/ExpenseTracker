@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "i/VsCoHcB8YYqMCqaDi56C1Nzct+gJ4Kn+5ES2p9qnw=",
+  "Hash": "XRhUZozyRBs84btKzcy1O/ZtaRvGwN1uyoCW223slE0=",
   "Source": "ExpenseTrackerMvc",
   "BasePath": "_content/ExpenseTrackerMvc",
   "Mode": "Default",
@@ -99,6 +99,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\CategoryCreateEdit.css"
+    },
+    {
+      "Identity": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\Home.css",
+      "SourceId": "ExpenseTrackerMvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\",
+      "BasePath": "_content/ExpenseTrackerMvc",
+      "RelativePath": "css/Home#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4ozt5e342g",
+      "Integrity": "1KYSDu1g67EcZg7WDmcln0xU2oXw055HnJ7wecUwIHY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Home.css"
     },
     {
       "Identity": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\login.css",
@@ -1649,6 +1670,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-cp+RYtN12duKP6aU5G9gG1PTW0y1gUeV06e8+zfQS5w="
+        }
+      ]
+    },
+    {
+      "Route": "css/Home.4ozt5e342g.css",
+      "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\Home.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3401"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1KYSDu1g67EcZg7WDmcln0xU2oXw055HnJ7wecUwIHY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 05 Apr 2025 16:06:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4ozt5e342g"
+        },
+        {
+          "Name": "label",
+          "Value": "css/Home.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1KYSDu1g67EcZg7WDmcln0xU2oXw055HnJ7wecUwIHY="
+        }
+      ]
+    },
+    {
+      "Route": "css/Home.css",
+      "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\Home.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3401"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1KYSDu1g67EcZg7WDmcln0xU2oXw055HnJ7wecUwIHY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 05 Apr 2025 16:06:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1KYSDu1g67EcZg7WDmcln0xU2oXw055HnJ7wecUwIHY="
         }
       ]
     },
