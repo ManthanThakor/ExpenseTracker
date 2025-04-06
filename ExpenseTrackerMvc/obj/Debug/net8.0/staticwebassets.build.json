@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "h1YAbCGJo62KMMB4cVKG5EC1c+WPyohlexBes1jzJ4E=",
+  "Hash": "oa0/BSzZ4dhWpN1vALClZ87xw/O/g4CU05i+32ruw9I=",
   "Source": "ExpenseTrackerMvc",
   "BasePath": "_content/ExpenseTrackerMvc",
   "Mode": "Default",
@@ -367,8 +367,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3n8k26vg24",
-      "Integrity": "QY2VYdlA5LLauj86qC49abmeGw8nbPYGWc4BjO3PMxw=",
+      "Fingerprint": "vjby28x3fl",
+      "Integrity": "BV9wtZU356jJ53wIZP2tZG2M5cXlOssk+Euf/MipTRI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\login.css"
@@ -409,8 +409,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xwl4myscps",
-      "Integrity": "8aVKfSp8+8Ip1xcyE9M6IpgTRuv4CBtzk7ixDqNwa90=",
+      "Fingerprint": "hnap1vd4bg",
+      "Integrity": "07Dihzpzo1XMlwTKqM7AzMOlMtBZWbMmSP95k6FaBw4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\register.css"
@@ -2952,51 +2952,6 @@
       ]
     },
     {
-      "Route": "css/login.3n8k26vg24.css",
-      "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\login.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "7904"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QY2VYdlA5LLauj86qC49abmeGw8nbPYGWc4BjO3PMxw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 17:58:49 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3n8k26vg24"
-        },
-        {
-          "Name": "label",
-          "Value": "css/login.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-QY2VYdlA5LLauj86qC49abmeGw8nbPYGWc4BjO3PMxw="
-        }
-      ]
-    },
-    {
       "Route": "css/login.css",
       "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\login.css",
       "Selectors": [],
@@ -3007,7 +2962,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7904"
+          "Value": "7818"
         },
         {
           "Name": "Content-Type",
@@ -3015,11 +2970,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QY2VYdlA5LLauj86qC49abmeGw8nbPYGWc4BjO3PMxw=\""
+          "Value": "\"BV9wtZU356jJ53wIZP2tZG2M5cXlOssk+Euf/MipTRI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 17:58:49 GMT"
+          "Value": "Sun, 06 Apr 2025 18:07:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3029,7 +2984,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-QY2VYdlA5LLauj86qC49abmeGw8nbPYGWc4BjO3PMxw="
+          "Value": "sha256-BV9wtZU356jJ53wIZP2tZG2M5cXlOssk+Euf/MipTRI="
+        }
+      ]
+    },
+    {
+      "Route": "css/login.vjby28x3fl.css",
+      "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7818"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BV9wtZU356jJ53wIZP2tZG2M5cXlOssk+Euf/MipTRI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 18:07:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vjby28x3fl"
+        },
+        {
+          "Name": "label",
+          "Value": "css/login.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BV9wtZU356jJ53wIZP2tZG2M5cXlOssk+Euf/MipTRI="
         }
       ]
     },
@@ -3126,7 +3126,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7323"
+          "Value": "7233"
         },
         {
           "Name": "Content-Type",
@@ -3134,11 +3134,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"8aVKfSp8+8Ip1xcyE9M6IpgTRuv4CBtzk7ixDqNwa90=\""
+          "Value": "\"07Dihzpzo1XMlwTKqM7AzMOlMtBZWbMmSP95k6FaBw4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 13:11:19 GMT"
+          "Value": "Sun, 06 Apr 2025 18:07:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3148,12 +3148,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-8aVKfSp8+8Ip1xcyE9M6IpgTRuv4CBtzk7ixDqNwa90="
+          "Value": "sha256-07Dihzpzo1XMlwTKqM7AzMOlMtBZWbMmSP95k6FaBw4="
         }
       ]
     },
     {
-      "Route": "css/register.xwl4myscps.css",
+      "Route": "css/register.hnap1vd4bg.css",
       "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\register.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3163,7 +3163,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7323"
+          "Value": "7233"
         },
         {
           "Name": "Content-Type",
@@ -3171,11 +3171,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"8aVKfSp8+8Ip1xcyE9M6IpgTRuv4CBtzk7ixDqNwa90=\""
+          "Value": "\"07Dihzpzo1XMlwTKqM7AzMOlMtBZWbMmSP95k6FaBw4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 13:11:19 GMT"
+          "Value": "Sun, 06 Apr 2025 18:07:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3185,7 +3185,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xwl4myscps"
+          "Value": "hnap1vd4bg"
         },
         {
           "Name": "label",
@@ -3193,7 +3193,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-8aVKfSp8+8Ip1xcyE9M6IpgTRuv4CBtzk7ixDqNwa90="
+          "Value": "sha256-07Dihzpzo1XMlwTKqM7AzMOlMtBZWbMmSP95k6FaBw4="
         }
       ]
     },

@@ -24,7 +24,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    background: linear-gradient(135deg, rgba(77, 150, 255, 0.1) 0%, rgba(0, 255, 100, 0.05) 100%);
+    
 }
 
 .login-box {
@@ -55,7 +55,7 @@ body {
     margin-bottom: 2rem;
 }
 
-.logo {
+.logo-sec-log {
     width: 80px;
     height: 80px;
     margin-bottom: 1rem;
