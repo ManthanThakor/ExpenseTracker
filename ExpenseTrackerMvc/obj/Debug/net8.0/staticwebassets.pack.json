@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets\\css\\CateAndTranCreateEdit\\CateCreateEdit.css"
     },
     {
+      "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\CateAndTranCreateEdit\\TransCreateEdit.css",
+      "PackagePath": "staticwebassets\\css\\CateAndTranCreateEdit\\TransCreateEdit.css"
+    },
+    {
       "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\CateAndTranDelete\\CategoryDelete.css",
       "PackagePath": "staticwebassets\\css\\CateAndTranDelete\\CategoryDelete.css"
     },
@@ -49,8 +53,16 @@
       "PackagePath": "staticwebassets\\css\\Category.css"
     },
     {
+      "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\DeshBoardSec\\Deshboard.css",
+      "PackagePath": "staticwebassets\\css\\DeshBoardSec\\Deshboard.css"
+    },
+    {
       "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\Home.css",
       "PackagePath": "staticwebassets\\css\\Home.css"
+    },
+    {
+      "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\Policy.css",
+      "PackagePath": "staticwebassets\\css\\Policy.css"
     },
     {
       "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\TransactionIndex\\Transaction.css",

@@ -2,74 +2,114 @@
 @{
     ViewData["Title"] = Model.Id == 0 ? "Create Transaction" : "Edit Transaction";
 }
-
-<div class="container-fluid">
-    <h1 class="mt-4">@(Model.Id == 0 ? "Create" : "Edit") Transaction</h1>
+<div class="container-fluid py-4" style="padding:100px !important; padding-left:100px!important; padding-right:100px !important;">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="display-5 fw-bold">
+                <i class="fas fa-money-bill-wave me-2"></i>
+                @(Model.Id == 0 ? "Create New Transaction" : "Edit Transaction")
+            </h1>
+            <p class="text-muted">@(Model.Id == 0 ? "Add a new financial transaction" : "Update transaction details")</p>
+        </div>
+    </div>
 
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-edit me-1"></i>
             Transaction Details
         </div>
-        <div class="card-body">
+        <div class="card-body p-4">
             <form asp-action="CreateEdit" method="post">
                 <input type="hidden" asp-for="Id" />
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger mb-4"></div>
 
-                <div class="row mb-3">
+                <div class="row mb-4">
                     <div class="col-md-6">
-                        <div class="form-group">
+                        <div class="form-group mb-4">
                             <label asp-for="Title" class="form-label">Title</label>
-                            <input asp-for="Title" class="form-control" placeholder="Enter transaction title" />
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-heading"></i></span>
+                                <input asp-for="Title" class="form-control" placeholder="Enter transaction title" />
+                            </div>
                             <span asp-validation-for="Title" class="text-danger"></span>
                         </div>
+
+                        <div class="form-group mb-4">
+                            <label asp-for="Date" class="form-label">Date</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-calendar-day"></i></span>
+                                <input asp-for="Date" class="form-control" type="date" />
+                            </div>
+                            <span asp-validation-for="Date" class="text-danger"></span>
+                        </div>
                     </div>
+
                     <div class="col-md-6">
-                        <div class="form-group">
+                        <div class="form-group mb-4">
                             <label asp-for="Amount" class="form-label">Amount</label>
                             <div class="input-group">
-                                <span class="input-group-text">$</span>
+                                <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
                                 <input asp-for="Amount" class="form-control" type="number" step="0.01" placeholder="0.00" />
                             </div>
                             <span asp-validation-for="Amount" class="text-danger"></span>
                         </div>
-                    </div>
-                </div>
 
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Date" class="form-label">Date</label>
-                            <input asp-for="Date" class="form-control" type="date" />
-                            <span asp-validation-for="Date" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
+                        <div class="form-group mb-4">
                             <label asp-for="CategoryId" class="form-label">Category</label>
-                            <select asp-for="CategoryId" asp-items="Model.Categories" class="form-select">
-                                <option value="">-- Select Category --</option>
-                            </select>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-tag"></i></span>
+                                <select asp-for="CategoryId" asp-items="Model.Categories" class="form-select">
+                                    <option value="">-- Select Category --</option>
+                                </select>
+                            </div>
                             <span asp-validation-for="CategoryId" class="text-danger"></span>
                         </div>
                     </div>
                 </div>
 
-                <div class="mt-4">
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-save me-1"></i> Save
-                    </button>
+                <div class="d-flex justify-content-between pt-3 border-top">
                     <a asp-action="Index" class="btn btn-secondary">
-                        <i class="fas fa-arrow-left me-1"></i> Back to List
+                        <i class="fas fa-arrow-left me-2"></i> Back to List
                     </a>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save me-2"></i> Save Transaction
+                    </button>
                 </div>
             </form>
         </div>
     </div>
 </div>
+<link href="~/css/cateandtrancreateedit/transcreateedit.css" rel="stylesheet" />
 
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add subtle glow effect to form inputs on focus
+            const inputs = document.querySelectorAll('.form-control, .form-select');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.style.boxShadow = '0 0 0 0.25rem rgba(106, 17, 203, 0.25)';
+                });
+
+                input.addEventListener('blur', function() {
+                    this.style.boxShadow = '';
+                });
+            });
+
+            // Add hover effect to form groups
+            const formGroups = document.querySelectorAll('.form-group');
+            formGroups.forEach(group => {
+                group.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateX(5px)';
+                });
+
+                group.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                });
+            });
+        });
+    </script>
 }

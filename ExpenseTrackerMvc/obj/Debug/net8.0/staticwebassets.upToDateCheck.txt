@@ -6,11 +6,14 @@ wwwroot\assets\SliderSection\data-visualization.png
 wwwroot\assets\SliderSection\expense-tracking.png
 wwwroot\assets\SliderSection\financial-goals.png
 wwwroot\css\CateAndTranCreateEdit\CateCreateEdit.css
+wwwroot\css\CateAndTranCreateEdit\TransCreateEdit.css
 wwwroot\css\CateAndTranDelete\CategoryDelete.css
 wwwroot\css\CateAndTranDelete\TransactionDelete.css
 wwwroot\css\Category.css
+wwwroot\css\DeshBoardSec\Deshboard.css
 wwwroot\css\Home.css
 wwwroot\css\login.css
+wwwroot\css\Policy.css
 wwwroot\css\register.css
 wwwroot\css\site.css
 wwwroot\css\TransactionIndex\Transaction.css

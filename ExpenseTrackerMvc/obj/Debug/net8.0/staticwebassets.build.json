@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9snerOh27Iit6/4Fs5AlC8QnEuD/W+5BYgaykQziK/E=",
+  "Hash": "NoPXnWgkWvMgY4a1g5waPA8ZPLcYvdLH0GizlP+P3Zo=",
   "Source": "ExpenseTrackerMvc",
   "BasePath": "_content/ExpenseTrackerMvc",
   "Mode": "Default",
@@ -227,6 +227,27 @@
       "OriginalItemSpec": "wwwroot\\css\\CateAndTranCreateEdit\\CateCreateEdit.css"
     },
     {
+      "Identity": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\CateAndTranCreateEdit\\TransCreateEdit.css",
+      "SourceId": "ExpenseTrackerMvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\",
+      "BasePath": "_content/ExpenseTrackerMvc",
+      "RelativePath": "css/CateAndTranCreateEdit/TransCreateEdit#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "shr91eyl7x",
+      "Integrity": "cOw7AaMGH1I34hzVvdL8nPmD9qMj54bimIbUk/GgLJw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\CateAndTranCreateEdit\\TransCreateEdit.css"
+    },
+    {
       "Identity": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\CateAndTranDelete\\CategoryDelete.css",
       "SourceId": "ExpenseTrackerMvc",
       "SourceType": "Discovered",
@@ -290,6 +311,27 @@
       "OriginalItemSpec": "wwwroot\\css\\Category.css"
     },
     {
+      "Identity": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\DeshBoardSec\\Deshboard.css",
+      "SourceId": "ExpenseTrackerMvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\",
+      "BasePath": "_content/ExpenseTrackerMvc",
+      "RelativePath": "css/DeshBoardSec/Deshboard#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jkf377dpn6",
+      "Integrity": "bZv43+mqc2j+Qzdfk/hohqIs5VqNpQT1uidEudUrwwo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\DeshBoardSec\\Deshboard.css"
+    },
+    {
       "Identity": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\Home.css",
       "SourceId": "ExpenseTrackerMvc",
       "SourceType": "Discovered",
@@ -330,6 +372,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\login.css"
+    },
+    {
+      "Identity": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\Policy.css",
+      "SourceId": "ExpenseTrackerMvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\",
+      "BasePath": "_content/ExpenseTrackerMvc",
+      "RelativePath": "css/Policy#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k9hdb2tbty",
+      "Integrity": "qFu/8anvWmohEBCUp/ZalkRgBEm5qVL+9E85h7MeqlE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Policy.css"
     },
     {
       "Identity": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\register.css",
@@ -388,8 +451,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "jawq6zd69c",
-      "Integrity": "+6fDkU24lPlb15PCTGCu7/QYNLJ6oH4QakpiTWjS1Es=",
+      "Fingerprint": "hbun8zyfx9",
+      "Integrity": "w7JSHTbEEZit0OmMVYwC8n7J+OnsdvldTRcWcSOdiLs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\TransactionIndex\\Transaction.css"
@@ -2397,6 +2460,88 @@
       ]
     },
     {
+      "Route": "css/CateAndTranCreateEdit/TransCreateEdit.css",
+      "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\CateAndTranCreateEdit\\TransCreateEdit.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3195"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cOw7AaMGH1I34hzVvdL8nPmD9qMj54bimIbUk/GgLJw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 16:49:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cOw7AaMGH1I34hzVvdL8nPmD9qMj54bimIbUk/GgLJw="
+        }
+      ]
+    },
+    {
+      "Route": "css/CateAndTranCreateEdit/TransCreateEdit.shr91eyl7x.css",
+      "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\CateAndTranCreateEdit\\TransCreateEdit.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3195"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cOw7AaMGH1I34hzVvdL8nPmD9qMj54bimIbUk/GgLJw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 16:49:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "shr91eyl7x"
+        },
+        {
+          "Name": "label",
+          "Value": "css/CateAndTranCreateEdit/TransCreateEdit.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cOw7AaMGH1I34hzVvdL8nPmD9qMj54bimIbUk/GgLJw="
+        }
+      ]
+    },
+    {
       "Route": "css/CateAndTranDelete/CategoryDelete.css",
       "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\CateAndTranDelete\\CategoryDelete.css",
       "Selectors": [],
@@ -2583,7 +2728,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 14:08:10 GMT"
+          "Value": "Sun, 06 Apr 2025 17:00:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2620,7 +2765,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 14:08:10 GMT"
+          "Value": "Sun, 06 Apr 2025 17:00:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2639,6 +2784,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-2M6KwOAn+C4qmTCKU3fGaSTC++DQUoIqnuLM2DKsITw="
+        }
+      ]
+    },
+    {
+      "Route": "css/DeshBoardSec/Deshboard.css",
+      "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\DeshBoardSec\\Deshboard.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2971"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bZv43+mqc2j+Qzdfk/hohqIs5VqNpQT1uidEudUrwwo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 17:04:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bZv43+mqc2j+Qzdfk/hohqIs5VqNpQT1uidEudUrwwo="
+        }
+      ]
+    },
+    {
+      "Route": "css/DeshBoardSec/Deshboard.jkf377dpn6.css",
+      "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\DeshBoardSec\\Deshboard.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2971"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bZv43+mqc2j+Qzdfk/hohqIs5VqNpQT1uidEudUrwwo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 17:04:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jkf377dpn6"
+        },
+        {
+          "Name": "label",
+          "Value": "css/DeshBoardSec/Deshboard.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bZv43+mqc2j+Qzdfk/hohqIs5VqNpQT1uidEudUrwwo="
         }
       ]
     },
@@ -2803,6 +3030,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-I3tqkAfGTdjdSbP2Vm39qQf5RnsxKESeHGDLyDtjnNg="
+        }
+      ]
+    },
+    {
+      "Route": "css/Policy.css",
+      "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\Policy.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1942"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qFu/8anvWmohEBCUp/ZalkRgBEm5qVL+9E85h7MeqlE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 17:13:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qFu/8anvWmohEBCUp/ZalkRgBEm5qVL+9E85h7MeqlE="
+        }
+      ]
+    },
+    {
+      "Route": "css/Policy.k9hdb2tbty.css",
+      "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\Policy.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1942"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qFu/8anvWmohEBCUp/ZalkRgBEm5qVL+9E85h7MeqlE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 17:13:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k9hdb2tbty"
+        },
+        {
+          "Name": "label",
+          "Value": "css/Policy.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qFu/8anvWmohEBCUp/ZalkRgBEm5qVL+9E85h7MeqlE="
         }
       ]
     },
@@ -2981,7 +3290,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5319"
+          "Value": "4995"
         },
         {
           "Name": "Content-Type",
@@ -2989,11 +3298,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+6fDkU24lPlb15PCTGCu7/QYNLJ6oH4QakpiTWjS1Es=\""
+          "Value": "\"w7JSHTbEEZit0OmMVYwC8n7J+OnsdvldTRcWcSOdiLs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 16:12:40 GMT"
+          "Value": "Sun, 06 Apr 2025 16:39:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3003,12 +3312,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+6fDkU24lPlb15PCTGCu7/QYNLJ6oH4QakpiTWjS1Es="
+          "Value": "sha256-w7JSHTbEEZit0OmMVYwC8n7J+OnsdvldTRcWcSOdiLs="
         }
       ]
     },
     {
-      "Route": "css/TransactionIndex/Transaction.jawq6zd69c.css",
+      "Route": "css/TransactionIndex/Transaction.hbun8zyfx9.css",
       "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\TransactionIndex\\Transaction.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3018,7 +3327,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5319"
+          "Value": "4995"
         },
         {
           "Name": "Content-Type",
@@ -3026,11 +3335,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+6fDkU24lPlb15PCTGCu7/QYNLJ6oH4QakpiTWjS1Es=\""
+          "Value": "\"w7JSHTbEEZit0OmMVYwC8n7J+OnsdvldTRcWcSOdiLs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 16:12:40 GMT"
+          "Value": "Sun, 06 Apr 2025 16:39:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3040,7 +3349,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jawq6zd69c"
+          "Value": "hbun8zyfx9"
         },
         {
           "Name": "label",
@@ -3048,7 +3357,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-+6fDkU24lPlb15PCTGCu7/QYNLJ6oH4QakpiTWjS1Es="
+          "Value": "sha256-w7JSHTbEEZit0OmMVYwC8n7J+OnsdvldTRcWcSOdiLs="
         }
       ]
     },
