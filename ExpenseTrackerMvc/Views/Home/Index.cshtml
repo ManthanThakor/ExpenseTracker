@@ -1,44 +1,39 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<!-- Animated Slider Section -->
-<div id="slider">
-    <div class="slider-inner">
-        <div id="slider-content">
-            <div class="meta">Finance</div>
-            <h2 id="slide-title">Track Your<br>Expenses</h2>
-            <span data-slide-title="0">Track Your<br>Expenses</span>
-            <span data-slide-title="1">Manage Your<br>Budget</span>
-            <span data-slide-title="2">Visualize<br>Spending</span>
-            <span data-slide-title="3">Achieve<br>Goals</span>
-            <div class="meta">Action</div>
-            <div id="slide-status">Take Control Today</div>
-            <span data-slide-status="0">Take Control Today</span>
-            <span data-slide-status="1">Plan For Tomorrow</span>
-            <span data-slide-status="2">Understand Your Habits</span>
-            <span data-slide-status="3">Financial Freedom</span>
-            <a href="#" class="action-button">Get Started</a>
-        </div>
-        <div class="slider-image-container">
-            <div class="slider-image active" data-slide="0">
-                <img src="~/assets/SliderSection/expense-tracking.png" alt="Track expenses" />
-            </div>
-            <div class="slider-image" data-slide="1">
-                <img src="~/assets/SliderSection/budget-management.png" alt="Manage budget" />
-            </div>
-            <div class="slider-image" data-slide="2">
-                <img src="~/assets/SliderSection/data-visualization.png" alt="Visualize spending" />
-            </div>
-            <div class="slider-image" data-slide="3">
-                <img src="~/assets/SliderSection/financial-goals.png" alt="Achieve goals" />
+<!-- Welcome Slider Section -->
+<div id="welcome-slider">
+    <div class="slider-overlay"></div>
+    <div class="welcome-slider">
+        <!-- Slide 1 -->
+        <div class="welcome-slide">
+            <div class="slide-content">
+                <span class="slide-subtitle">Welcome to ExpenseTracker</span>
+                <h2 class="slide-title">Take Control of<br>Your Finances</h2>
+                <p class="slide-description">Start tracking your expenses effortlessly and gain valuable insights into your spending habits.</p>
+                <a href="#" class="action-button">Get Started <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
-    </div>
-    <div id="pagination">
-        <button class="active" data-slide="0"></button>
-        <button data-slide="1"></button>
-        <button data-slide="2"></button>
-        <button data-slide="3"></button>
+
+        <!-- Slide 2 -->
+        <div class="welcome-slide">
+            <div class="slide-content">
+                <span class="slide-subtitle">Smart Budgeting</span>
+                <h2 class="slide-title">Plan Your<br>Financial Future</h2>
+                <p class="slide-description">Create budgets that work and watch your savings grow with our intuitive tools.</p>
+                <a href="#" class="action-button">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="welcome-slide">
+            <div class="slide-content">
+                <span class="slide-subtitle">Visual Insights</span>
+                <h2 class="slide-title">Understand Your<br>Spending Patterns</h2>
+                <p class="slide-description">Beautiful charts and reports help you see where your money goes each month.</p>
+                <a href="#" class="action-button">See Demo <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
     </div>
 </div>
 
