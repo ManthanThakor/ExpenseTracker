@@ -3,92 +3,107 @@
 @{
     ViewData["Title"] = "Login";
 }
-
+<link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
 <div class="login-container">
-    <div class="row login-box">
-        <!-- Login Form -->
-        <div class="col-md-6 col-12 login-form">
-            <img src="~/assets/Logo/icon-l1g9rKqp.svg" alt="Expense Tracker Logo" class="mb-3 logo" width="100" height="100" />
-
-            <h1 class="mb-4 text-center">
-                <i class="fas fa-robot"></i> Welcome to Expense Tracker
-                <br />
-                Sign into your account
-            </h1>
-
-            <form asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-                <!-- Email Input -->
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-user"></i></span>
-                    </div>
-                    <input asp-for="Email" class="form-control" placeholder="Email address" required />
-                </div>
-                <span asp-validation-for="Email" class="text-danger error-message"></span>
-
-
-                <!-- Password Input -->
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                    </div>
-                    <input asp-for="Password" class="form-control" placeholder="Password" type="password" required />
-                </div>
-                <span asp-validation-for="Password" class="text-danger error-message"></span>
-
-
-                <!-- Forgot Password & Remember Me -->
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <a class="forgot-password" href="#">Forgot password?</a>
-                    <div class="form-check">
-                        <input asp-for="RememberMe" class="form-check-input" />
-                        <label asp-for="RememberMe" class="form-check-label">Remember Me</label>
-                    </div>
+    <div class="login-box">
+        <div class="login-form-container">
+            <div class="login-form">
+                <div class="logo-container">
+                    <img src="~/assets/Logo/icon-l1g9rKqp.svg" alt="Expense Tracker Logo" class="logo" />
+                    <h1 class="brand-name">Expense<span>Tracker</span></h1>
                 </div>
 
-                <!-- Login Button -->
-                <button class="btn btn-primary btn-block" type="submit">
-                    <i class="fas fa-sign-in-alt"></i> Log In
-                </button>
-            </form>
+                <h2 class="welcome-text">
+                    <i class="fas fa-robot"></i> Welcome Back!
+                </h2>
+                <p class="subtext">Sign in to continue your financial journey</p>
 
-            <!-- Register & Home Button -->
-            <a class="register-link mt-3 d-block text-center" asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]">
-                Don't have an account? Register
-            </a>
+                <form asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="auth-form">
+                    <div asp-validation-summary="ModelOnly" class="text-danger validation-summary"></div>
 
-            <a href="/" class="register-link mt-2 d-block text-center">
-                <button class="btn btn-secondary btn-block mt-2">
-                    <i class="fas fa-home"></i> Go back to Home
-                </button>
-            </a>
+                    <div class="form-group floating-label">
+                        <div class="input-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <input asp-for="Email" class="form-control" placeholder=" " required />
+                        <label asp-for="Email">Email Address</label>
+                        <span asp-validation-for="Email" class="text-danger error-message"></span>
+                    </div>
+
+                    <div class="form-group floating-label">
+                        <div class="input-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <input asp-for="Password" class="form-control" placeholder=" " type="password" required />
+                        <label asp-for="Password">Password</label>
+                        <span asp-validation-for="Password" class="text-danger error-message"></span>
+                    </div>
+
+                    <div class="form-options">
+                        <div class="form-check remember-me">
+                            <input asp-for="RememberMe" class="form-check-input" />
+                            <label asp-for="RememberMe" class="form-check-label">Remember me</label>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-login">
+                        <i class="fas fa-sign-in-alt"></i> Log In
+                    </button>
+
+                    <div class="social-login">
+                        <p class="divider">or continue with</p>
+                        <div class="social-buttons">
+                            <button type="button" class="btn-social google">
+                                <i class="fab fa-google"></i>
+                            </button>
+                            <button type="button" class="btn-social facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+                            <button type="button" class="btn-social twitter">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="register-link">
+                        Don't have an account? <a asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]">Sign up</a>
+                    </div>
+                </form>
+            </div>
         </div>
 
-        <!-- Robot Image Section -->
-        <div class="col-md-6 col-12 login-image">
-            <img src="~/imgs/login/cute-blue-robot-waving-hand-600nw-2056356791-removebg-preview.png"
-                 alt="Robot Login Page" width="450" height="450" />
+        <!-- Right Side - Illustration -->
+        <div class="login-illustration">
+            <div class="illustration-container">
+                <img src="~/imgs/login/cute-blue-robot-waving-hand-600nw-2056356791-removebg-preview.png"
+                     alt="Friendly Robot" class="robot-image" />
+                <div class="illustration-text">
+                    <h3>Smart Finance Management</h3>
+                    <p>Track expenses, set budgets, and achieve your financial goals with our intuitive platform.</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<script>
-    @section Scripts {
-        @await Html.PartialAsync("_ValidationScriptsPartial")
-            <script>
-            $(document).ready(function () {
-                $("form").on("submit", function () {
-                    $(".text-danger").each(function () {
-                        if ($(this).text().trim() !== "") {
-                            $(this).parent(".input-group").addClass("error");
-                        }
-                    });
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script>
+        $(document).ready(function() {
+            // Add floating label functionality
+            $('.floating-label input').on('focus blur', function() {
+                $(this).siblings('label').toggleClass('active', $(this).val() !== '' || $(this).is(':focus'));
+            }).trigger('blur');
+
+            // Add error class to parent when validation fails
+            $("form").on("submit", function() {
+                $(".text-danger").each(function() {
+                    if ($(this).text().trim() !== "") {
+                        $(this).closest(".form-group").addClass("has-error");
+                    }
                 });
             });
+        });
     </script>
-    }
-</script>
-
-<link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+}
