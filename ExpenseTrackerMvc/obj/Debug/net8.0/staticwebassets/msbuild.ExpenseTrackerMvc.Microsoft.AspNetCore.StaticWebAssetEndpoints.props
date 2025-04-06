@@ -24,17 +24,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"e860dp10g2"},{"Name":"integrity","Value":"sha256-cp\u002BRYtN12duKP6aU5G9gG1PTW0y1gUeV06e8\u002BzfQS5w="},{"Name":"label","Value":"_content/ExpenseTrackerMvc/css/CategoryCreateEdit.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"898"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022cp\u002BRYtN12duKP6aU5G9gG1PTW0y1gUeV06e8\u002BzfQS5w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 05 Apr 2025 03:06:03 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/ExpenseTrackerMvc/css/Home.4ozt5e342g.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\Home.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4ozt5e342g"},{"Name":"integrity","Value":"sha256-1KYSDu1g67EcZg7WDmcln0xU2oXw055HnJ7wecUwIHY="},{"Name":"label","Value":"_content/ExpenseTrackerMvc/css/Home.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3401"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00221KYSDu1g67EcZg7WDmcln0xU2oXw055HnJ7wecUwIHY=\u0022"},{"Name":"Last-Modified","Value":"Sat, 05 Apr 2025 16:06:43 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ExpenseTrackerMvc/css/Home.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\Home.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1KYSDu1g67EcZg7WDmcln0xU2oXw055HnJ7wecUwIHY="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3401"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00221KYSDu1g67EcZg7WDmcln0xU2oXw055HnJ7wecUwIHY=\u0022"},{"Name":"Last-Modified","Value":"Sat, 05 Apr 2025 16:06:43 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-w6tdDK2vYueIGz\u002BqAJuj7bdpudb6gPfflZspPUHcKhc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3384"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022w6tdDK2vYueIGz\u002BqAJuj7bdpudb6gPfflZspPUHcKhc=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 05:47:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ExpenseTrackerMvc/css/Home.dwrssbf9lh.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\Home.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dwrssbf9lh"},{"Name":"integrity","Value":"sha256-w6tdDK2vYueIGz\u002BqAJuj7bdpudb6gPfflZspPUHcKhc="},{"Name":"label","Value":"_content/ExpenseTrackerMvc/css/Home.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3384"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022w6tdDK2vYueIGz\u002BqAJuj7bdpudb6gPfflZspPUHcKhc=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 05:47:02 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ExpenseTrackerMvc/css/login.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</AssetFile>

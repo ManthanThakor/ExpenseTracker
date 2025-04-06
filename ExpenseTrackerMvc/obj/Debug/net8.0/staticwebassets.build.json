@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XRhUZozyRBs84btKzcy1O/ZtaRvGwN1uyoCW223slE0=",
+  "Hash": "2fIG/1T2F2aL4oA6Q3GdeDH+LHQ8FX2exQc1c0HuV5U=",
   "Source": "ExpenseTrackerMvc",
   "BasePath": "_content/ExpenseTrackerMvc",
   "Mode": "Default",
@@ -115,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "4ozt5e342g",
-      "Integrity": "1KYSDu1g67EcZg7WDmcln0xU2oXw055HnJ7wecUwIHY=",
+      "Fingerprint": "dwrssbf9lh",
+      "Integrity": "w6tdDK2vYueIGz+qAJuj7bdpudb6gPfflZspPUHcKhc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Home.css"
@@ -1674,51 +1674,6 @@
       ]
     },
     {
-      "Route": "css/Home.4ozt5e342g.css",
-      "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\Home.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3401"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"1KYSDu1g67EcZg7WDmcln0xU2oXw055HnJ7wecUwIHY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 05 Apr 2025 16:06:43 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4ozt5e342g"
-        },
-        {
-          "Name": "label",
-          "Value": "css/Home.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-1KYSDu1g67EcZg7WDmcln0xU2oXw055HnJ7wecUwIHY="
-        }
-      ]
-    },
-    {
       "Route": "css/Home.css",
       "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\Home.css",
       "Selectors": [],
@@ -1729,7 +1684,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3401"
+          "Value": "3384"
         },
         {
           "Name": "Content-Type",
@@ -1737,11 +1692,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"1KYSDu1g67EcZg7WDmcln0xU2oXw055HnJ7wecUwIHY=\""
+          "Value": "\"w6tdDK2vYueIGz+qAJuj7bdpudb6gPfflZspPUHcKhc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Apr 2025 16:06:43 GMT"
+          "Value": "Sun, 06 Apr 2025 05:47:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1751,7 +1706,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-1KYSDu1g67EcZg7WDmcln0xU2oXw055HnJ7wecUwIHY="
+          "Value": "sha256-w6tdDK2vYueIGz+qAJuj7bdpudb6gPfflZspPUHcKhc="
+        }
+      ]
+    },
+    {
+      "Route": "css/Home.dwrssbf9lh.css",
+      "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\Home.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3384"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"w6tdDK2vYueIGz+qAJuj7bdpudb6gPfflZspPUHcKhc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 05:47:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dwrssbf9lh"
+        },
+        {
+          "Name": "label",
+          "Value": "css/Home.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-w6tdDK2vYueIGz+qAJuj7bdpudb6gPfflZspPUHcKhc="
         }
       ]
     },
