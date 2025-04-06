@@ -1,7 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
 <!-- Animated Slider Section -->
 <div id="slider">
     <div class="slider-inner">
@@ -18,14 +17,23 @@
             <span data-slide-status="1">Plan For Tomorrow</span>
             <span data-slide-status="2">Understand Your Habits</span>
             <span data-slide-status="3">Financial Freedom</span>
+            <a href="#" class="action-button">Get Started</a>
+        </div>
+        <div class="slider-image-container">
+            <div class="slider-image active" data-slide="0">
+                <img src="~/assets/SliderSection/expense-tracking.png" alt="Track expenses" />
+            </div>
+            <div class="slider-image" data-slide="1">
+                <img src="~/assets/SliderSection/budget-management.png" alt="Manage budget" />
+            </div>
+            <div class="slider-image" data-slide="2">
+                <img src="~/assets/SliderSection/data-visualization.png" alt="Visualize spending" />
+            </div>
+            <div class="slider-image" data-slide="3">
+                <img src="~/assets/SliderSection/financial-goals.png" alt="Achieve goals" />
+            </div>
         </div>
     </div>
-
-    <img src="~/imgs/Background/Bgimg.jpg" alt="Track expenses" />
-    <img src="~/imgs/Background/Bgimg.jpg" alt="Manage budget" />
-    <img src="~/imgs/Background/Bgimg.jpg" alt="Visualize spending" />
-    <img src="~/imgs/Background/Bgimg.jpg" alt="Achieve goals" />
-
     <div id="pagination">
         <button class="active" data-slide="0"></button>
         <button data-slide="1"></button>
@@ -34,10 +42,355 @@
     </div>
 </div>
 
+<!-- Features Section -->
+<section id="features">
+    <div class="container features-wrapper">
+        <!-- Left side: Text and cards (now full width) -->
+        <div class="features-content">
+            <div class="section-header">
+                <span class="section-tag">What We Offer</span>
+                <h2>Smart Features For Your Financial Success</h2>
+                <p class="section-subheading">Take control of your finances with powerful yet simple tools</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div>
+                        <h3>Expense Categorization</h3>
+                        <p>Automatically categorize your spending with custom categories and color coding to visualize where your money goes.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div>
+                        <h3>Date Tracking</h3>
+                        <p>Monitor your transactions by date with intuitive calendars and timelines to identify spending patterns.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <div>
+                        <h3>Custom Labels</h3>
+                        <p>Create personalized transaction labels with customizable icons and colors to match your financial style.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div>
+                        <h3>Secure Access</h3>
+                        <p>Your financial data stays protected with secure login and privacy controls that keep information safe.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <div>
+                        <h3>Transaction History</h3>
+                        <p>Access your complete financial history with searchable records of all your past expenses and income.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <div>
+                        <h3>Smart Filtering</h3>
+                        <p>Filter transactions by multiple criteria to find exactly what you're looking for in seconds.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- How It Works Section -->
+<div id="how-it-works">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Simple Process</span>
+            <h2>How It Works</h2>
+            <p class="section-subheading">Three easy steps to financial clarity</p>
+        </div>
+
+        <div class="steps-container">
+            <!-- Step 1 -->
+            <div class="step-item" data-aos="fade-up">
+                <div class="step-number pulse-animation">1</div>
+                <div class="step-content glass-card">
+                    <div class="step-icon floating">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Create Your Account</h3>
+                    <p>Sign up with your email and password to create your secure personal account in seconds. No credit card required.</p>
+                    <a href="#" class="step-link magnetic-wrap">
+                        <span class="magnetic-area"></span>
+                        <span class="btn-magnetic">
+                            Get started <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </a>
+                    <div class="step-decoration"></div>
+                </div>
+                <div class="step-image floating">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Create account" />
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+
+            <div class="step-connector"></div>
+
+            <!-- Step 2 -->
+            <div class="step-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="step-number pulse-animation">2</div>
+                <div class="step-content glass-card">
+                    <div class="step-icon floating">
+                        <i class="fas fa-folder-plus"></i>
+                    </div>
+                    <h3>Set Up Categories</h3>
+                    <p>Create custom income and expense categories with personalized colors and icons that match your financial life.</p>
+                    <a href="#" class="step-link magnetic-wrap">
+                        <span class="magnetic-area"></span>
+                        <span class="btn-magnetic">
+                            Learn more <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </a>
+                    <div class="step-decoration"></div>
+                </div>
+                <div class="step-image floating">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Set up categories" />
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+
+            <div class="step-connector"></div>
+
+            <!-- Step 3 -->
+            <div class="step-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="step-number pulse-animation">3</div>
+                <div class="step-content glass-card">
+                    <div class="step-icon floating">
+                        <i class="fas fa-receipt"></i>
+                    </div>
+                    <h3>Track Transactions</h3>
+                    <p>Start recording your income and expenses with detailed information to gain insights into your spending habits.</p>
+                    <a href="#" class="step-link magnetic-wrap">
+                        <span class="magnetic-area"></span>
+                        <span class="btn-magnetic">
+                            See demo <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </a>
+                    <div class="step-decoration"></div>
+                </div>
+                <div class="step-image floating">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Track transactions" />
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Benefits Section -->
+<div id="benefits">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Why Choose Us</span>
+            <h2>Benefits That Make a Difference</h2>
+            <p class="section-subheading">Experience financial clarity like never before</p>
+        </div>
+
+        <div class="benefits-wrapper">
+            <div class="benefits-image" data-aos="zoom-in">
+                <div class="image-container floating">
+                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Financial freedom" />
+                    <div class="image-glow"></div>
+                </div>
+            </div>
+
+            <div class="benefits-list">
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon pulse">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Save Time</h3>
+                        <p>Quick entry and smart categorization means less time managing finances and more time living life.</p>
+                        <div class="hover-line"></div>
+                    </div>
+                </div>
+
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon pulse">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Gain Insights</h3>
+                        <p>Discover spending patterns you never knew existed and make informed decisions about your money.</p>
+                        <div class="hover-line"></div>
+                    </div>
+                </div>
+
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon pulse">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Reduce Stress</h3>
+                        <p>No more financial anxiety when you know exactly where your money is going each month.</p>
+                        <div class="hover-line"></div>
+                    </div>
+                </div>
+
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-icon pulse">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Reach Goals Faster</h3>
+                        <p>Identify savings opportunities and redirect funds toward what matters most to you.</p>
+                        <div class="hover-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Testimonials Section -->
+<div id="testimonials">
+    <div class="testimonials-container-sec">
+        <div class="section-header">
+            <span class="section-tag">User Stories</span>
+            <h2>What Our Users Say</h2>
+            <p class="section-subheading">Real people, real financial transformations</p>
+        </div>
+
+        <div class="testimonials-carousel slick-slider">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" />
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <span>Marketing Professional</span>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Torres" />
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Torres</h4>
+                            <span>Small Business Owner</span>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Lisa Chen" />
+                        </div>
+                        <div class="author-info">
+                            <h4>Lisa Chen</h4>
+                            <span>Freelance Designer</span>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 (additional) -->
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David Kim" />
+                        </div>
+                        <div class="author-info">
+                            <h4>David Kim</h4>
+                            <span>Software Engineer</span>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 @section Styles {
     <link rel="stylesheet" href="~/css/home.css" />
 }
-
 @section Scripts {
     <script src="~/js/home.js"></script>
 }

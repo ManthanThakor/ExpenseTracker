@@ -5,8 +5,32 @@
       "PackagePath": "staticwebassets\\ExpenseTrackerMvc.dx92t0ndgg.bundle.scp.css"
     },
     {
+      "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\assets\\Background-slider\\Bg.png",
+      "PackagePath": "staticwebassets\\assets\\Background-slider\\Bg.png"
+    },
+    {
+      "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\assets\\Feature\\Featuresec.png",
+      "PackagePath": "staticwebassets\\assets\\Feature\\Featuresec.png"
+    },
+    {
       "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\assets\\Logo\\icon-l1g9rKqp.svg",
       "PackagePath": "staticwebassets\\assets\\Logo\\icon-l1g9rKqp.svg"
+    },
+    {
+      "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\assets\\SliderSection\\budget-management.png",
+      "PackagePath": "staticwebassets\\assets\\SliderSection\\budget-management.png"
+    },
+    {
+      "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\assets\\SliderSection\\data-visualization.png",
+      "PackagePath": "staticwebassets\\assets\\SliderSection\\data-visualization.png"
+    },
+    {
+      "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\assets\\SliderSection\\expense-tracking.png",
+      "PackagePath": "staticwebassets\\assets\\SliderSection\\expense-tracking.png"
+    },
+    {
+      "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\assets\\SliderSection\\financial-goals.png",
+      "PackagePath": "staticwebassets\\assets\\SliderSection\\financial-goals.png"
     },
     {
       "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\CategoryCreateEdit.css",
@@ -33,12 +57,12 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\imgs\\Background\\Bgimg.jpg",
-      "PackagePath": "staticwebassets\\imgs\\Background\\Bgimg.jpg"
-    },
-    {
       "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\imgs\\Background\\image.png",
       "PackagePath": "staticwebassets\\imgs\\Background\\image.png"
+    },
+    {
+      "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\imgs\\Background\\wallpapersden.jpg",
+      "PackagePath": "staticwebassets\\imgs\\Background\\wallpapersden.jpg"
     },
     {
       "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\imgs\\login\\cute-blue-robot-waving-hand-600nw-2056356791-removebg-preview.png",
