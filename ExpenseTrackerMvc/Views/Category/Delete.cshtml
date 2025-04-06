@@ -1,47 +1,54 @@
-﻿@model ExpenseTrackerMvc.ViewModels.TransactionDeleteViewModel
+﻿@model ExpenseTrackerMvc.ViewModels.CategoryDeleteViewModel
+
 @{
-    ViewData["Title"] = "Delete Transaction";
+    ViewData["Title"] = "Delete Category";
 }
 
-<div class="container-fluid">
-    <h1 class="mt-4">Delete Transaction</h1>
-
-    <div class="card mb-4">
+<div class="container py-5" style="margin-top: 100px;">
+    <div class="card shadow">
         <div class="card-header bg-danger text-white">
-            <i class="fas fa-exclamation-triangle me-1"></i>
-            Confirm Deletion
+            <h3 class="mb-0"><i class="fas fa-trash-alt me-2"></i>Delete Category</h3>
         </div>
         <div class="card-body">
-            <h3>Are you sure you want to delete this transaction?</h3>
-            <div class="alert alert-warning">
-                <p>This action cannot be undone.</p>
+            <h4 class="text-danger">Are you sure you want to delete this category?</h4>
+
+            @if (Model.TransactionCount > 0)
+            {
+                <div class="alert alert-warning">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    Warning! This category has @Model.TransactionCount associated transactions.
+                    Deleting it will also remove all these transactions.
+                </div>
+            }
+
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <dl class="row">
+                        <dt class="col-sm-4">Name:</dt>
+                        <dd class="col-sm-8">@Model.Name</dd>
+
+                        <dt class="col-sm-4">Type:</dt>
+                        <dd class="col-sm-8">
+                            <span class="badge @(Model.Type == "Expense" ? "bg-danger" : "bg-success")">
+                                @Model.Type
+                            </span>
+                        </dd>
+                    </dl>
+                </div>
             </div>
 
-            <div class="mb-4">
-                <dl class="row">
-                    <dt class="col-sm-3">Title</dt>
-                    <dd class="col-sm-9">@Model.Title</dd>
-
-                    <dt class="col-sm-3">Amount</dt>
-                    <dd class="col-sm-9">@Model.Amount.ToString("C")</dd>
-
-                    <dt class="col-sm-3">Date</dt>
-                    <dd class="col-sm-9">@Model.Date.ToString("yyyy-MM-dd")</dd>
-
-                    <dt class="col-sm-3">Category</dt>
-                    <dd class="col-sm-9">@Model.CategoryName</dd>
-                </dl>
-            </div>
-
-            <form asp-action="Delete" method="post">
+            <form asp-action="Delete" class="mt-4">
                 <input type="hidden" asp-for="Id" />
-                <button type="submit" class="btn btn-danger">
-                    <i class="fas fa-trash me-1"></i> Delete
-                </button>
-                <a asp-action="Index" class="btn btn-secondary">
-                    <i class="fas fa-arrow-left me-1"></i> Back to List
-                </a>
+                <div class="d-flex justify-content-between">
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left me-1"></i> Back to List
+                    </a>
+                    <button type="submit" class="btn btn-danger">
+                        <i class="fas fa-trash me-1"></i> Delete
+                    </button>
+                </div>
             </form>
         </div>
     </div>
 </div>
+<link href="~/css/cateandtrandelete/categorydelete.css" rel="stylesheet" />

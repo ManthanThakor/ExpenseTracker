@@ -1,0 +1,150 @@
+﻿
+body {
+    background: linear-gradient(90deg, rgba(12,8,64,0.96) 29%, rgba(57,0,73,1) 72%, rgba(29,36,112,1) 100%);
+    color: #f8f9fa;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card Styling with Glow Effect */
+.card {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+    .card:hover {
+        box-shadow: 0 8px 40px rgba(255, 65, 108, 0.3);
+    }
+
+/* Danger Header with Pulsing Glow */
+.card-header.bg-danger {
+    background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%) !important;
+    animation: pulse-glow 2s infinite alternate;
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 75, 43, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgba(255, 75, 43, 0.8);
+    }
+}
+
+/* Alert Styling with Subtle Pulse */
+.alert-warning {
+    background: rgba(255, 193, 7, 0.15);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    color: #ffc107;
+    border-radius: 8px;
+    animation: subtle-pulse 4s infinite;
+}
+
+@keyframes subtle-pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+}
+
+/* Button Styling with Glow Effects */
+.btn {
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+    box-shadow: 0 4px 15px rgba(255, 75, 43, 0.4);
+}
+
+    .btn-danger:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 75, 43, 0.6);
+    }
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+    .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+/* Data List Styling */
+dl.row dt {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+dl.row dd {
+    color: #fff;
+    font-weight: 400;
+}
+
+/* Form Elements */
+.form-control {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card {
+        border-radius: 10px;
+    }
+
+    .btn {
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Floating Icon Animation */
+.fa-exclamation-triangle {
+    animation: float-icon 3s ease-in-out infinite;
+}
+
+@keyframes float-icon {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Smooth Page Transition */
+.container-fluid {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+

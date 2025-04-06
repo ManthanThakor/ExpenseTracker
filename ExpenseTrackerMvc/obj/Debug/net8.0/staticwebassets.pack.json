@@ -33,12 +33,28 @@
       "PackagePath": "staticwebassets\\assets\\SliderSection\\financial-goals.png"
     },
     {
-      "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\CategoryCreateEdit.css",
-      "PackagePath": "staticwebassets\\css\\CategoryCreateEdit.css"
+      "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\CateAndTranCreateEdit\\CateCreateEdit.css",
+      "PackagePath": "staticwebassets\\css\\CateAndTranCreateEdit\\CateCreateEdit.css"
+    },
+    {
+      "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\CateAndTranDelete\\CategoryDelete.css",
+      "PackagePath": "staticwebassets\\css\\CateAndTranDelete\\CategoryDelete.css"
+    },
+    {
+      "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\CateAndTranDelete\\TransactionDelete.css",
+      "PackagePath": "staticwebassets\\css\\CateAndTranDelete\\TransactionDelete.css"
+    },
+    {
+      "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\Category.css",
+      "PackagePath": "staticwebassets\\css\\Category.css"
     },
     {
       "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\Home.css",
       "PackagePath": "staticwebassets\\css\\Home.css"
+    },
+    {
+      "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\TransactionIndex\\Transaction.css",
+      "PackagePath": "staticwebassets\\css\\TransactionIndex\\Transaction.css"
     },
     {
       "Id": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\login.css",

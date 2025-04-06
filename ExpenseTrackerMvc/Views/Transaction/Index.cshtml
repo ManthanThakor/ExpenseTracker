@@ -3,162 +3,267 @@
     ViewData["Title"] = "Transactions";
 }
 
-<div class="container-fluid">
-    <h1 class="mt-4">Transactions</h1>
+<!-- Particle Background -->
+<div class="particles" id="particles-js"></div>
+
+<div class="container-fluid py-4">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="hero-title display-4 mb-3">Transaction History</h1>
+                <p class="lead mb-4">Track your income and expenses with detailed analytics and insights.</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <a asp-action="Create" class="btn btn-primary btn-lg px-4 py-2">
+                    <i class="fas fa-plus me-2"></i> Add Transaction
+                </a>
+            </div>
+        </div>
+    </div>
 
     @if (TempData["SuccessMessage"] != null)
     {
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            @TempData["SuccessMessage"]
+        <div class="alert alert-success alert-dismissible fade show glass-card" role="alert">
+            <i class="fas fa-check-circle me-2"></i> @TempData["SuccessMessage"]
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     }
 
-    <div class="card mb-4">
-        <div class="card-header">
-            <div class="d-flex justify-content-between align-items-center">
-                <span><i class="fas fa-table me-1"></i> Transaction List</span>
-                <a asp-action="Create" class="btn btn-primary">
-                    <i class="fas fa-plus"></i> Add New
-                </a>
+    <!-- Summary Cards -->
+    <div class="row mb-4">
+        <div class="col-md-4 mb-3">
+            <div class="summary-card income-card p-4 text-white floating" style="animation-delay: 0.2s;">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-2">Total Income</h5>
+                        <h2 class="mb-0">@Model.TotalIncome.ToString("C")</h2>
+                    </div>
+                    <i class="fas fa-arrow-down fa-3x opacity-25"></i>
+                </div>
             </div>
         </div>
-        <div class="card-body">
-            <!-- Summary Cards -->
-            <div class="row mb-4">
-                <div class="col-md-4">
-                    <div class="card bg-success text-white">
-                        <div class="card-body">
-                            <h5 class="card-title">Total Income</h5>
-                            <h3 class="card-text">@Model.TotalIncome.ToString("C")</h3>
-                        </div>
+        <div class="col-md-4 mb-3">
+            <div class="summary-card expense-card p-4 text-white floating" style="animation-delay: 0.4s;">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-2">Total Expense</h5>
+                        <h2 class="mb-0">@Model.TotalExpense.ToString("C")</h2>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-danger text-white">
-                        <div class="card-body">
-                            <h5 class="card-title">Total Expense</h5>
-                            <h3 class="card-text">@Model.TotalExpense.ToString("C")</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card @(Model.Balance >= 0 ? "bg-primary" : "bg-warning") text-white">
-                        <div class="card-body">
-                            <h5 class="card-title">Balance</h5>
-                            <h3 class="card-text">@Model.Balance.ToString("C")</h3>
-                        </div>
-                    </div>
+                    <i class="fas fa-arrow-up fa-3x opacity-25"></i>
                 </div>
             </div>
-
-            <!-- Filters -->
-            <form asp-action="Index" method="get" class="mb-4">
-                <div class="row g-3">
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <label asp-for="SearchTerm" class="form-label">Search</label>
-                            <input asp-for="SearchTerm" class="form-control" placeholder="Search transactions..." />
-                        </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="summary-card @(Model.Balance >= 0 ? "balance-card" : "warning-card") p-4 text-white floating" style="animation-delay: 0.6s;">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-2">Current Balance</h5>
+                        <h2 class="mb-0">@Model.Balance.ToString("C")</h2>
                     </div>
-                    <div class="col-md-2">
-                        <div class="form-group">
-                            <label asp-for="StartDate" class="form-label">From Date</label>
-                            <input asp-for="StartDate" class="form-control" type="date" />
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="form-group">
-                            <label asp-for="EndDate" class="form-label">To Date</label>
-                            <input asp-for="EndDate" class="form-control" type="date" />
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <label asp-for="CategoryId" class="form-label">Category</label>
-                            <select asp-for="CategoryId" asp-items="Model.Categories" class="form-select">
-                                <option value="">-- All Categories --</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-2 d-flex align-items-end">
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary w-100">
-                                <i class="fas fa-search"></i> Filter
-                            </button>
-                        </div>
-                    </div>
+                    <i class="fas fa-wallet fa-3x opacity-25"></i>
                 </div>
-            </form>
-
-            <!-- Transactions Table -->
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover" id="transactionsTable">
-                    <thead class="table-light">
-                        <tr>
-                            <th>Date</th>
-                            <th>Title</th>
-                            <th>Category</th>
-                            <th>Amount</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model.Transactions)
-                        {
-                            string badgeClass = item.Category?.Type == "Income" ? "bg-success" : "bg-danger";
-                            string amountSign = item.Category?.Type == "Income" ? "+" : "-";
-                            <tr>
-                                <td>@item.Date.ToString("yyyy-MM-dd")</td>
-                                <td>@item.Title</td>
-                                <td>
-                                    @if (item.Category != null)
-                                    {
-                                        <span class="badge @badgeClass" style="background-color: @item.Category.Color;">
-                                            @item.Category.Name
-                                        </span>
-                                    }
-                                </td>
-                                <td class="text-@(item.Category?.Type == "Income" ? "success" : "danger")">
-                                    @amountSign @item.Amount.ToString("C")
-                                </td>
-                                <td>
-                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary">
-                                        <i class="fas fa-edit"></i>
-                                    </a>
-                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">
-                                        <i class="fas fa-trash"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                        }
-                        @if (!Model.Transactions.Any())
-                        {
-                            <tr>
-                                <td colspan="5" class="text-center">No transactions found.</td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
             </div>
         </div>
     </div>
+
+    <!-- Filter Section -->
+    <div class="glass-card p-4 mb-4">
+        <form asp-action="Index" method="get" class="filter-form">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="SearchTerm" class="form-label">Search</label>
+                        <input asp-for="SearchTerm" class="form-control" placeholder="Search transactions..." />
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="StartDate" class="form-label">From Date</label>
+                        <input asp-for="StartDate" class="form-control" type="date" />
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="EndDate" class="form-label">To Date</label>
+                        <input asp-for="EndDate" class="form-control" type="date" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="CategoryId" class="form-label">Category</label>
+                        <select asp-for="CategoryId" asp-items="Model.Categories" class="form-select">
+                            <option value="">All Categories</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary w-100 py-2">
+                        <i class="fas fa-filter me-2"></i> Filter
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Transactions List -->
+    <div class="glass-card p-4">
+        <h5 class="mb-4"><i class="fas fa-list me-2"></i> Recent Transactions</h5>
+
+        @if (!Model.Transactions.Any())
+        {
+            <div class="text-center py-5">
+                <i class="fas fa-exchange-alt fa-4x mb-3 opacity-25"></i>
+                <h4>No transactions found</h4>
+                <p class="text-muted">Start by adding your first transaction</p>
+                <a asp-action="Create" class="btn btn-primary mt-3">
+                    <i class="fas fa-plus me-2"></i> Add Transaction
+                </a>
+            </div>
+        }
+        else
+        {
+            <div class="transaction-list">
+                @foreach (var item in Model.Transactions)
+                {
+                    <div class="transaction-card glass-card @(item.Category?.Type == "Income" ? "income-transaction" : "expense-transaction")">
+                        <div class="row align-items-center">
+                            <div class="col-md-2">
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <div class="category-badge" style="background-color: @(item.Category?.Color + "20"); color: @item.Category?.Color; border: 1px solid @item.Category?.Color;">
+                                            @if (!string.IsNullOrEmpty(item.Category?.Icon))
+                                            {
+                                                <i class="@item.Category.Icon"></i>
+                                            }
+                                            @item.Category?.Name
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <h6 class="mb-1">@item.Title</h6>
+                                <small class="text-muted">@item.Date.ToString("MMM dd, yyyy")</small>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="transaction-amount @(item.Category?.Type == "Income" ? "income-amount" : "expense-amount")">
+                                    @(item.Category?.Type == "Income" ? "+" : "-") @item.Amount.ToString("C")
+                                </div>
+                            </div>
+                            <div class="col-md-3 text-end">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="action-btn edit-btn me-2">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="action-btn delete-btn">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
 </div>
 
+
+<link href="~/css/transactionindex/transaction.css" rel="stylesheet" />
 @section Scripts {
+    <!-- Particles.js Script -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $('#transactionsTable').DataTable({
-                "ordering": true,
-                "order": [[0, "desc"]],
-                "paging": true,
-                "searching": false,
-                "info": true,
-                "pageLength": 10,
-                "lengthChange": true,
-                "language": {
-                    "emptyTable": "No transactions found"
-                }
+        // Initialize particles.js
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 60,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#ffffff"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.3,
+                        "random": true,
+                        "anim": {
+                            "enable": true,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": true,
+                            "speed": 2,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#ffffff",
+                        "opacity": 0.2,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 1,
+                        "direction": "none",
+                        "random": true,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": true,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 0.5
+                            }
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        }
+                    }
+                },
+                "retina_detect": true
             });
         });
     </script>

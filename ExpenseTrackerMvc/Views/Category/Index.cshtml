@@ -2,22 +2,36 @@
 @{
     ViewData["Title"] = "Categories";
 }
+<link href="~/css/category.css" rel="stylesheet" />
+<style>
+    
+</style>
 
-<div class="py-5 container" style="margin-top:100px;">
-    <div class="row mb-4">
-        <div class="col-md-8">
-            <h1 class="h3 fw-bold text-dark">
-                <i class="fas fa-tags me-2"></i> Categories
-            </h1>
-            <p class="text-muted">Manage your expense and income categories</p>
-        </div>
-        <div class="col-md-4 text-md-end">
-            <a asp-action="Create" class="btn btn-primary">
-                <i class="fas fa-plus-circle me-1"></i> New Category
-            </a>
+<!-- Hero Section -->
+<div class="container " style="margin-top:120px;">
+    <div class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="display-5 fw-bold mb-4">Organize Your Finances</h1>
+                <p class="lead mb-4">Efficiently categorize your expenses and income to gain better financial insights and control over your budget.</p>
+                <div class="d-flex gap-3">
+                    <div class="feature-box p-3 rounded" style="background: rgba(106, 17, 203, 0.2); border: 1px solid rgba(106, 17, 203, 0.4);">
+                        <i class="fas fa-tags me-2"></i> Custom Categories
+                    </div>
+                    <div class="feature-box p-3 rounded" style="background: rgba(37, 117, 252, 0.2); border: 1px solid rgba(37, 117, 252, 0.4);">
+                        <i class="fas fa-chart-pie me-2"></i> Visual Reports
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image floating">
+                <img src="https://placehold.co/500x300/6a11cb/white?text=Category+Management" alt="Financial Categories">
+            </div>
         </div>
     </div>
+</div>
 
+<!-- Main Content -->
+<div class="container py-4">
     @if (TempData["SuccessMessage"] != null)
     {
         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -26,7 +40,7 @@
         </div>
     }
 
-    <div class="card shadow-sm">
+    <div class="card shadow-lg mb-5">
         <div class="card-body">
             <div class="row mb-4">
                 <div class="col-md-6">
@@ -62,21 +76,34 @@
                     </div>
                 </div>
             </div>
-
+            <div class="row mb-4">
+                <div class="col-md-8">
+                    <h1 class="h3 fw-bold" style="color: #00f9ff;
+">
+                        <i class="fas fa-tags me-2"></i> Categories
+                    </h1>
+                    <p class="text-muted">Manage your expense and income categories</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <a asp-action="Create" class="btn btn-primary">
+                        <i class="fas fa-plus-circle me-1"></i> New Category
+                    </a>
+                </div>
+            </div>
             @if (!Model.Categories.Any())
             {
-                <div class="py-5 text-center">
-                    <i class="fas fa-folder-open text-muted mb-3" style="font-size: 3rem;"></i>
-                    <h5 class="text-muted">No categories found</h5>
+                <div class="empty-state py-5 text-center">
+                    <i class="fas fa-folder-open mb-3" style="font-size: 3rem;"></i>
+                    <h5>No categories found</h5>
                     @if (!string.IsNullOrEmpty(Model.SearchTerm))
                     {
-                        <p>Try a different search term or <a asp-action="Index">view all categories</a>.</p>
+                        <p>Try a different search term or <a asp-action="Index" class="text-primary">view all categories</a>.</p>
                     }
                     else
                     {
                         <p>
                             Get started by
-                            <a asp-action="Create" class="fw-bold text-decoration-none">creating a new category</a>
+                            <a asp-action="Create" class="fw-bold text-decoration-none text-primary">creating a new category</a>
                         </p>
                     }
                 </div>
@@ -84,13 +111,12 @@
             else
             {
                 <div class="table-responsive">
-                    <table class="table-hover table align-middle">
-                        <thead class="table-light">
+                    <table class="table table-hover align-middle">
+                        <thead>
                             <tr>
                                 <th style="width: 50px"></th>
                                 <th>Name</th>
                                 <th>Type</th>
-                                <th>Description</th>
                                 <th class="text-end">Actions</th>
                             </tr>
                         </thead>
@@ -117,15 +143,6 @@
                                     <td>
                                         <span class="badge @(category.Type == "Expense" ? "bg-danger" : "bg-success")">
                                             @category.Type
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <span class="text-muted small">
-                                            @(string.IsNullOrEmpty(category.Description)
-                                                ? "-"
-                                                : (category.Description.Length > 50
-                                                ? $"{category.Description.Substring(0, 47)}..."
-                                                : category.Description))
                                         </span>
                                     </td>
                                     <td class="text-end">
@@ -156,6 +173,35 @@
             setTimeout(function () {
                 $(".alert-success").fadeOut("slow");
             }, 5000);
+
+            $('.card').hover(
+                function() {
+                    $(this).css('transform', 'translateY(-8px) scale(1.02)');
+                    $(this).find('.category-icon').css('transform', 'rotate(15deg) scale(1.2)');
+                },
+                function() {
+                    $(this).css('transform', '');
+                    $(this).find('.category-icon').css('transform', '');
+                }
+            );
+
+            // Add ripple effect to buttons
+            $('.btn').on('click', function(e) {
+                var x = e.pageX - $(this).offset().left;
+                var y = e.pageY - $(this).offset().top;
+
+                var ripple = $('<span class="ripple"></span>').css({
+                    left: x,
+                    top: y,
+                    background: $(this).hasClass('btn-primary') ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.1)'
+                });
+
+                $(this).append(ripple);
+
+                setTimeout(function() {
+                    ripple.remove();
+                }, 1000);
+            });
         });
     </script>
 }

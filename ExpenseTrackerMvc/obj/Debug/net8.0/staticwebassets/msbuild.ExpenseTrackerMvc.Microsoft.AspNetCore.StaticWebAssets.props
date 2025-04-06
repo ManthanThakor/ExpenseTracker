@@ -126,23 +126,77 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\SliderSection\financial-goals.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\CategoryCreateEdit.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\CateAndTranCreateEdit\CateCreateEdit.css'))">
       <SourceType>Package</SourceType>
       <SourceId>ExpenseTrackerMvc</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ExpenseTrackerMvc</BasePath>
-      <RelativePath>css/CategoryCreateEdit.css</RelativePath>
+      <RelativePath>css/CateAndTranCreateEdit/CateCreateEdit.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>e860dp10g2</Fingerprint>
-      <Integrity>cp+RYtN12duKP6aU5G9gG1PTW0y1gUeV06e8+zfQS5w=</Integrity>
+      <Fingerprint>elikx8k4ya</Fingerprint>
+      <Integrity>3kMumzzNIEjxu3xXe2+QtXqIg0gtzAtEXXWfk+DonFo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\CategoryCreateEdit.css'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\CateAndTranCreateEdit\CateCreateEdit.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\CateAndTranDelete\CategoryDelete.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ExpenseTrackerMvc</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ExpenseTrackerMvc</BasePath>
+      <RelativePath>css/CateAndTranDelete/CategoryDelete.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>tnqnv33ysx</Fingerprint>
+      <Integrity>R/6iI4DqZVvMBrwawvl0LK3Ogs/Q3h4Dp2tDTghBSdY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\CateAndTranDelete\CategoryDelete.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\CateAndTranDelete\TransactionDelete.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ExpenseTrackerMvc</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ExpenseTrackerMvc</BasePath>
+      <RelativePath>css/CateAndTranDelete/TransactionDelete.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>8altm1gsy9</Fingerprint>
+      <Integrity>AIt5o8X/g1h4eVyDR7nMineZzrsQkIhxF7jcDjyUR3c=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\CateAndTranDelete\TransactionDelete.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\Category.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ExpenseTrackerMvc</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ExpenseTrackerMvc</BasePath>
+      <RelativePath>css/Category.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gmz2mqnzb2</Fingerprint>
+      <Integrity>2M6KwOAn+C4qmTCKU3fGaSTC++DQUoIqnuLM2DKsITw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\Category.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\Home.css'))">
       <SourceType>Package</SourceType>
@@ -174,8 +228,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>sokqz86hhx</Fingerprint>
-      <Integrity>xFEV++k+bH6GwO3WZ2B8ZKhX/ue2ZYIapoKdpyks9o0=</Integrity>
+      <Fingerprint>5eqlkq9lql</Fingerprint>
+      <Integrity>I3tqkAfGTdjdSbP2Vm39qQf5RnsxKESeHGDLyDtjnNg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</OriginalItemSpec>
@@ -192,8 +246,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>73wvoeh2wy</Fingerprint>
-      <Integrity>zat4Vxub6Nb3Co4025w0QqUoZBb/FcqH2qZJYGd/ieA=</Integrity>
+      <Fingerprint>xwl4myscps</Fingerprint>
+      <Integrity>8aVKfSp8+8Ip1xcyE9M6IpgTRuv4CBtzk7ixDqNwa90=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\register.css'))</OriginalItemSpec>
@@ -215,6 +269,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\TransactionIndex\Transaction.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ExpenseTrackerMvc</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ExpenseTrackerMvc</BasePath>
+      <RelativePath>css/TransactionIndex/Transaction.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>jawq6zd69c</Fingerprint>
+      <Integrity>+6fDkU24lPlb15PCTGCu7/QYNLJ6oH4QakpiTWjS1Es=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\TransactionIndex\Transaction.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ExpenseTrackerMvc.dx92t0ndgg.bundle.scp.css'))">
       <SourceType>Package</SourceType>
@@ -318,8 +390,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>99nsb0qkbn</Fingerprint>
-      <Integrity>QxCm2Z9PbyekKcT9UynQBHrAk/zKe4JvldYXNw0i5QM=</Integrity>
+      <Fingerprint>6obz5rszb1</Fingerprint>
+      <Integrity>Kun/rsJBN0vJhPUH7c4IxtEH5jWGlnzRxkDVQ6TX/uo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\categoryCreateEdit.js'))</OriginalItemSpec>

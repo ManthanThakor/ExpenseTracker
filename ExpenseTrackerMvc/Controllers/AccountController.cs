@@ -71,7 +71,7 @@ namespace ExpenseTrackerMvc.Controllers
                 return LocalRedirect(returnUrl);
             }
 
-            return RedirectToAction("Index", "Dashboard");
+            return RedirectToAction("Index", "Home");
         }
 
 
