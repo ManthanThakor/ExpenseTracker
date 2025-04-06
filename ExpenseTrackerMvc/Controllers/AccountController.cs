@@ -3,8 +3,6 @@ using ExpenseTrackerMvc.Models;
 using ExpenseTrackerMvc.Services.AuthServices;
 using ExpenseTrackerMvc.Services.PassService;
 using ExpenseTrackerMvc.ViewModels;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -158,10 +156,78 @@ namespace ExpenseTrackerMvc.Controllers
             return View(user);
         }
 
-        [HttpGet]
-        public IActionResult AccessDenied()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UpdateProfile(User model, string currentPassword, string newPassword)
         {
-            return View();
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            var user = await _context.Users.FindAsync(userId);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            // Verify current password if changing sensitive data
+            if (!string.IsNullOrEmpty(currentPassword))
+            {
+                if (!_passwordService.VerifyPassword(currentPassword, user.PasswordHash))
+                {
+                    ModelState.AddModelError("CurrentPassword", "Current password is incorrect.");
+                    return View("Profile", user);
+                }
+
+                // Update password if new password provided
+                if (!string.IsNullOrEmpty(newPassword))
+                {
+                    user.PasswordHash = _passwordService.HashPassword(newPassword);
+                }
+            }
+
+            // Update other fields
+            user.Username = model.Username;
+            user.Email = model.Email;
+
+            _context.Update(user);
+            await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Profile updated successfully!";
+            return RedirectToAction("Profile");
+        }
+
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteAccount(int id, string deletePassword)
+        {
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            if (id != userId)
+            {
+                return Forbid();
+            }
+
+            var user = await _context.Users.FindAsync(userId);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            // Verify password
+            if (!_passwordService.VerifyPassword(deletePassword, user.PasswordHash))
+            {
+                TempData["ErrorMessage"] = "Password verification failed. Account not deleted.";
+                return RedirectToAction("Profile");
+            }
+
+            // Delete user and associated data
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+
+            // Sign out
+            await _authService.SignOutAsync(HttpContext);
+
+            TempData["SuccessMessage"] = "Your account has been successfully deleted.";
+            return RedirectToAction("Index", "Home");
         }
     }
 }

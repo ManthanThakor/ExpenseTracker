@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NoPXnWgkWvMgY4a1g5waPA8ZPLcYvdLH0GizlP+P3Zo=",
+  "Hash": "csGJx6/XtOBh1GHtJ+gpfp5qUeaa84AtjssjsuxhSMw=",
   "Source": "ExpenseTrackerMvc",
   "BasePath": "_content/ExpenseTrackerMvc",
   "Mode": "Default",
@@ -430,8 +430,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "h06gdro3m2",
-      "Integrity": "cTtar131h/d1YqTth+Qlh9eXhqVDJuQWLca+NbEYxXA=",
+      "Fingerprint": "cmb8uxu2r7",
+      "Integrity": "1E79eFXWdFsZuE/uo5ZAHSdejKi+I4qpWFd2cD0E9Tc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -3198,6 +3198,51 @@
       ]
     },
     {
+      "Route": "css/site.cmb8uxu2r7.css",
+      "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12700"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1E79eFXWdFsZuE/uo5ZAHSdejKi+I4qpWFd2cD0E9Tc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 17:16:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cmb8uxu2r7"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1E79eFXWdFsZuE/uo5ZAHSdejKi+I4qpWFd2cD0E9Tc="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -3208,7 +3253,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12607"
+          "Value": "12700"
         },
         {
           "Name": "Content-Type",
@@ -3216,11 +3261,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"cTtar131h/d1YqTth+Qlh9eXhqVDJuQWLca+NbEYxXA=\""
+          "Value": "\"1E79eFXWdFsZuE/uo5ZAHSdejKi+I4qpWFd2cD0E9Tc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 12:51:45 GMT"
+          "Value": "Sun, 06 Apr 2025 17:16:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3230,52 +3275,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-cTtar131h/d1YqTth+Qlh9eXhqVDJuQWLca+NbEYxXA="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.h06gdro3m2.css",
-      "AssetFile": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "12607"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"cTtar131h/d1YqTth+Qlh9eXhqVDJuQWLca+NbEYxXA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 12:51:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "h06gdro3m2"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-cTtar131h/d1YqTth+Qlh9eXhqVDJuQWLca+NbEYxXA="
+          "Value": "sha256-1E79eFXWdFsZuE/uo5ZAHSdejKi+I4qpWFd2cD0E9Tc="
         }
       ]
     },

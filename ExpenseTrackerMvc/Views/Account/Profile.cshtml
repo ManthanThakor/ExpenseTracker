@@ -1,33 +1,312 @@
 ﻿@model ExpenseTrackerMvc.Models.User
-
 @{
     ViewData["Title"] = "Profile";
 }
 
-<div class="row justify-content-center">
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-header">
-                <h4>User Profile</h4>
+<style>
+
+    body {
+        background: linear-gradient(90deg, rgba(12,8,64,0.96) 29%, rgba(57,0,73,1) 72%, rgba(29,36,112,1) 100%);
+        color: #f8f9fa;
+        min-height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Glassmorphism Card */
+    .profile-card {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        transition: all 0.4s ease;
+    }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+    /* Profile Header */
+    .profile-header {
+        background: linear-gradient(135deg, rgba(106, 17, 203, 0.8) 0%, rgba(37, 117, 252, 0.8) 100%);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .profile-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        font-size: 2.5rem;
+        color: white;
+    }
+
+    /* Form Elements */
+    .form-control, .form-select {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #fff;
+        border-radius: 10px;
+        padding: 0.75rem 1rem;
+        transition: all 0.3s ease;
+    }
+
+        .form-control:focus, .form-select:focus {
+            background: rgba(0, 0, 0, 0.4);
+            border-color: rgba(106, 17, 203, 0.6);
+            box-shadow: 0 0 0 0.25rem rgba(106, 17, 203, 0.25);
+            color: #fff;
+        }
+
+    .form-label {
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Buttons */
+    .btn {
+        border-radius: 10px;
+        padding: 0.75rem 1.5rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        border: none;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        box-shadow: 0 4px 15px rgba(106, 17, 203, 0.4);
+    }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(106, 17, 203, 0.6);
+        }
+
+    .btn-danger {
+        background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+        box-shadow: 0 4px 15px rgba(255, 75, 43, 0.4);
+    }
+
+        .btn-danger:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 75, 43, 0.6);
+        }
+
+    .btn-outline-secondary {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+        .btn-outline-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+    /* Danger Zone */
+    .danger-zone {
+        border: 1px solid rgba(255, 65, 108, 0.3);
+        border-radius: 12px;
+        padding: 1.5rem;
+        background: rgba(255, 65, 108, 0.05);
+        margin-top: 2rem;
+    }
+
+    /* Animations */
+    @@keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .profile-content {
+        animation: fadeIn 0.6s ease-out;
+    }
+
+    /* Responsive */
+    @@media (max-width: 768px) {
+        .profile-header {
+            padding: 1rem;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+        }
+    }
+</style>
+
+<div class="container py-4 profile-content" style="padding-top:100px!important; padding:100px!important;">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="profile-card mb-4">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        @Model.Username.Substring(0, 1).ToUpper()
+                    </div>
+                    <h3>@Model.Username</h3>
+                    <p class="mb-0">@Model.Email</p>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="UpdateProfile" method="post">
+                        <input type="hidden" asp-for="Id" />
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="Username" class="form-label">Username</label>
+                                    <input asp-for="Username" class="form-control" />
+                                    <span asp-validation-for="Username" class="text-danger small"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="Email" class="form-label">Email</label>
+                                    <input asp-for="Email" class="form-control" />
+                                    <span asp-validation-for="Email" class="text-danger small"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="CurrentPassword" class="form-label">Current Password (required for changes)</label>
+                            <input type="password" id="CurrentPassword" name="CurrentPassword" class="form-control" />
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="NewPassword" class="form-label">New Password</label>
+                                    <input type="password" id="NewPassword" name="NewPassword" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="ConfirmPassword" class="form-label">Confirm New Password</label>
+                                    <input type="password" id="ConfirmPassword" name="ConfirmPassword" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between pt-3 border-top">
+                            <a asp-action="Dashboard" asp-controller="Transaction" class="btn btn-outline-secondary">
+                                <i class="fas fa-arrow-left me-1"></i> Back to Dashboard
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save me-1"></i> Update Profile
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="card-body">
-                <div class="mb-3">
-                    <label class="fw-bold">Username:</label>
-                    <p>@Model.Username</p>
-                </div>
-                <div class="mb-3">
-                    <label class="fw-bold">Email:</label>
-                    <p>@Model.Email</p>
-                </div>
-                <div class="mb-3">
-                    <label class="fw-bold">Registered Categories:</label>
-                    <p>@Model.Categories.Count</p>
-                </div>
-          
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Back to Dashboard</a>
+
+            <!-- Danger Zone -->
+            <div class="danger-zone">
+                <h4 class="text-danger mb-4">
+                    <i class="fas fa-exclamation-triangle me-2"></i> Danger Zone
+                </h4>
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-1">Delete Account</h5>
+                        <p class="small text-muted mb-0">This action cannot be undone. All your data will be permanently deleted.</p>
+                    </div>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteAccountModal">
+                        <i class="fas fa-trash me-1"></i> Delete Account
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Delete Account Modal -->
+<div class="modal fade" id="deleteAccountModal" tabindex="-1" aria-labelledby="deleteAccountModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content glass-card" style="background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(12px);">
+            <div class="modal-header border-bottom-0">
+                <h5 class="modal-title text-danger" id="deleteAccountModalLabel">
+                    <i class="fas fa-exclamation-triangle me-2"></i> Confirm Account Deletion
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to permanently delete your account? This action will:</p>
+                <ul>
+                    <li>Delete all your transactions and categories</li>
+                    <li>Remove your profile information</li>
+                    <li>Cannot be undone</li>
+                </ul>
+                <div class="form-group mt-3">
+                    <label for="DeletePassword" class="form-label">Enter your password to confirm:</label>
+                    <input type="password" class="form-control" id="DeletePassword" name="DeletePassword" required />
+                </div>
+            </div>
+            <div class="modal-footer border-top-0">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-1"></i> Cancel
+                </button>
+                <form asp-action="DeleteAccount" method="post" style="display: inline;">
+                    <input type="hidden" asp-for="Id" />
+                    <button type="submit" class="btn btn-danger">
+                        <i class="fas fa-trash me-1"></i> Delete Account
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add confirmation for account deletion
+            const deleteForm = document.querySelector('form[asp-action="DeleteAccount"]');
+            if (deleteForm) {
+                deleteForm.addEventListener('submit', function(e) {
+                    const password = document.getElementById('DeletePassword').value;
+                    if (!password) {
+                        e.preventDefault();
+                        alert('Please enter your password to confirm account deletion.');
+                        return false;
+                    }
+                    if (!confirm('Are you absolutely sure you want to delete your account? This cannot be undone.')) {
+                        e.preventDefault();
+                        return false;
+                    }
+                    return true;
+                });
+            }
+
+            // Add glow effect to form inputs on focus
+            const inputs = document.querySelectorAll('.form-control, .form-select');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.style.boxShadow = '0 0 0 0.25rem rgba(106, 17, 203, 0.25)';
+                });
+
+                input.addEventListener('blur', function() {
+                    this.style.boxShadow = '';
+                });
+            });
+        });
+    </script>
+}
