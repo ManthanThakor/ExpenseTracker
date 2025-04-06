@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|d:\\manthanthakor\\expensetracker\\expensetrackermvc\\wwwroot\\js\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:wwwroot\\js\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|d:\\manthanthakor\\expensetracker\\expensetrackermvc\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|d:\\manthanthakor\\expensetracker\\expensetrackermvc\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|d:\\manthanthakor\\expensetracker\\expensetrackermvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|d:\\manthanthakor\\expensetracker\\expensetrackermvc\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|d:\\manthanthakor\\expensetracker\\expensetrackermvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|d:\\manthanthakor\\expensetracker\\expensetrackermvc\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|d:\\manthanthakor\\expensetracker\\expensetrackermvc\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|d:\\manthanthakor\\expensetracker\\expensetrackermvc\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|d:\\manthanthakor\\expensetracker\\expensetrackermvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|d:\\manthanthakor\\expensetracker\\expensetrackermvc\\wwwroot\\css\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:wwwroot\\css\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|d:\\manthanthakor\\expensetracker\\expensetrackermvc\\wwwroot\\js\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:wwwroot\\js\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|d:\\manthanthakor\\expensetracker\\expensetrackermvc\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{11B30C6D-7947-4827-B7B2-CA2D7AB0E829}|ExpenseTrackerMvc.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,50 +46,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAcwF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T12:46:38.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "login.css",
+              "DocumentMoniker": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\login.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\login.css",
+              "ToolTip": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\login.css",
+              "RelativeToolTip": "wwwroot\\css\\login.css",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAYwJ0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-06T12:43:17.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "register.css",
+              "DocumentMoniker": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\register.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\register.css",
+              "ToolTip": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\register.css",
+              "RelativeToolTip": "wwwroot\\css\\register.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-06T12:42:47.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "site.css",
               "DocumentMoniker": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
               "ToolTip": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAABUBAAAAAAAAAAAYwEIBAABhAAAAAAAAAA==",
+              "ViewState": "AgIAAMQBAAAAAAAAAAAnwPkBAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-04-06T12:02:18.4Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAcwJ8AAAANAAAAAAAAAA==",
+              "ToolTip": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Shared\\_Layout.cshtml*",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml*",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAMwIwAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-06T11:46:57.209Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "home.js",
               "DocumentMoniker": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\js\\home.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\home.js",
               "ToolTip": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\js\\home.js",
               "RelativeToolTip": "wwwroot\\js\\home.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-04-06T11:27:29.395Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "site.js",
               "DocumentMoniker": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
@@ -112,14 +163,14 @@
               "RelativeDocumentMoniker": "wwwroot\\css\\Home.css",
               "ToolTip": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\wwwroot\\css\\Home.css",
               "RelativeToolTip": "wwwroot\\css\\Home.css",
-              "ViewState": "AgIAALEAAAAAAAAAAAAYwLgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAALEDAAAAPNDUyKIWwCUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-04-06T06:58:56.653Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\ManthanThakor\\ExpenseTracker\\ExpenseTrackerMvc\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",

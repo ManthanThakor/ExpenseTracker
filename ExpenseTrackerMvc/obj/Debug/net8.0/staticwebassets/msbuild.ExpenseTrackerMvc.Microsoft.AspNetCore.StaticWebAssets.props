@@ -156,8 +156,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>nluh8kzyif</Fingerprint>
-      <Integrity>1cLfG7vy4QmMg9daxUyZ9q+DT8mQda+mQJzDvLO/aEI=</Integrity>
+      <Fingerprint>ngstda2ida</Fingerprint>
+      <Integrity>V2pAu/4bleU/M+DxIM63zJ+d/nLex7UKvsnxjZUJ25w=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\Home.css'))</OriginalItemSpec>
@@ -174,8 +174,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>fgh6g5h4kd</Fingerprint>
-      <Integrity>IQ4bo4dMwb2w5ES8WDv5guMJFU5vvJsZwtl7iJe0Xio=</Integrity>
+      <Fingerprint>p64j18a0r5</Fingerprint>
+      <Integrity>8fxR33VrXY9wAUlmDN05JH/rSDvlHgfp4AgTobPFxWk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</OriginalItemSpec>
@@ -192,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>j3tjtvet7k</Fingerprint>
-      <Integrity>8axZHf4v2XK4J/SvCEo2seLmgqk0Cx2pjaulTUQ+pxw=</Integrity>
+      <Fingerprint>73wvoeh2wy</Fingerprint>
+      <Integrity>zat4Vxub6Nb3Co4025w0QqUoZBb/FcqH2qZJYGd/ieA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\register.css'))</OriginalItemSpec>
@@ -210,8 +210,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3cujqnnmdk</Fingerprint>
-      <Integrity>UyYeM8DrDNRlOFchcOmr4pIhqjI/u/CvNPTDS9VGZg4=</Integrity>
+      <Fingerprint>h06gdro3m2</Fingerprint>
+      <Integrity>cTtar131h/d1YqTth+Qlh9eXhqVDJuQWLca+NbEYxXA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</OriginalItemSpec>
@@ -336,8 +336,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>jnltlyizxl</Fingerprint>
-      <Integrity>3+9vwLwNTG5zIy+sJ9T2RhjQGXgvyEs2LRvH4SX3CIs=</Integrity>
+      <Fingerprint>hhm83tor6e</Fingerprint>
+      <Integrity>1drvNIFNWvM0LwGCuf/mCUJoV+g7C5X2wI14mtu5oYM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\home.js'))</OriginalItemSpec>
