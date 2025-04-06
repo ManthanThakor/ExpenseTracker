@@ -263,7 +263,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3384"
+          "Value": "3476"
         },
         {
           "Name": "Content-Type",
@@ -271,22 +271,22 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"w6tdDK2vYueIGz+qAJuj7bdpudb6gPfflZspPUHcKhc=\""
+          "Value": "\"XXLjPkyiIttvJpvjULpK2RJH947NcPtUgFubLcJiNgI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 05:47:02 GMT"
+          "Value": "Sun, 06 Apr 2025 06:47:39 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-w6tdDK2vYueIGz+qAJuj7bdpudb6gPfflZspPUHcKhc="
+          "Value": "sha256-XXLjPkyiIttvJpvjULpK2RJH947NcPtUgFubLcJiNgI="
         }
       ]
     },
     {
-      "Route": "css/Home.dwrssbf9lh.css",
+      "Route": "css/Home.x3xbanzbe3.css",
       "AssetFile": "css/Home.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -300,7 +300,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3384"
+          "Value": "3476"
         },
         {
           "Name": "Content-Type",
@@ -308,21 +308,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"w6tdDK2vYueIGz+qAJuj7bdpudb6gPfflZspPUHcKhc=\""
+          "Value": "\"XXLjPkyiIttvJpvjULpK2RJH947NcPtUgFubLcJiNgI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 05:47:02 GMT"
+          "Value": "Sun, 06 Apr 2025 06:47:39 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dwrssbf9lh"
+          "Value": "x3xbanzbe3"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-w6tdDK2vYueIGz+qAJuj7bdpudb6gPfflZspPUHcKhc="
+          "Value": "sha256-XXLjPkyiIttvJpvjULpK2RJH947NcPtUgFubLcJiNgI="
         },
         {
           "Name": "label",
@@ -983,6 +983,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-QxCm2Z9PbyekKcT9UynQBHrAk/zKe4JvldYXNw0i5QM="
+        }
+      ]
+    },
+    {
+      "Route": "js/home.1zvbktssx6.js",
+      "AssetFile": "js/home.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2998"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y6FUHSytj5iuT/iFtYJfdHiDMJIWRUXHENl5LPJ7h/o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 05:48:55 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1zvbktssx6"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Y6FUHSytj5iuT/iFtYJfdHiDMJIWRUXHENl5LPJ7h/o="
+        },
+        {
+          "Name": "label",
+          "Value": "js/home.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/home.js",
+      "AssetFile": "js/home.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2998"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y6FUHSytj5iuT/iFtYJfdHiDMJIWRUXHENl5LPJ7h/o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 05:48:55 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Y6FUHSytj5iuT/iFtYJfdHiDMJIWRUXHENl5LPJ7h/o="
         }
       ]
     },

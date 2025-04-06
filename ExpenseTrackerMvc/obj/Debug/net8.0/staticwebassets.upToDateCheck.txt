@@ -9,6 +9,7 @@ wwwroot\imgs\Background\Bgimg.jpg
 wwwroot\imgs\Background\image.png
 wwwroot\imgs\login\cute-blue-robot-waving-hand-600nw-2056356791-removebg-preview.png
 wwwroot\js\categoryCreateEdit.js
+wwwroot\js\home.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
