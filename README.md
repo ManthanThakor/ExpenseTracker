@@ -34,10 +34,6 @@ ExpenseTracker is a web application designed to help users track their daily exp
   - jQuery
   - Chart.js (for visualizations)
 
-## Live Demo
-
-Check out the live application: [ExpenseTracker Demo](https://manthanthakor.github.io/ExpenseTracker/)
-
 ## Installation
 
 1. Clone the repository:
