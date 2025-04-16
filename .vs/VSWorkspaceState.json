@@ -1,11 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.github",
     "\\ExpenseTrackerMvc",
-    "\\ExpenseTrackerMvc\\wwwroot",
-    "\\ExpenseTrackerMvc\\wwwroot\\css"
+    "\\ExpenseTrackerMvc\\Views",
+    "\\ExpenseTrackerMvc\\Views\\Category"
   ],
-  "SelectedNode": "\\ExpenseTrackerMvc\\wwwroot\\css\\login.css",
+  "SelectedNode": "\\ExpenseTrackerMvc\\Views\\Category\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
