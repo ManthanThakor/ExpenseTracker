@@ -2,7 +2,7 @@
 
 A comprehensive expense tracking application built with ASP.NET Core MVC to help you manage your personal finances.
 
-![Expense Tracker Demo](https://raw.githubusercontent.com/ManthanThakor/ExpenseTracker/main/wwwroot/images/demo-screenshot.png)
+![Expense Tracker Demo](https://github.com/ManthanThakor/ExpenseTracker/blob/main/ExpenseTrackerMvc/wwwroot/imgs/Ex-tr-img.png)
 
 ## Overview
 
